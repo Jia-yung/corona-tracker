@@ -181,7 +181,8 @@ class CoronaTracker extends Component {
                 </Row>
                 <Row>
                     <Col md={12}> 
-                        <h4 className="subTitle">Countries Data</h4>                  
+                        <h4 className="subTitle">Countries Data</h4>  
+                        <h6 style={{textAlign: 'left'}}>Click the column header to sort.</h6>                
                         <DataTable url={countriesData} />                    
                     </Col>
                 </Row>               

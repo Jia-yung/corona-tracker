@@ -6,10 +6,6 @@
     overflow: scroll;
 }
 
-.pageTitle {
-    text-align: left;
-}
-
 .toolTipContainer {
     overflow-x: scroll;
     margin-bottom: 25px;
@@ -52,25 +48,9 @@
     text-align: left;
 }
 
-.modalContainer {
-    border-radius: 15px;
-    margin-bottom: 25px;
-    background-color: #343A40;
-    padding: 1px !important;
-}
-
 .articleContainer {
     overflow-x: scroll !important;
 
-}
-
-.alertContainer {
-    padding: 5px;
-    background-color: black;
-    border-color: black;
-    color: grey;
-    display: flex;
-    justify-content: center
 }
 
 @media screen and (max-width: 540px ) {

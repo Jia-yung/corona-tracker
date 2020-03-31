@@ -1,7 +1,7 @@
 .cardStyle {
     margin-bottom: 25px;
     padding-bottom: 0px !important;
-    height: 310px;
+    height: 290px;
     overflow: hidden;
     cursor: pointer;
     color: white;
@@ -32,8 +32,8 @@
 }
 
 .cardTitle {
-    font-size: 16px !important;
-    font-weight: 800 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
     text-align: left;
 }
 
@@ -53,5 +53,15 @@
 
     .cardText {
         font-size: 8px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .cardTitle {
+        font-size: 11px !important;
+    }
+
+    .cardText {
+        font-size: 7px !important;
     }
 }
