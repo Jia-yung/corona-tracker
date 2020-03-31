@@ -1,0 +1,44 @@
+.alertContainer {
+    padding: 5px;
+    background-color: black;
+    border-color: black;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.paypalImg {
+    width: 90px;
+    height: 25px; 
+    margin-left: 10px;
+}
+
+.alertText {
+    font-size: 15px !important;
+}
+
+@media screen and (max-width: 420px) {
+    .paypalImg {
+        width: 60px;
+        height: 16px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .paypalImg {
+        width: 80px;
+        height: 22px;
+    }
+
+    .alertText {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .alertText{
+        font-size: 8px !important;
+    }
+}

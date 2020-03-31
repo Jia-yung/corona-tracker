@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, Alert} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 //import DataMap from '../../components/DataMap/DataMap';
 import DataGraph from '../../components/DataGraph/DataGraph';
@@ -8,7 +8,7 @@ import Modal from '../../components/Modal/Modal';
 import Spinner from '../../components/UI/Spinner/Spinner'
 import ListItem from '../../components/ListItem/ListItem';
 import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
-import Paypal from '../../components/Paypal/Paypal';
+import Alert from '../../components/Alert/Alert';
 import Article from '../../components/Article/Article';
 import Logo from '../../components/Logo/Logo';
 
@@ -121,9 +121,7 @@ class CoronaTracker extends Component {
             <Container fluid className="main">
                 <Row>
                     <Col xs={12}>
-                        <Alert className="alertContainer">
-                            Your support is needed to keep this site operating.<Paypal/>                            
-                        </Alert>
+                        <Alert />                            
                     </Col>
                 </Row>
                 <Row>
@@ -133,19 +131,13 @@ class CoronaTracker extends Component {
                 </Row>
                 <Row>
                     <Col xs={4}>
-                        <div className="modalContainer">
-                            {recovered}
-                        </div>
+                        {recovered}
                     </Col>
                     <Col xs={4}>
-                        <div className="modalContainer">
-                            {infected}
-                        </div>
+                        {infected}
                     </Col>
                     <Col xs={4}>
-                        <div className="modalContainer">
-                            {death}
-                        </div>
+                        {death}
                     </Col>                
                 </Row>
                 <Row>
