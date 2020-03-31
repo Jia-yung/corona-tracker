@@ -1,0 +1,11 @@
+.table-custom {
+    color: white !important;
+}
+
+.dataTable {
+    width: 100% !important;
+    background-color: #343A40;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,26 @@
+.logoStyle {
+    text-align: left;
+}
+
+.logoStyle > p {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logoIcon {
+    height: 60px;
+    width: 60px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 540px) {
+    .logoIcon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logoStyle > p {
+        font-size: 20px;
+    }
+}

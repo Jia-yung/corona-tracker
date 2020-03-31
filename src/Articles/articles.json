@@ -1,0 +1,1436 @@
+{
+    "status": "ok",
+    "totalResults": 338926,
+    "article": [
+        {
+            "source": {
+                "id": 7,
+                "name": "American Association for the Advancement of Science (AAAS)"
+            },
+            "author": "Kelly Servick",
+            "title": "Would everyone wearing face masks help us slow the pandemic?",
+            "description": "As cases of coronavirus disease 2019 (COVID-19) ballooned last month, people in Europe and North America scrambled to get their hands on surgical masks to protect themselves.",
+            "url": "https://www.sciencemag.org/news/2020/03/would-everyone-wearing-face-masks-help-us-slow-pandemic",
+            "urlToImage": "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/Coronavirus_masks_1280x720.jpg?itok=NkUhrOBI",
+            "publishedAt": "2020-03-28",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 8,
+                "name": "American Association for the Advancement of Science (AAAS)"
+            },
+            "author": "Richard Stone",
+            "title": "Iran confronts coronavirus amid a ‘battle between science and conspiracy theories’",
+            "description": "As of today, Iran has 38,309 confirmed cases and 2640 deaths—the highest totals in the Middle East.",
+            "url": "https://www.sciencemag.org/news/2020/03/iran-confronts-coronavirus-amid-battle-between-science-and-conspiracy-theories",
+            "urlToImage": "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/iran_1280p.jpg?itok=aVLL1cvu",
+            "publishedAt": "2020-03-29",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 9,
+                "name": "CNET"
+            },
+            "author": "Jackson Ryan",
+            "title": "Coronavirus medicine: Vaccines, chloroquine and drugs to treat COVID-19",
+            "description": "Everything you need to know about coronavirus vaccines, chloroquine treatments and the cutting-edge drugs being developed to counter the pandemic.",
+            "url": "https://www.cnet.com/how-to/coronavirus-medicine-vaccines-chloroquine-and-drugs-to-treat-covid-19/",
+            "urlToImage": "https://cnet4.cbsistatic.com/img/bFGoWxsdS_r19mxEEKF4_d6wQig=/0x0:1225x1089/756x567/2020/03/14/8b6352f3-8a43-4b7c-86de-5a105ff52d29/gettyimages-144560269.jpg",
+            "publishedAt": "2020-03-29",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 10,
+                "name": "CNET"
+            },
+            "author": "Clifford Colby",
+            "title": "What you can and cannot do when you're in lockdown, quarantine or shelter in place",
+            "description": "Across the US and Europe, the most severely stricken coronavirus areas can teach us what to expect.",
+            "url": "https://www.cnet.com/how-to/what-you-can-and-cannot-do-when-youre-in-lockdown-quarantine-or-shelter-in-place/",
+            "urlToImage": "https://cnet1.cbsistatic.com/img/ZoMTOL2mNnYIq4j-KRv-qNV1vHA=/756x567/2020/03/23/cc997f2d-4362-4277-90af-dfdff44a7c98/coronavirus-hiking-outdoors01000.jpg",
+            "publishedAt": "2020-03-29",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": "1",
+                "name": "World Health Organization (WHO)"
+            },
+            "author": "World Health Organization (WHO)",
+            "title": "Coronavirus disease (COVID-19) advice for the public",
+            "description": "Some protective measures for the public against COVID-19",
+            "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public",
+            "urlToImage": "https://www.who.int/images/default-source/health-topics/coronavirus/social-media-squares/be-ready-social-1.jpg",
+            "publishedAt": "2020-03-18",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 2,
+                "name": "World Health Organization (WHO)"
+            },
+            "author": "World Health Organization (WHO)",
+            "title": "Key considerations for repatriation and quarantine of travellers (2019-nCoV)",
+            "description": "COVID-19 Travel Advice",
+            "url": "https://www.who.int/news-room/articles-detail/key-considerations-for-repatriation-and-quarantine-of-travellers-in-relation-to-the-outbreak-of-novel-coronavirus-2019-ncov",
+            "urlToImage": "https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2020/03/15/1aad4e30-669e-11ea-8e9f-2d196083a37c_image_hires_222925.jpg?itok=qWxpJKOa&v=1584282574",
+            "publishedAt": "2020-02-11",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 3,
+                "name": "U.S. Department of Health & Human Services"
+            },
+            "author": "Center of Disease Control and Prevention (CDC)",
+            "title": "Symptoms of Coronavirus",
+            "description": "Reported illnesses have ranged from mild symptoms to severe illness and death for confirmed COVID-19 cases.",
+            "url": "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html",
+            "urlToImage": "https://www.cdc.gov/coronavirus/2019-ncov/images/homepage/symptoms_lg.jpg",
+            "publishedAt": "",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 4,
+                "name": "American Association for the Advancement of Science (AAAS)"
+            },
+            "author": "Jon Cohen",
+            "title": "Not wearing masks to is a ‘big mistake,’ top Chinese scientist says",
+            "description": "In Wuhan, China, people with mild COVID-19 cases were taken to large facilities and not permitted to see their families. “Infected people must be isolated. That should happen everywhere,” George Gao says",
+            "url": "https://www.sciencemag.org/news/2020/03/not-wearing-masks-protect-against-coronavirus-big-mistake-top-chinese-scientist-says#",
+            "urlToImage": "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/temphospital_main_1280p.jpg?itok=L6Ti--IJ",
+            "publishedAt": "2020-03-27",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 5,
+                "name": "American Association for the Advancement of Science (AAAS)"
+            },
+            "author": "Dennis Normile",
+            "title": "Can China return to normalcy while keeping the coronavirus in check?",
+            "description": "Workers at the joint-venture Dongfeng Honda in Wuhan, in China's Hubei province, eat lunch while sitting 1.5 meter away from each other.",
+            "url": "https://www.sciencemag.org/news/2020/03/can-china-return-normalcy-while-keeping-coronavirus-check",
+            "urlToImage": "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/930-HoR.jpg?itok=p5__O1tD",
+            "publishedAt": "2020-03-29",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 6,
+                "name": "American Association for the Advancement of Science (AAAS)"
+            },
+            "author": "Jocelyn Kaiser",
+            "title": "How sick will the coronavirus make you? The answer may be in your genes",
+            "description": "A patient in Italy receives intensive care for COVID-19. Human geneticists are coming together to look for genes that make some people more vulnerable to the disease.",
+            "url": "https://www.sciencemag.org/news/2020/03/how-sick-will-coronavirus-make-you-answer-may-be-your-genes",
+            "urlToImage": "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/1208262152-1280x720.jpg?itok=6Aom9tDY",
+            "publishedAt": "2020-03-27",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": 11,
+                "name": "Terra.com.br"
+            },
+            "author": "Estadão Conteúdo",
+            "title": "Em meio a apoiadores, Bolsonaro afirma que País não pode parar",
+            "description": "Em meio a apoiadores, o presidente Jair Bolsonaro afirmou que o Brasil não pode parar por conta da pandemia de covid-19 e que é necessário que o governo trab",
+            "url": "https://www.terra.com.br/noticias/brasil/politica/em-meio-a-apoiadores-bolsonaro-afirma-que-pais-nao-pode-parar,c14ff07ffea3d0eab3a3543861d5e11bjozpcblt.html",
+            "urlToImage": "http://p2.trrsf.com/image/fget/cf/800/450/middle/s1.trrsf.com/atm/3/core/_img/terra-logo-white-bg-v3.jpg",
+            "publishedAt": "2020-03-29T16:54:01Z",
+            "content": "Em meio a apoiadores, o presidente Jair Bolsonaro afirmou que o Brasil não pode parar por conta da pandemia de covid-19 e que é necessário que o governo trabalhe em duas frentes: saúde e economia. Bolsonaro visitou comércios locais em diferentes regiões do Di… [+2032 chars]"
+        },
+        {
+            "source": {
+                "id": 12,
+                "name": "Www.jn.pt"
+            },
+            "author": "Luís Moreira",
+            "title": "Câmara de Braga critica falta de autonomia dos organismos locais de saúde e da Segurança Social",
+            "description": "\"Não podem comprar um prego sem autorização de Lisboa\", lamenta vereador Altino Bessa.",
+            "url": "https://www.jn.pt/local/noticias/braga/braga/camara-de-braga-critica-falta-de-autonomia-dos-organismos-locais-de-saude-e-da-seguranca-social-12002514.html",
+            "urlToImage": "https://static.globalnoticias.pt/jn/image.aspx?brand=JN&type=generate&guid=d41d634e-e72c-4949-bdf3-9ec7aebaf6ea&w=800&h=420&watermark=true&t=20200329173700",
+            "publishedAt": "2020-03-29T16:53:56Z",
+            "content": "Hoje às 17:37\r\n\"Não podem comprar um prego sem autorização de Lisboa\", lamenta vereador Altino Bessa.\r\nA \"total falta de autonomia\" dos organismos locais e regionais da saúde e da segurança social dificulta e atrasa o combate à pandemia de Covid-19. A crítica… [+1507 chars]"
+        },
+        {
+            "source": {
+                "id": 13,
+                "name": "Www.jn.pt"
+            },
+            "author": "JN/Agências",
+            "title": "Mercado de gado de Rates retoma na segunda-feira, mas autarquia está contra",
+            "description": "A Câmara Municipal da Póvoa de Varzim manifestou-se este domingo \"frontalmente contra\" a realização do mercado de gado de Rates, suspenso desde o dia 14 devido à pandemia, mas que a promotora Leicar pretende retomar na segunda-feira.",
+            "url": "https://www.jn.pt/local/noticias/porto/povoa-de-varzim/mercado-de-gado-de-rates-retoma-na-segunda-feira-mas-autarquia-esta-contra-12002592.html",
+            "urlToImage": "https://static.globalnoticias.pt/jn/image.aspx?brand=JN&type=generate&guid=4b7b509d-7806-4581-82f9-27e8a393b0e4&w=800&h=420&watermark=true&t=20200329174400",
+            "publishedAt": "2020-03-29T16:53:56Z",
+            "content": "A Câmara Municipal da Póvoa de Varzim manifestou-se este domingo \"frontalmente contra\" a realização do mercado de gado de Rates, suspenso desde o dia 14 devido à pandemia, mas que a promotora Leicar pretende retomar na segunda-feira.\r\n\"O mercado não se realiz… [+3723 chars]"
+        },
+        {
+            "source": {
+                "id": 14,
+                "name": "Www.jn.pt"
+            },
+            "author": "Jornal de Notícias",
+            "title": "Benfica solidário com antigo treinador internado com Covid-19",
+            "description": "O Benfica emitiu, este domingo, um comunicado a solidarizar-se com Alípio Matos, antigo técnico de Futsal e Coordenador Técnico do clube, que se encontra internado depois de ter sido diagnosticado com Covid-19.",
+            "url": "https://www.jn.pt/desporto/benfica-solidario-com-antigo-treinador-internado-com-covid-19--12002564.html",
+            "urlToImage": "https://static.globalnoticias.pt/jn/image.aspx?brand=JN&type=generate&guid=9b248819-cdbd-4b68-b3cb-1b6df5ba5bfd&w=800&h=420&watermark=true&t=20200329175100",
+            "publishedAt": "2020-03-29T16:53:56Z",
+            "content": "O Benfica emitiu, este domingo, um comunicado a solidarizar-se com Alípio Matos, antigo técnico de Futsal e Coordenador Técnico do clube, que se encontra internado depois de ter sido diagnosticado com Covid-19.\r\nSegundo informação das águias, o antigo respons… [+212 chars]"
+        },
+        {
+            "source": {
+                "id": 15,
+                "name": "Www.jn.pt"
+            },
+            "author": "Jornal de Notícias",
+            "title": "Sporting doa 120 mil máscaras e 80 mil luvas às misericordias",
+            "description": "O Sporting assumiu num comunicado, este domingo, uma doação de 120 mil máscaras e 80 mil luvas para a União das Misericórdias, no âmbito da luta contra a pandemia mundial da Covid-19.",
+            "url": "https://www.jn.pt/desporto/sporting-doa-120-mil-mascaras-e-80-mil-luvas-as-misericordias-12002505.html",
+            "urlToImage": "https://static.globalnoticias.pt/jn/image.aspx?brand=JN&type=generate&guid=fc466593-a0a5-4189-86d6-4d1847e5d1c3&w=800&h=420&watermark=true&t=20200329175200",
+            "publishedAt": "2020-03-29T16:53:56Z",
+            "content": "O Sporting assumiu num comunicado, este domingo, uma doação de 120 mil máscaras e 80 mil luvas para a União das Misericórdias, no âmbito da luta contra a pandemia mundial da Covid-19.\r\n\"O Sporting Clube de Portugal disponibilizou-se para oferecer a todas as i… [+867 chars]"
+        },
+        {
+            "source": {
+                "id": 16,
+                "name": "The Hill"
+            },
+            "author": "Justine Coleman",
+            "title": "McCarthy says fourth stimulus bill might not be necessary",
+            "description": "The top Republican in the House said Sunday that a fourth stimulus bill may not be necessary to help an economy wracked by the coronavirus pandemic. House Minority Leader Rep. Kevin McCarthy (R-C...",
+            "url": "https://thehill.com/policy/healthcare/490063-mccarthy-says-fourth-stimulus-bill-might-not-be-necessary",
+            "urlToImage": "https://thehill.com/sites/default/files/mccarthykevin_030520gn2_lead.jpg",
+            "publishedAt": "2020-03-29T16:53:40Z",
+            "content": "The top Republican in the House said Sunday that a fourth stimulus bill may not be necessary to help an economy wracked by the coronavirus pandemic. \r\nHouse Minority Leader Rep. Kevin McCarthyKevin Owen McCarthySunday shows preview: Lawmakers, state governors… [+1841 chars]"
+        },
+        {
+            "source": {
+                "id": 17,
+                "name": "Slashdot.org"
+            },
+            "author": "feedfeeder",
+            "title": "Spain toughens restrictions as coronavirus death toll surges - Reuters.com",
+            "description": "Spain toughens restrictions as coronavirus death toll surgesReuters.com Spain tightens lockdown as coronavirus death toll spikesPolitico Death toll in Spain rises by record 838 in one day | TheHillThe Hill Spain's coronavirus death toll hits a new high with 5…",
+            "url": "https://slashdot.org/firehose.pl?op=view&amp;id=128236644",
+            "urlToImage": null,
+            "publishedAt": "2020-03-29T16:53:12Z",
+            "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
+        },
+        {
+            "source": {
+                "id": 18,
+                "name": "Slashdot.org"
+            },
+            "author": "feedfeeder",
+            "title": "2020 Detroit Auto Show canceled due to coronavirus crisis - Fox News",
+            "description": "2020 Detroit Auto Show canceled due to coronavirus crisisFox News REPORT: 2020 Detroit Auto Show canceled, TCF Center to be makeshift hospitalnbc25news.com News 2020 Detroit Auto Show canceled; TCF Center to turn into hospital during COVID-19 outbreakWXYZ Det…",
+            "url": "https://slashdot.org/firehose.pl?op=view&amp;id=128236636",
+            "urlToImage": null,
+            "publishedAt": "2020-03-29T16:53:02Z",
+            "content": "The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way."
+        },
+        {
+            "source": {
+                "id": 19,
+                "name": "Newsweek"
+            },
+            "author": "Jason Lemon",
+            "title": "Trump's Coronavirus Response Coordinator Warns 'No Metro Area Will Be Spared' From Pandemic",
+            "description": "\"We all are deeply concerned and [that's] why we've been raising the alert,\" said Dr. Deborah Birx.",
+            "url": "https://www.newsweek.com/trumps-coronavirus-response-coordinator-warns-no-metro-area-will-spared-pandemic-1494888",
+            "urlToImage": "https://d.newsweek.com/en/full/1577406/trump-birx.jpg",
+            "publishedAt": "2020-03-29T16:52:40Z",
+            "content": "Dr. Deborah Birx, the White House's coronavirus response coordinator, has warned that the growing pandemic will hit every metro area within the country.\r\nBirx, who previously served as the U.S. Global AIDS Coordinator, made the remark during an interview with… [+3357 chars]"
+        },
+        {
+            "source": {
+                "id": 20,
+                "name": "Thewrap.com"
+            },
+            "author": "Thom Geier",
+            "title": "Fox News Explains Judge Jeanine Pirro’s ‘Technical Difficulties’ in 1st Home Broadcast",
+            "description": "Fox News on Sunday issued an explanation for Saturday’s episode of “Justice With Judge Jeanine,” which was marred by “technical difficulties” and the appearance of host Jeanine Pirro that many on the internet thought seemed disheveled and perhaps even tipsy. …",
+            "url": "http://www.thewrap.com/fox-news-judge-jeanine-pirro-technical-difficulties-teleprompter-hair-makeup/",
+            "urlToImage": "https://www.thewrap.com/wp-content/uploads/2020/03/pirro-1.gif",
+            "publishedAt": "2020-03-29T16:51:43Z",
+            "content": "Fox News on Sunday issued an explanation for Saturday’s episode of “Justice With Judge Jeanine,” which was marred by “technical difficulties” and the appearance of host Jeanine Pirro that many on the internet thought seemed disheveled and perhaps even tipsy.\r… [+8312 chars]"
+        },
+        {
+            "source": {
+                "id": 21,
+                "name": "Sbnation.com"
+            },
+            "author": "Graham MacAree",
+            "title": "With New York locked down, the dinosaurs have returned to Yankee Stadium",
+            "description": "“Nature is taking back the fields.”",
+            "url": "https://www.sbnation.com/mlb/2020/3/29/21192573/new-yankee-stadium-dinosaurs",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/zwQRvJ5jp8pC97p0VBHxkvJL1XE=/0x86:1200x714/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19830124/dino2.jpg",
+            "publishedAt": "2020-03-29T16:50:58Z",
+            "content": "Joe/JoAnne DiMaggio/Kalish /Contributor Look down into the playing field of Yankee Stadium these days and you’re in for a surprise – not just a clear view of the grass and dirt, but herds of grazing hadrosaurs, scurrying ornithomimids and awesome sauropods. U… [+1124 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Maisfutebol.iol.pt"
+            },
+            "author": "Redação Maisfutebol",
+            "title": "EUA vão ter «entre 100 a 200 mil» vítimas pela covid-19",
+            "description": "Maior especialista de doenças infeciosas do governo, Anthony Fauci, aponta para «milhões» de casos»",
+            "url": "https://maisfutebol.iol.pt/internacional/coronavirus/estados-unidos-vao-ter-entre-100-a-200-mil-vitimas-pela-covid-19",
+            "urlToImage": "https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/5e80cfaa0cf20719306a3a6f/",
+            "publishedAt": "2020-03-29T16:50:54Z",
+            "content": "O principal especialista de doenças infeciosas do governo dos Estados Unidos, Anthony Fauci, deixou a previsão, este domingo, de que o país pode vir a ter entre 100 mil a 200 mil vítimas pelo novo coronavírus.\r\n«Quando os modelos aparecem, eles mostram o pior… [+602 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "W3.org"
+            },
+            "author": "Sören Auer",
+            "title": "Re: COVID19 Cross-Domain Linked Dataset",
+            "description": null,
+            "url": "https://lists.w3.org/Archives/Public/semantic-web/2020Mar/0060.html",
+            "urlToImage": null,
+            "publishedAt": "2020-03-29T16:50:48Z",
+            "content": "From: Sören Auer &lt;auer@l3s.de&gt;\r\nDate: Sun, 29 Mar 2020 18:50:48 +0200To: semantic-web@w3.orgMessage-ID: &lt;75965b57-290e-8c6c-2c11-6bce876eb7dd@l3s.de&gt;\r\nDear all,\r\nIt would be amazing, if we as a community can contribute in some way to\r\nfight COVID1… [+5446 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "20minutes.fr"
+            },
+            "author": "no-reply@20minutes.fr (No Reply)",
+            "title": "Coronavirus : Les malades soignés avec de la chloroquine inquiets après la ruée dans les pharmacies",
+            "description": "Avant d’être un possible remède contre le coronavirus, la chloroquine est un traitement indispensable pour les malades du lupus ou de polyarthrite rhumatoïde. Ils craignent d’en manquer, même après le décret paru jeudi encadrant la délivrance du médicament",
+            "url": "https://www.20minutes.fr/sante/2750483-20200329-coronavirus-malades-soignes-chloroquine-inquiets-apres-ruee-pharmacies",
+            "urlToImage": "https://img.20mn.fr/xNh6MK5vTBWU4TLHpcIWSg/648x360_pharmacien-montre-boite-plaquenil-23-mars-rennes.jpg",
+            "publishedAt": "2020-03-29T16:50:31Z",
+            "content": "Un pharmacien montre une boîte de Damien Meyer / AFP\r\nCest un coup de fil, anonyme, qui a fait déborder le vase. « Il y a un peu plus dune semaine, une personne me contacte pour me dire quelle sest procuré de nombreuses boîtes de Plaquenil et quelle propose d… [+6726 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Www.tsf.pt"
+            },
+            "author": "Gonçalo Teles",
+            "title": "Itália regista 756 mortes nas últimas 24 horas",
+            "description": "Covid-19 já matou 10.779 pessoas no país.",
+            "url": "https://www.tsf.pt/mundo/italia-regista-756-mortes-nas-ultimas-24-horas-12002562.html",
+            "urlToImage": "https://static.globalnoticias.pt/tsf/image.aspx?brand=TSF&type=generate&guid=d9f60d2f-f0fe-4905-a3ec-8f693c67cceb&w=800&h=420&watermark=true&t=20200329172900",
+            "publishedAt": "2020-03-29T16:50:28Z",
+            "content": "© Luca Zennaro/EPA\r\nItália registou, nas últimas 24 horas, 756 vítimas mortais provocados pelo novo coronavírus, elevando o total de mortos para 10.779.\r\nHá, por esta altura, 97.689 casos confirmados de infeção por Covid-19 no país, com 3906 pessoas a receber… [+489 chars]"
+        },
+        {
+            "source": {
+                "id": "ansa",
+                "name": "ANSA.it"
+            },
+            "author": "",
+            "title": "Coronavirus: 1.480 positivi, 98 decessi e 84 guariti in Fvg",
+            "description": "Sono 1.480 i casi accertati positivi al coronavirus in Friuli Venezia Giulia, con un incremento di\r\n44 unità rispetto a ieri. I guariti in totale sono 84, mentre i clinicamente guariti (persone senza\r\npiù sintomi ma non ancora negativi al tampone) sono 157. (…",
+            "url": "http://www.ansa.it/friuliveneziagiulia/notizie/2020/03/29/coronavirus-1.480-positivi-98-decessi-e-84-guariti-in-fvg_101e15e5-f151-4fb6-99ad-00846d0cc4a0.html",
+            "urlToImage": "http://www.ansa.it/webimages/img_700/2020/3/29/523070ce232a13d072ba83dad3ca4a60.jpg",
+            "publishedAt": "2020-03-29T16:50:23Z",
+            "content": "(ANSA) - PALMANOVA (UDINE), 29 MAR - Sono 1.480 i casi\r\naccertati positivi al coronavirus in Friuli Venezia Giulia, con\r\nun incremento di 44 unità rispetto a ieri. I guariti in totale\r\nsono 84, mentre i clinicamente guariti (persone senza più\r\nsintomi ma non … [+637 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ledevoir.com"
+            },
+            "author": "redaction@ledevoir.com (Le Devoir)",
+            "title": "Le point sur la pandémie de COVID-19 au Québec | Dimanche 29 mars",
+            "description": "Regardez en direct la mise à jour quotidienne du gouvernement du Québec sur la pandémie de COVID-19.",
+            "url": "https://www.ledevoir.com/politique/quebec/575988/le-point-sur-la-pandemie-de-covid-19-au-quebec-dimanche-29-mars",
+            "urlToImage": "https://media1.ledevoir.com/images_galerie/nwd_799835_632702/image.jpg?ts=1585500619",
+            "publishedAt": "2020-03-29T16:50:19Z",
+            "content": "Le Québec compte désormais 2498 cas de coronavirus, soit 477 de plus que la veille, et 22 décès."
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ara.cat"
+            },
+            "author": "Josep M. Muñoz",
+            "title": "Per quan passi l’emergència",
+            "description": "L’any 1918, pocs dies abans de morir del flagell que, ara fa cent anys, assolava el món, Guillaume Apollinaire es permetia d’ironitzar, com el bon dandi que era, sobre “la malaltia de moda”, l’anomenada “grip espanyola”, que havia agafat el rei d’Espanya, Alf…",
+            "url": "https://www.ara.cat/opinio/coronavirus-covid-19-emergencia-article-josep-maria-munoz_0_2426157372.html",
+            "urlToImage": "https://www.ara.cat/2020/03/29/opinio/passi-emergencia_2425567615_70813729_1200x630.png",
+            "publishedAt": "2020-03-29T16:50:11Z",
+            "content": "Lany 1918, pocs dies abans de morir del flagell que, ara fa cent anys, assolava el món, Guillaume Apollinaire es permetia dironitzar, com el bon dandi que era, sobre la malaltia de moda, lanomenada grip espanyola, que havia agafat el rei dEspanya, Alfons XIII… [+4289 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Independent.ie"
+            },
+            "author": "Catherine Devine",
+            "title": "Covid-19: 10 more deaths and 200 new cases of coronavirus diagnosed in Ireland",
+            "description": "TEN more people have died from the coronavirus in Ireland, taking the country’s death toll to 46, the National Public Health Emergency Team has announced.",
+            "url": "https://www.independent.ie/irish-news/covid-19-10-more-deaths-and-200-new-cases-of-coronavirus-diagnosed-in-ireland-39085493.html",
+            "urlToImage": "https://www.independent.ie/incoming/3a562/39082877.ece/AUTOCROP/w1240h700/HEALTH%20%203582.jpg",
+            "publishedAt": "2020-03-29T16:49:45Z",
+            "content": "TEN more people have died from the coronavirus in Ireland, taking the countrys death toll to 46, the National Public Health Emergency Team has announced.\r\nSix of the deaths are located in the east of the country, three in the northwest of the country and one … [+446 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Adage.com"
+            },
+            "author": null,
+            "title": "Amazon is teaming up with Lyft on recruiting its drivers as ride-hailing demand drops",
+            "description": "Lyft is also suggesting its drivers install plastic barriers in their vehicles.",
+            "url": "https://adage.com/article/digital/amazon-teaming-lyft-recruiting-its-drivers-ride-hailing-demand-drops/2246866",
+            "urlToImage": "https://adage.com/s3/files/styles/800x600/public/337366720.jpg",
+            "publishedAt": "2020-03-29T16:49:35Z",
+            "content": "Amazon is teaming up with Lyft on recruiting the ride-hailing companys drivers to deliver packages and groceries as the coronavirus pandemic keeps people indoors.\r\nIn an email to Lyft drivers Friday, the company referred them to work opportunities at Amazon a… [+1734 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Bolsamania.com"
+            },
+            "author": "Bolsamanía",
+            "title": "Sánchez da por perdidos los coronabonos en su reunión con los presidentes de las CCAA",
+            "description": "Pedro Sánchez ha dado la batalla por los coronabonos, o \"bonos de reconstrucción\" como se refirió este sábado a ellos, por perdida. Así se lo ha trasladado a los presidentes de las comunidades autónomas este domingo, en la reunión por vídeoconferencia que han…",
+            "url": "https://www.bolsamania.com/noticias/economia/sanchez-da-por-perdidos-coronabonos-reunion-presidentes-ccaa--7405963.html",
+            "urlToImage": "https://img.s3wfg.com/web/img/images_uploaded/e/0/ep_el_presidente_del_gobierno_pedro_sanchez_durante_la_videoconferencia_con_los_presidentes.jpg",
+            "publishedAt": "2020-03-29T16:49:12Z",
+            "content": "Pedro Sánchez ha dado la batalla por los coronabonos, o \"bonos de reconstrucción\" como se refirió este sábado a ellos, por perdida. Así se lo ha trasladado a los presidentes de las comunidades autónomas este domingo, en la reunión por vídeoconferencia que han… [+1689 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Excelsior.com.mx"
+            },
+            "author": "cesar.montiel",
+            "title": "Exportero del Barcelona es hospitalizado por coronavirus",
+            "description": "Notimex ANKARA El exfutbolista turco Rüstü Reçber, quien tuvo un paso por el Barcelona y fue internacional con su selección nacional, tuvo que ser hospitalizado por contagio de COVID-19, como informó en redes sociales su esposa, Isil Reçber. Me gustaría darle…",
+            "url": "https://www.excelsior.com.mx/adrenalina/exportero-del-barcelona-es-hospitalizado-por-coronavirus/1372814",
+            "urlToImage": "https://cdn2.excelsior.com.mx/media/styles/imagen_redes_sociales/public/pictures/2020/03/29/2333492.jpg",
+            "publishedAt": "2020-03-29T16:49:08Z",
+            "content": "ANKARA\r\nEl exfutbolista turco Rüstü Reçber, quien tuvo un paso por el Barcelona y fue internacional con su selección nacional, tuvo que ser hospitalizado por contagio de COVID-19, como informó en redes sociales su esposa, Isil Reçber.\r\nMe gustaría darles buen… [+774 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Thestar.com"
+            },
+            "author": "The Associated Press",
+            "title": "Alaska lawmakers set oil check among at around $1,000",
+            "description": "ANCHORAGE, Alaska - Alaska lawmakers early Sunday approved a budget that set this October’s oil wealth fund check to nearly every single Alaskan at ab...",
+            "url": "https://www.thestar.com/news/world/us/2020/03/29/alaska-lawmakers-set-oil-check-among-at-around-1000.html",
+            "urlToImage": "https://www.thestar.com/assets/img/thestar-ribbon.png",
+            "publishedAt": "2020-03-29T16:48:50Z",
+            "content": "ANCHORAGE, Alaska - Alaska lawmakers early Sunday approved a budget that set this Octobers oil wealth fund check to nearly every single Alaskan at about $1,000, but did not approve a second dividend intended to help residents struggling with the economic fall… [+892 chars]"
+        },
+        {
+            "source": {
+                "id": "lenta",
+                "name": "Lenta"
+            },
+            "author": null,
+            "title": "Кудрявцева раскрыла подробности вечеринки с заразившимся коронавирусом Лещенко",
+            "description": "Телеведущая Лера Кудрявцева раскрыла подробности вечеринки в честь дня рождения сестры Игоря Крутого, на которой присутствовал и заразившийся коронавирусом певец Лев Лещенко. Гости мероприятия вели себя ответственно и соблюдали меры предосторожности. Сама тел…",
+            "url": "https://lenta.ru/news/2020/03/29/lera/",
+            "urlToImage": "https://icdn.lenta.ru/images/2020/03/29/19/20200329194426093/detail_d39ab78611947b7aa9a01c0b89c951f4.png",
+            "publishedAt": "2020-03-29T16:48:46Z",
+            "content": ", . , « », «».\r\n , . , .\r\n . .\r\n , . , . « . , . , », .\r\n 24 40 , . . , . , . , « ».\r\n ?   . 65 , . , .   .\r\n? , , COVID-19, , . , . , - , .\r\n? , .\r\n? , . , , .\r\n; , .\r\n ? . , , , .\r\n? , . , , , .\r\n.;;;;: 03, 103 ( );: 8-800-555-49-43;: 8-800-707-88-41;: +7 (… [+17 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Aftonbladet.se"
+            },
+            "author": "TT",
+            "title": "Minskning av antalet dödsfall i Italien",
+            "description": "Det senaste dygnet har 756 människor avlidit i covid-19 i Italien. För andra dagen i rad sker dock en minskning av antalet dödsfall.",
+            "url": "https://www.aftonbladet.se/nyheter/a/qLgnp0/minskning-av-antalet-dodsfall-i-italien",
+            "urlToImage": "https://imgs.aftonbladet-cdn.se/v2/images/62cad863-5355-4db6-b35f-b27e25c468a0?fit=crop&h=1267&q=50&w=1900&s=807538463ad4a41d2d90e019156633375e384f37",
+            "publishedAt": "2020-03-29T16:48:12Z",
+            "content": "avTT\r\nPublicerad: 29 mars 2020 kl. 18.48\r\nFoto: Andrew Medichini/AP/TT\r\nTvå nunnor i närheten av Vatikanen i Rom på söndagen.\r\nDet senaste dygnet har 756 människor avlidit i covid-19 i Italien. För andra dagen i rad sker dock en minskning av antalet dödsfall.… [+446 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Elcomercio.com"
+            },
+            "author": "Ana Guerrero",
+            "title": "Alto flujo de personas en la feria de Guamaní y sus alrededores",
+            "description": "22 de los 54 mercados, ferias y plataformas de Quito atienden durante la emergencia por el covid-19. En uno de los centros de abasto, en Guamaní, este domingo 29 de marzo del 2020, se registra gran afluencia de compradores.",
+            "url": "http://www.elcomercio.com/actualidad/coronavirus-alto-flujo-personas-guamani.html",
+            "urlToImage": "http://www.elcomercio.com/files/og_thumbnail/uploads/2020/03/29/5e80d0bccf56c.jpeg",
+            "publishedAt": "2020-03-29T16:48:00Z",
+            "content": "22 de los 54 mercados, ferias y plataformas de Quito atienden durante la emergencia por el covid-19. En uno de los centros de abasto, en Guamaní, este domingo 29 de marzo del 2020, se registra gran afluencia de compradores.\r\nEn el Mercado de Guamaní-Feria de … [+1517 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Vz.ru"
+            },
+            "author": null,
+            "title": "В Италии за сутки умерли 756 пациентов с коронавирусом",
+            "description": "В Италии от коронавируса за прошедшие сутки скончались 756 человек, сообщил глава службы гражданской обороны страны Анджело Боррелли. Таким образом, общее число погибших от COVID-19 возросло до 10 779, передает ТАСС. По словам Боррелли, всего в Италии зафикси…",
+            "url": "https://vz.ru/news/2020/3/29/1031529.html",
+            "urlToImage": "https://img.vz.ru/upimg/soc/soc_1031529.png",
+            "publishedAt": "2020-03-29T16:47:36Z",
+            "content": "<table><tr><td><table><tr><td></td><td></td></tr></table></td><td></td></tr></table>\r\n<table><tr><td></td></tr><table><tr><td></td><td> 756 \r\n 756 ,   .\r\n , COVID-19 10 779, .  \r\n , 73 880 , 3815 . \r\n, 646 . 13 030. \r\n, 15 , , 100 , - . \r\n . \r\n COVID-19  ..\r\n… [+57 chars]"
+        },
+        {
+            "source": {
+                "id": "bild",
+                "name": "Bild"
+            },
+            "author": "Bild.de",
+            "title": "Medien berichten - Vitor Godinho (14) mit Corona infiziert – tot",
+            "description": "Er war jung, fit und liebte Sport. Am Sonntag ist Vitor Rafael Bastos Godinho (14) gestorben. Er soll sich mit Corona infiziert haben. Foto: privat",
+            "url": "https://www.bild.de/news/ausland/news-ausland/nach-corona-infektion-gestorben-portugal-trauert-um-vitor-godinho-14-69708628.bild.html",
+            "urlToImage": "https://bilder.bild.de/fotos/nach-corona-infektion-gestorben-portugal-trauert-um-vitor-godinho-14-201396228-69710294/Bild/7.bild.jpg",
+            "publishedAt": "2020-03-29T16:47:16Z",
+            "content": "Maceda (Portugal)  Er war jung, fit und liebte Sport. Am Sonntagmorgen ist Vitor Rafael Bastos Godinho (14) gestorben. Laut übereinstimmenden Medienberichten war er an Corona erkrankt. Ob das Virus für den Tod des Jungen verantwortlich ist, wird noch untersuc… [+2348 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Elcomercio.com"
+            },
+            "author": "Evelyn Tapia",
+            "title": "Empleadores y empleados, ¿qué pueden hacer este fin de mes?",
+            "description": "El Ministerio de Trabajo emitió la noche del 28 de marzo del 2020 el Acuerdo 080 con el cual abre la posibilidad de que empleadores y trabajadores se pongan de acuerdo en la forma de pago de la remuneración.",
+            "url": "http://www.elcomercio.com/actualidad/coronavirus-sueldo-ecuador-empresarios-empleado.html",
+            "urlToImage": "http://www.elcomercio.com/files/og_thumbnail/uploads/2020/03/29/5e80c36695c04.jpeg",
+            "publishedAt": "2020-03-29T16:47:00Z",
+            "content": "El Ministerio de Trabajo emitió la noche del 28 de marzo del 2020 el Acuerdo 080 con el cual abre la posibilidad de que empleadores y trabajadores se pongan de acuerdo en la forma de pago de la remuneración.\r\nEn el decreto, firmado por el nuevo Ministro Luis … [+4798 chars]"
+        },
+        {
+            "source": {
+                "id": "cnbc",
+                "name": "CNBC"
+            },
+            "author": "Lauren Thomas",
+            "title": "US mall owner Taubman is telling tenants they must pay rent amid coronavirus",
+            "description": "U.S. mall owner Taubman is telling its tenants that they must pay rent amid the coronavirus pandemic.",
+            "url": "https://www.cnbc.com/2020/03/29/coronavirus-mall-owner-taubman-is-telling-tenants-they-must-pay-rent.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/104841063-GettyImages-159543959.jpg?v=1585496692",
+            "publishedAt": "2020-03-29T16:47:00Z",
+            "content": "U.S. mall owner Taubman is telling its tenants that they must pay rent amid the coronavirus pandemic.\r\nIn a memo dated March 25, which was obtained by CNBC, the real estate investment trust said it still has its own obligations to meet  such as paying lenders… [+4402 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Kim Lyons",
+            "title": "FDA approves Battelle’s process to decontaminate N95 face masks but limits it to 10,000 per day",
+            "description": "The FDA approved the limited use of a process that would clean much-needed N95 protective face masks and allow them to be reused safely. Ohio- based Battelle uses a “vapor phase hydrogen peroxide” process to decontaminate the masks being used by healthcare pr…",
+            "url": "https://www.theverge.com/2020/3/29/21198715/fda-approves-battelles-decontaminate-n95-face-masks-coronavirus",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/JLedlyPxetz1LSmq3Ao8_gz659M=/0x287:3979x2370/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19856998/1208482560.jpg.jpg",
+            "publishedAt": "2020-03-29T16:46:50Z",
+            "content": "The Ohio company says its process could decontaminate 80,000 masks per day\r\nPhoto by James Black/Icon Sportswire via Getty Images\r\nThe Food and Drug Administration has approved the limited use of a process that would clean much-needed N95 protective face mask… [+1702 chars]"
+        },
+        {
+            "source": {
+                "id": "fox-news",
+                "name": "Fox News"
+            },
+            "author": "Talia Kaplan",
+            "title": "Dr. Anthony Fauci: CDC's coronavirus 'travel advisory' will ultimately 'help stop the virus'",
+            "description": "Coronavirus task force member Dr. Anthony Fauci said on Sunday that the Centers for Disease Control and Prevention’s travel advisory that was implemented on Saturday “ultimately will help stop” the spread of the novel coronavirus.",
+            "url": "https://www.foxnews.com/media/dr-anthony-fauci-cdcs-14-day-travel-advisory-will-ultimately-will-help-stop-the-virus",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2020/03/Fauci-FNS.jpg",
+            "publishedAt": "2020-03-29T16:45:50Z",
+            "content": "Get all the latest news on coronavirus and more delivered daily to your inbox. Sign up here.\r\nCoronavirus task force member Dr. Anthony Fauci said on Sunday the Centers for Disease Control and Prevention’s travel advisory that was implemented on Saturday “ult… [+4614 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Commondreams.org"
+            },
+            "author": null,
+            "title": "Fighting COVID-19 Starts With Universal Access to Water and Sanitation",
+            "description": "Water shutoffs are a huge problem in the U.S... Today, a global pandemic brings into focus how important water is to our lives and to public health and reveals how much more needs to be done to fully guarantee water and sanitation is available to everyone, bo…",
+            "url": "https://www.commondreams.org/views/2020/03/29/fighting-covid-19-starts-universal-access-water-and-sanitation",
+            "urlToImage": "https://www.commondreams.org/sites/default/files/views-article/thumbs/waterislife_0.jpg",
+            "publishedAt": "2020-03-29T16:45:31Z",
+            "content": "Today, a global pandemic brings into focus how important water is to our lives and to public health and reveals how much more needs to be done to fully guarantee water and sanitation is available to everyone, both as a human right and as a critical way to pro… [+5416 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Bostonherald.com"
+            },
+            "author": "Associated Press",
+            "title": "The Latest: Italy’s virus cases showing signs of narrowing",
+            "description": "The Latest on the coronavirus pandemic. The new coronavirus causes mild or moderate symptoms for most people. For some, especially older adults and people with existing health problems, it can cause more severe illness or death.",
+            "url": "https://www.bostonherald.com/2020/03/29/the-latest-italys-virus-cases-showing-signs-of-narrowing/",
+            "urlToImage": "https://www.bostonherald.com/wp-content/uploads/2020/01/Britain_US_Treasury_Mnuchin_66325.jpg?w=1024&h=662",
+            "publishedAt": "2020-03-29T16:45:17Z",
+            "content": "By The Associated Press\r\nThe Latest on the coronavirus pandemic. The new coronavirus causes mild or moderate symptoms for most people. For some, especially older adults and people with existing health problems, it can cause more severe illness or death.\r\nTOP … [+12775 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Thestar.com"
+            },
+            "author": "The Canadian Press",
+            "title": "Trudeau remaining in isolation longer despite wife’s recovery from COVID-19",
+            "description": "The prime minister says the couple took steps to remain apart, but staying at home for another two weeks is prudent because he was sharing a roof with someone who was ill.",
+            "url": "https://www.thestar.com/news/canada/2020/03/29/trudeau-remaining-in-isolation-longer-despite-wifes-recovery-from-covid-19.html",
+            "urlToImage": "https://images.thestar.com/FlKwgj-iJYcx4VZV_Vl4nzEWqm0=/1200x895/smart/filters:cb(1585500312304)/https://www.thestar.com/content/dam/thestar/news/canada/2020/03/29/trudeau-remaining-in-isolation-longer-despite-wifes-recovery-from-covid-19/isolation.jpg",
+            "publishedAt": "2020-03-29T16:45:11Z",
+            "content": "OTTAWA—Prime Minister Justin Trudeau says he will remain in isolation at his home for almost two more weeks even though his wife recently announced she has recovered from COVID-19.\r\nTrudeau says the couple took steps to remain apart, but staying at home for a… [+1153 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "10tv.com"
+            },
+            "author": "https://www.facebook.com/WBNS10TV/",
+            "title": "Starbucks employees will be paid for next 30 days whether they go to work or not",
+            "description": "( First Coast News ) -- Due to the coronavirus pandemic, many things have changed for businesses and how they interact with their customers and employees. However, Starbuck's is making it known that its pledge to its customers and employees will stay the same…",
+            "url": "https://www.10tv.com/article/starbucks-employees-will-be-paid-next-30-days-whether-they-go-work-or-not-2020-mar",
+            "urlToImage": "https://www.10tv.com/sites/default/files/styles/article_image/public/2020/03/25/starbucks.jpg?itok=z20OybhN",
+            "publishedAt": "2020-03-29T16:44:52Z",
+            "content": "(First Coast News) -- Due to the coronavirus pandemic, many things have changed for businesses and how they interact with their customers and employees. However, Starbuck's is making it known that its pledge to its customers and employees will stay the same.\r… [+1529 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Timesofisrael.com"
+            },
+            "author": null,
+            "title": "تسجيل حالة الوفاة ال15 في إسرائيل والثالثة خلال يوم واحد جراء وباء كورونا",
+            "description": "بحسب مركز ’شعاري تسيدك’ الطبي فإن روزا شرمان أربيل (84 عاما) توفيت بعد معاناتها لمدة ستة أيام من مرض خطير",
+            "url": "http://ar.timesofisrael.com/%d8%aa%d8%b3%d8%ac%d9%8a%d9%84-%d8%ad%d8%a7%d9%84%d8%a9-%d8%a7%d9%84%d9%88%d9%81%d8%a7%d8%a9-%d8%a7%d9%8415-%d9%81%d9%8a-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d8%a7%d9%84%d8%ab%d8%a7%d9%84/",
+            "urlToImage": "http://cdn.timesofisrael.com/uploads/2020/03/F200329YS60-640x400-1-300x300.jpg",
+            "publishedAt": "2020-03-29T16:44:28Z",
+            "content": "(84 ) \r\n15 (84 ) .\r\n“ ” .\r\n. .\r\n COVID-19 13 . 82 .\r\n 3,865 . 66 54 82 .\r\n . “ ” .\r\n 5,000 .\r\n 12 “ ”.\r\n 1,437 . 2,864 .\r\n .\r\n . 500 (140 ) .\r\n ."
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Expressen.se"
+            },
+            "author": "sara.malm@expressen.se (Sara Malm)",
+            "title": "Michael Mosley: Min familj är smittad",
+            "description": "Den brittiske hälsogurun Michael Mosleys familj har drabbats av coronaviruset. Två av familjens tre vuxna söner har insjuknat i covid-19, varav en bor med Michael och hans fru, Clare Bailey. Michael Mosley, mannen bakom 5:2-dieten, skriver i Mail on Sunday at…",
+            "url": "https://www.expressen.se/nyheter/coronaviruset/michael-mosley-min-familj-ar-smittad/",
+            "urlToImage": "https://x.cdn-expressen.se/images/e8/36/e836a7019b1a4d7b97eb8277f08a45a2/16x9/original.jpg",
+            "publishedAt": "2020-03-29T16:44:03Z",
+            "content": "Den här veckan blev min rädsla verklighet: viruset har, tror vi, drabbat min familj, skriver Michael Mosley i sin kolumn i Mail on Sunday.\r\n5:2-guruns två yngsta söner: Jack, 27 och Dan, 25, är sjuka i misstänkt covid-19.\r\nJack jobbar som AT-läkare i Manchest… [+2001 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gothamist.com"
+            },
+            "author": "Sydney Pereira",
+            "title": "Jacobi Healthcare Workers Demand More N95 Masks As Supplies Run Low",
+            "description": "\"If in 1940, we could completely restructure the entire country to make weapons to fight in a war, then we could have the ability to restructure a couple factories to double or triple their N95 production.\" [ more › ]",
+            "url": "https://gothamist.com/news/nurses-masks-jacobi-coronaviru-protest",
+            "urlToImage": "https://cms.prod.nypr.digital/images/302629/fill-1200x650/",
+            "publishedAt": "2020-03-29T16:44:00Z",
+            "content": "Healthcare workers at Jacobi Medical Center in the Bronx are demanding more personal protective equipment during the COVID-19 outbreak to protect themselves and others from the virus.\r\nStaffers say they are required to use one N95 mask per week due to a natio… [+3667 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Turkiyegazetesi.com.tr"
+            },
+            "author": null,
+            "title": "İtalya'da son 24 saatte koronavirüsten 756 kişi hayatını kaybetti",
+            "description": "İtalya'da Covid-19'dan ölenlerin sayısı son 24 saatte 756 artarak 10 bin 779'a yükseldi.",
+            "url": "https://www.turkiyegazetesi.com.tr/dunya/692172.aspx",
+            "urlToImage": "https://icdn.turkiyegazetesi.com.tr/images/anamanset/2020_03/italya-da-son-24-saatte-koronavirusten-756-kisi-hayatini-kaybetti-1585498860.jpg",
+            "publishedAt": "2020-03-29T16:43:57Z",
+            "content": "29.03.2020 - 19:19 | Son Güncelleme: 29.03.2020 - 19:21\r\ntalya'da Covid-19'dan ölenlerin says son 24 saatte 756 artarak 10 bin 779'a yükseldi.\r\nEtiketler : italya,koronavirüs,covid-19,"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Turkiyegazetesi.com.tr"
+            },
+            "author": null,
+            "title": "Dünya genelinde yeni tip koronavirüs vaka sayısı 700 bini geçti",
+            "description": "Dünya genelinde yeni tip koronavirüs (Covid-19) vaka sayısı 700 bini geçti.",
+            "url": "https://www.turkiyegazetesi.com.tr/dunya/692174.aspx",
+            "urlToImage": "https://icdn.turkiyegazetesi.com.tr/images/anamanset/2020_03/dunya-genelinde-yeni-tip-koronavirus-vaka-sayisi-700-bini-gecti-1585500405.jpg",
+            "publishedAt": "2020-03-29T16:43:57Z",
+            "content": "29.03.2020 - 19:32 | Son Güncelleme: 29.03.2020 - 19:46\r\nDünya genelinde yeni tip koronavirüs (Covid-19) vaka says 700 bini geçti.\r\nEtiketler : koronavirüs,covid-19,"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Theclinic.cl"
+            },
+            "author": "The Clinic",
+            "title": "[Video] Tenor se matricula con ovación tras cantar para sus vecinos en toque de queda",
+            "description": "El vídeo se registró en un edificio de Ñuñoa, en pleno toque de queda. The post [Video] Tenor se matricula con ovación tras cantar para sus vecinos en toque de queda appeared first on The Clinic - Reportajes, noticias, podcast, videos y humor.",
+            "url": "https://www.theclinic.cl/2020/03/29/video-tenor-se-matricula-con-ovacion-tras-cantar-para-sus-vecinos-en-toque-de-queda/",
+            "urlToImage": "https://www.theclinic.cl/wp-content/uploads/2020/03/tenor-ñuñoa-twitter.jpg",
+            "publishedAt": "2020-03-29T16:43:54Z",
+            "content": "Una residente de un edificio en Ñuñoa publicó un emocionante registro en el cual un tenor brindó un “concierto” improvisado para sus vecinos.\r\nEl vídeo se grabó durante el toque de queda que se ha establecido en el país, debido a la emergencia por el Covid-19… [+97 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Www.dn.se"
+            },
+            "author": "Hugo Lindkvist",
+            "title": "Spanien paralyseras efter rekordmånga döda",
+            "description": "Extraordinära åtgärder införs för att begränsa spridningen av covid-19.",
+            "url": "https://www.dn.se/nyheter/varlden/extraordinara-atgarder-efter-rekordmanga-dodsfall-i-spanien/",
+            "urlToImage": "https://cached-images.bonnier.news/cms30/UploadedImages/2020/3/29/16bbd1ed-768e-42e2-a630-953f77b062f0/bigOriginal.jpg?interpolation=lanczos-none&fit=around%7C1024:576&crop=1024:h;center,top&output-quality=80&output-format=auto",
+            "publishedAt": "2020-03-29T16:43:32Z",
+            "content": "Från och med på måndag och två veckor framöver tvingas samtliga landets 47 miljoner invånare stanna i sina hem. Invånarna får bara lämna bostaden för att inhandla mat eller mediciner. Premiärminister Pedro Sánchez presenterade förslaget på utökade restriktion… [+4092 chars]"
+        },
+        {
+            "source": {
+                "id": "lenta",
+                "name": "Lenta"
+            },
+            "author": null,
+            "title": "В Москве начали поиски беглянки с коронавирусом",
+            "description": "На юго-западе Москвы сотрудники полиции ищут женщину, сбежавшую из домашнего карантина по коронавирусу. Она была оставлена на домашнем карантине в квартире на Профсоюзной улице. Однако камеры видеонаблюдения показали, что она, несмотря на запрет, покинула дом…",
+            "url": "https://lenta.ru/news/2020/03/29/kuda/",
+            "urlToImage": "https://icdn.lenta.ru/images/2020/03/29/19/20200329194038250/detail_34fc18952c92a29b8631f6f450248b57.jpg",
+            "publishedAt": "2020-03-29T16:43:30Z",
+            "content": "- , . «», .\r\n« . , , , », .\r\n, 45 . , , .\r\n, , . , . , 78 .\r\n ?   . 65 , . , .   .\r\n? , , COVID-19, , . , . , - , .\r\n? , .\r\n? , . , , .\r\n; , .\r\n ? . , , , .\r\n? , . , , , .\r\n.;;;;: 03, 103 ( );: 8-800-555-49-43;: 8-800-707-88-41;: +7 (495) 870-45-09.\r\n:"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Nzherald.co.nz"
+            },
+            "author": "newsfeeds@nzherald.co.nz",
+            "title": "The Country wants you to 'kick off your boots' for rural mental health",
+            "description": "Instead of simply talking about the rural mental health problem, Jamie, Rowena, Lashes and the team at The Country radio station want to be part of the solution. In farming, you are exposed to a unique set of challenges that often...",
+            "url": "https://www.nzherald.co.nz/the-country/news/article.cfm?c_id=16&objectid=12320144",
+            "urlToImage": "https://www.nzherald.co.nz/resizer/DKOmw-rsqLKSuamx0RqpVHEtamQ=/1200x0/smart/filters:quality(70)/arc-anglerfish-syd-prod-nzme.s3.amazonaws.com/public/TVSVOUVXKJHSVMJAHRY3C5HHQE.jpg",
+            "publishedAt": "2020-03-29T16:43:25Z",
+            "content": "Instead of simply talking about the rural mental health problem, Jamie, Rowena, Lashes and the team at The Country radio station want to be part of the solution.\r\n In farming, you are exposed to a unique set of challenges that often are beyond your control.\r\n… [+3409 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Variety.com"
+            },
+            "author": "msravindran",
+            "title": "Queen Elizabeth’s Footman Diagnosed with Coronavirus (Reports)",
+            "description": "Coronavirus remains firmly in the royal orbit as one of Queen Elizabeth’s footmen has reportedly tested positive for COVID-19. The royal footman, who regularly walks the Queen’s dogs and was in regular contact with the monarch, is now in self-isolation after …",
+            "url": "https://variety.com/2020/biz/global/queen-elizabeth-coronavirus-footman-tests-positive-prince-charles-boris-johnson-1203548230/",
+            "urlToImage": "https://pmcvariety.files.wordpress.com/2020/03/queen.jpg?w=700&h=393&crop=1",
+            "publishedAt": "2020-03-29T16:43:19Z",
+            "content": "Coronavirus remains firmly in the royal orbit as one of Queen Elizabeth’s footmen has reportedly tested positive for COVID-19.\r\nThe royal footman, who regularly walks the Queen’s dogs and was in regular contact with the monarch, is now in self-isolation after… [+2476 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Terra.com.br"
+            },
+            "author": "Ansa",
+            "title": "Itália registra queda no nº de mortes por coronavírus em 24h",
+            "description": "A Itália registrou 756 novas mortes pelo novo coronavírus (Sars-CoV-2) nas últimas 24 horas,...",
+            "url": "https://www.terra.com.br/noticias/mundo/italia-registra-queda-no-n-de-mortes-por-coronavirus-em-24h,05f02a9e10aff898244da16277d64fa2pxt5bsct.html",
+            "urlToImage": "http://p2.trrsf.com/image/fget/cf/800/450/middle/s1.trrsf.com/atm/3/core/_img/terra-logo-white-bg-v3.jpg",
+            "publishedAt": "2020-03-29T16:42:51Z",
+            "content": "A Itália registrou 756 novas mortes pelo novo coronavírus (Sars-CoV-2) nas últimas 24 horas, elevando para 10.779 o número total de vítimas na pandemia, informou a Defesa Civil neste domingo (29). O dado é menor do que o registrado no sábado (28), quando 889 … [+1650 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Iz.ru"
+            },
+            "author": "Елена Кирьянова",
+            "title": "Ученые назвали наиболее благоприятную температуру для коронавируса",
+            "description": "Коронавирус SARS-CoV-2, являющийся возбудителем заболевания COVID-19, наиболее стабилен при температуре +4 градуса. В таких условиях он может существовать 14 суток, после чего его активность начинает снижаться. К этому выводу пришли ученые из гонконгского уни…",
+            "url": "https://iz.ru/992962/2020-03-29/uchenye-nazvali-naibolee-blagopriiatnuiu-temperaturu-dlia-koronavirusa",
+            "urlToImage": "http://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2020-03/AL1_9585%203.jpg?itok=aWNtd9V5",
+            "publishedAt": "2020-03-29T16:42:36Z",
+            "content": "SARS-CoV-2, COVID-19, +4 . 14 , . , medRxiv.\r\n +70 .\r\n , . . .\r\n , , .\r\n , .\r\n , , . .\r\n28 , . 16 , 35,5 . , .\r\n 29 , 1534 . 64 , . .\r\n. ., #. 8 (800) 2000-112."
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Dealnews.com"
+            },
+            "author": null,
+            "title": "J.Crew Sale: Extra 60% off + free shipping",
+            "description": "That's one of the strongest extra-percent-off discounts we've seen from J.Crew, and it applies on thousands of men's, women's, and kids' styles. Shop Now at J.Crew Tips Apply coupon code \"SHOPNOW\" to get the discount. J.Crew Rewards members bag free shipping.…",
+            "url": "https://www.dealnews.com/J.Crew-Sale-Extra-60-off-free-shipping/18363145.html",
+            "urlToImage": "https://c.dlnws.com/image/upload/creative/logos/dn-logo-web.svg",
+            "publishedAt": "2020-03-29T16:42:28Z",
+            "content": "In response to COVID-19, Crocs is offering a free pair of Crocs shoes for Healthcare workers. There is a daily limit, and it is met fairly quickly, but is expected to continue replenishment. The next date for availability is expected at 12 p.m. ET Monday. Sho… [+13 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Abril.com.br"
+            },
+            "author": "Reuters",
+            "title": "Bolsonaro contraria Mandetta e divulga vídeo com ambulante na rua",
+            "description": "Presidente afirmou que brasileiros querem voltar ao trabalho",
+            "url": "https://exame.abril.com.br/brasil/bolsonaro-contraria-mandetta-e-divulga-video-com-ambulante-na-rua/",
+            "urlToImage": "https://abrilexame.files.wordpress.com/2020/03/bolso.jpg?quality=70&strip=info&w=680&h=445&crop=1",
+            "publishedAt": "2020-03-29T16:42:19Z",
+            "content": "No dia seguinte ao ministro da Saúde, Luiz Henrique Mandetta, defender o isolamento horizontal para evitar a disseminação do coronavírus, o presidente Jair Bolsonaro divulgou neste domingo um vídeo em que conversa com um vendedor ambulante em Taguatinga, no D… [+2460 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Tyden.cz"
+            },
+            "author": "TYDEN, www.tyden.cz, e-mail: webmaster@tyden.cz",
+            "title": "Jablonec vs. Liberec. Výtěžek speciálního duelu půjde nemocnici",
+            "description": "Fotbalisté Jablonce a Liberce sice kvůli pandemii nového koronaviru a přerušení ligy nebudou moci o prvním dubnovém víkendu odehrát plánované podještědské derby na hřišti, zápas se ale uskuteční aspoň imaginárně.",
+            "url": "https://www.tyden.cz/rubriky/sport/fotbal/fotbalova-liga/jablonec-vs-liberec-vytezek-specialniho-duelu-pujde-nemocnici_541515.html",
+            "urlToImage": "https://www.tyden.cz/obrazek/202003/5e80ba70ce0ca/crop-2045887-focust.jpeg",
+            "publishedAt": "2020-03-29T16:42:00Z",
+            "content": "Fotbalisté Jablonce a Liberce sice kvli pandemii nového koronaviru a peruení ligy nebudou moci o prvním dubnovém víkendu odehrát plánované podjetdské derby na hiti, zápas se ale uskutení aspo imaginárn. Severoetí rivalové zanou v pondlí na odloené utkání prod… [+1399 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Finance.ua"
+            },
+            "author": "Finance.UA",
+            "title": "При дистанционной работе во время карантина должны сохраняться все права работников, - Минюст",
+            "description": "На время карантина и на протяжении работы из дома за работниками сохраняются их трудовые права и оплата труда.",
+            "url": "https://news.finance.ua/ru/news/-/467934/pri-distantsionnoj-rabote-vo-vremya-karantina-dolzhny-sohranyatsya-vse-prava-rabotnikov-minyust",
+            "urlToImage": "http://resources.finance.ua/ru/news/image-repost?id=467934",
+            "publishedAt": "2020-03-29T16:42:00Z",
+            "content": "« , , , , COVID-19, SARS-CoV-2». .\r\n .\r\n , , , , . - .\r\n : , \r\n« , . , . , 1, 3, 4 . 40 », – .\r\n , , - Finance_ukr 🤫"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Scmp.com"
+            },
+            "author": "Bhavan Jaipragas, Bhavan Jaipragas",
+            "title": "Coronavirus: Singapore PM calls for end to US-China blame game, wants to see leadership from Trump administration",
+            "description": "Singapore’s Prime Minister Lee Hsien Loong said on Sunday it would be a pity if the United States failed to put to use its immense expertise, soft power and resources to lead global efforts to overcome the “grave challenge to mankind” posed by the Covid-19 pa…",
+            "url": "https://www.scmp.com/news/asia/southeast-asia/article/3077479/coronavirus-singapore-pm-calls-end-us-china-blame-game",
+            "urlToImage": "https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/methode/2020/03/30/79dd693e-226b-11ea-acfb-1fd6c5cf20a4_image_hires_005434.JPG?itok=p0Tuydlh&v=1585500880",
+            "publishedAt": "2020-03-29T16:41:58Z",
+            "content": "Published: 12:41am, 30 Mar, 2020\r\nUpdated: 12:54am, 30 Mar, 2020"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Huffingtonpost.es"
+            },
+            "author": "Redacción El HuffPost/EFE",
+            "title": "Sánchez admite a los presidentes de las CCAA el retraso en el material y da por perdidos los eurobonos",
+            "description": "El presidente del Gobierno, Pedro Sánchez, ha reconocido a los presidentes de las CCAA que la entrega de material para luchar contra el coronavirus va con retraso, según informan fuentes autonómicas. Varios presidentes le han recriminado que no haya contado c…",
+            "url": "https://www.huffingtonpost.es/entry/sanchez-admite-a-los-presidentes-de-ccaa-el-retraso-en-el-material-y-da-por-perdidos-los-eurobonos_es_5e80caddc5b6614922695d2d",
+            "urlToImage": "https://img.huffingtonpost.com/asset/5e772e2b230000281ede4dc1.jpeg?cache=tqvN4Ffl44&ops=1200_630",
+            "publishedAt": "2020-03-29T16:41:36Z",
+            "content": "El presidente del Gobierno, Pedro Sánchez, ha reconocido a los presidentes de las CCAA que la entrega de material para luchar contra el coronavirus va con retraso, según informan fuentes autonómicas. Varios presidentes le han recriminado que no haya contado c… [+6778 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Naftemporiki.gr"
+            },
+            "author": "naftemporiki.gr",
+            "title": "Συναυλία «Μένουμε Σπίτι» με οικοδεσπότη τον Έλτον Τζον",
+            "description": "Την ώρα που η μία εκδήλωση μετά την άλλη αναβάλλονται, λόγω της εξάπλωσης της πανδημίας του SARS-CoV-2 σε όλον τον πλανήτη, ο σερ Έλτον Τζον αποφάσισε να παρουσιάσει μία συναυλία με πολλούς αστέρες της μουσικής σκηνής. Η συναυλία θα προβληθεί απόψε από το αμε…",
+            "url": "https://www.naftemporiki.gr/story/1584406/sunaulia-menoume-spiti-me-oikodespoti-ton-elton-tzon",
+            "urlToImage": "https://www.naftemporiki.gr/fu/t/1584406/1080/568/0x00000000017fc984/2/1/sunaulia-menoume-spiti-oikodespoti-elton-tzon.jpg",
+            "publishedAt": "2020-03-29T16:41:23Z",
+            "content": ", SARS-CoV-2 , . FOX 9 , .\r\n COVID -19 .\r\n « » «Living Room Concert for America», iHeartRadio , , .\r\n , , , , Backstreet Boys . .\r\n iHeartRadio, COVID-19.  iHeartRadio iHeartMedia , Q102, 102.9 MGK, 93.3 WMMR, 95.7 BEN FM RADIO 104.5.\r\n «Concert Living Room» … [+58 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Politiken.dk"
+            },
+            "author": null,
+            "title": "Italiens dødstal efter coronavirus stiger med 756",
+            "description": "Et lille lyspunkt i Italien er, at antal af døde efter coronavirus falder søndag i forhold til dagen før.",
+            "url": "https://politiken.dk/udland/art7732632/Italiens-d%C3%B8dstal-efter-coronavirus-stiger-med-756",
+            "urlToImage": "https://politiken.dk/incoming/img7732616.2hrqp0/ALTERNATES/p16x9_960/TOPSHOT-ITALY-VIRUS-HEALTH-RELIGION-CHRISTIAN",
+            "publishedAt": "2020-03-29T16:41:10Z",
+            "content": "Der er ikke oplæsning af denne artikel, så den oplæses derfor med maskinstemme. Kontakt os gerne på automatiskoplaesning@pol.dk, hvis du hører ord, hvis udtale kan forbedres. Du kan også hjælpe ved at udfylde spørgeskemaet herunder, hvor vi spørger, hvordan d… [+1426 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lidovky.cz"
+            },
+            "author": null,
+            "title": "Koronavirem nakažený biskup Herbst je mimo ohrožení života, uvedl kardinál Duka. On sám se cítí dobře",
+            "description": "Emeritní biskup Karel Herbst, u kterého se v sobotu potvrdila nákaza novým typem koronaviru, je mimo ohrožení života. V Českém rozhlase Radiožurnál to v neděli řekl kardinál Dominik Duka. Arcibiskupství později uvedlo, že stav Herbsta je stabilizovaný. Duka j…",
+            "url": "https://www.lidovky.cz/domov/koronavirem-nakazeny-biskup-herbst-je-mimo-ohrozeni-zivota-uvedl-kardinal-duka-on-sam-se-citi-dobre.A200329_182703_ln_domov_ele",
+            "urlToImage": "https://1gr.cz/fotky/lidovky/20/033/lnc460/ELE825bd4_P202003280446801.jpg",
+            "publishedAt": "2020-03-29T16:41:00Z",
+            "content": "Praha Emeritní biskup Karel Herbst, u kterého se v sobotu potvrdila nákaza novým typem koronaviru, je mimo ohroení ivota. V eském rozhlase Radiournál to v nedli ekl kardinál Dominik Duka. Arcibiskupství pozdji uvedlo, e stav Herbsta je stabilizovaný. Duka je … [+1987 chars]"
+        },
+        {
+            "source": {
+                "id": "the-hindu",
+                "name": "The Hindu"
+            },
+            "author": "Special Correspondent",
+            "title": "Case against Singapore returnee for jumping quarantine",
+            "description": "The Tiruchi City Police has registered a case against a 26-year-old man of Pudukottai district who had been staying in a hotel here after arriving from Singapore a few days ago for disobeying quaranti",
+            "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/case-against-singapore-returnee-for-jumping-quarantine/article31200556.ece",
+            "urlToImage": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
+            "publishedAt": "2020-03-29T16:40:44Z",
+            "content": "The Tiruchi City Police has registered a case against a 26-year-old man of Pudukottai district who had been staying in a hotel here after arriving from Singapore a few days ago for disobeying quarantine rule.\r\nThe accused Sakthi Kannan of Mela Panayapatti vil… [+2108 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Indianexpress.com"
+            },
+            "author": "Express News Service",
+            "title": "Gujarat: 1,200 convicts, undertrial prisoners to be released for two months",
+            "description": "In the past three days, the Chief Minister's Relief Fund has received over Rs 25 crore from various social, educational, industrial and religious groups, apart from a few individuals.",
+            "url": "https://indianexpress.com/article/cities/ahmedabad/gujarat-1200-convicts-undertrial-prisoners-to-be-released-for-two-months-6337602/",
+            "urlToImage": "https://images.indianexpress.com/2019/09/jail.jpg?w=759",
+            "publishedAt": "2020-03-29T16:40:24Z",
+            "content": "These prisoners will be released on parole or interim bail, whichever is applicable, for two months. (Representational Image)To check the spread of COVID-19 in jails, the Gujarat government has decided to release 1,200 convicts and undertrial prisoners on par… [+1702 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Interia.pl"
+            },
+            "author": null,
+            "title": "Koronawirus w Syrii. Pierwsza ofiara śmiertelna COVID-19",
+            "description": "W Syrii zmarła kobieta zainfekowana koronawirusem. To pierwszy śmiertelny przypadek osoby zakażonej SARS-CoV-2 w kraju, w którym od dziewięciu lat trwa konflikt zbrojny.",
+            "url": "https://fakty.interia.pl/raporty/raport-koronawirus-chiny/aktualnosci/news-koronawirus-w-syrii-pierwsza-ofiara-smiertelna-covid-19,nId,4409901",
+            "urlToImage": "https://i.iplsc.com/-/0009Z51D8MFA4RH7-C411.jpg",
+            "publishedAt": "2020-03-29T16:40:07Z",
+            "content": "W Syrii zmara kobieta zainfekowana koronawirusem. To pierwszy miertelny przypadek osoby zakaonej SARS-CoV-2 w kraju, w którym od dziewiciu lat trwa konflikt zbrojny.\r\nZdjcieCzonkowie Syryjskiej Obrony Cywilnej dezynfekuja budynek byej szkoy, miasto Binnish, S… [+1765 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Abril.com.br"
+            },
+            "author": "robsonbonin",
+            "title": "Ibaneis reprova saída de Bolsonaro: ‘Rezo para que ele não pegue o vírus’",
+            "description": "‘Como o presidente não é formado em medicina, fico com as orientações do ministro Mandetta’, diz Ibaneis",
+            "url": "https://veja.abril.com.br/blog/radar/ibaneis-reprova-saida-de-bolsonaro-rezo-para-que-ele-nao-pegue-o-virus/",
+            "urlToImage": "https://abrilveja.files.wordpress.com/2018/09/politica-ibaneis-rocha-20180920-001.jpg?quality=70&strip=info&w=680&h=453&crop=1",
+            "publishedAt": "2020-03-29T16:40:02Z",
+            "content": "Governador do Distrito Federal, Ibaneis Rocha admitiu neste domingo seu descontentamento com o passeio do presidente Jair Bolsonaro por cidades da capital, em afronta às orientações do governo para que a população fique em casa. Ele deve ter indo conferir se … [+2026 chars]"
+        },
+        {
+            "source": {
+                "id": "the-hindu",
+                "name": "The Hindu"
+            },
+            "author": "Staff Reporter",
+            "title": "3 admitted to isolation ward",
+            "description": "Three patients were admitted to the isolation ward at the Mahatma Gandhi Memorial Government Hospital here on Sunday. A brother and sister who had travelled to Dubai and a 26-year-old man from Pudukot",
+            "url": "https://www.thehindu.com/news/cities/Tiruchirapalli/3-admitted-to-isolation-ward/article31200541.ece",
+            "urlToImage": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
+            "publishedAt": "2020-03-29T16:39:52Z",
+            "content": "Three patients were admitted to the isolation ward at the Mahatma Gandhi Memorial Government Hospital here on Sunday. \r\nA brother and sister who had travelled to Dubai and a 26-year-old man from Pudukottai who had travelled to Singapore are currently under ob… [+769 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Dailymail.co.uk"
+            },
+            "author": "By Valerie Edwards For Dailymail.com",
+            "title": "Gov. Cuomo orders New York's 'pause' on non-essential workers to stay in place for another two weeks",
+            "description": "Gov Andrew Cuomo has insisted that President Donald Trump's travel restrictions change nothing for the Empire State as he orders New York's non-essential workers to stay in place for two more weeks.",
+            "url": "https://www.dailymail.co.uk/news/article-8165191/Gov-Cuomo-orders-New-Yorks-pause-non-essential-workers-stay-place-two-weeks.html",
+            "urlToImage": "https://i.dailymail.co.uk/1s/2020/03/29/17/26553512-0-image-a-20_1585499615132.jpg",
+            "publishedAt": "2020-03-29T16:39:43Z",
+            "content": "Gov Andrew Cuomo has insisted that President Donald Trump's travel restrictions change nothing for the Empire State as he orders New York's non-essential workers to stay in place for another two weeks as cases rise by more than 7,000 overnight and the death t… [+4722 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Expansion.com"
+            },
+            "author": "EFE",
+            "title": "Torra pide a Sánchez una renta universal y suspender el pago de impuestos",
+            "description": "El presidente de la Generalitat, Quim Torra, ha pedido este domingo al jefe del Ejecutivo, Pedro Sánchez, que implante una renta de ciudadanía para trabajadores y autónomos y que suspenda el pago de impuestos durante la pandemia de coronavirus. Leer",
+            "url": "https://www.expansion.com/catalunya/2020/03/29/5e80cf42e5fdeaa1108b45dd.html",
+            "urlToImage": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2020/03/29/5e80cf42e5fdeaa1108b45dd_facebook.jpg",
+            "publishedAt": "2020-03-29T16:39:41Z",
+            "content": "El presidente de la Generalitat Quim Torra.\r\nEFE\r\nEl presidente de la Generalitat, Quim Torra, ha pedido este domingo al jefe del Ejecutivo, Pedro Sánchez, que implante una renta de ciudadanía para trabajadores y autónomos y que suspenda el pago de impuestos … [+4394 chars]"
+        },
+        {
+            "source": {
+                "id": "el-mundo",
+                "name": "El Mundo"
+            },
+            "author": "ESTEBAN URREIZTIETA, JUANMA LAMET",
+            "title": "La empresa china de los 'test pirata' comercializa en España un paquete como el que compró el Gobierno por 2,8 millones de euros",
+            "description": "La empresa china Bioeasy Biotechnology a la que el Gobierno ha comprado un paquete de test rápidos para detectar el coronavirus y que no funcionan, comercializa en España la unidad",
+            "url": "https://www.elmundo.es/espana/2020/03/29/5e80ca37fc6c8305298b4603.html",
+            "urlToImage": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2020/03/29/15854997401211.jpg",
+            "publishedAt": "2020-03-29T16:39:32Z",
+            "content": "La empresa china Bioeasy Biotechnology a la que el Gobierno ha comprado un paquete de test rápidos para detectar el coronavirus y que no funcionan, comercializa en España la unidad de cada uno de estos productos a 4,5 euros. Esto significa que un pedido como … [+2483 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Dlisted.com"
+            },
+            "author": "Adam",
+            "title": "Lady Gaga’s Dad Started (And Then Took Down) A GoFundMe For The Staff Of His Restaurant",
+            "description": "By now, there probably isn’t a square inch of NYC that hasn’t been touched, literally and figuratively, by the shitty COVID-19 virus. And that includes the famous Joanne Trattoria, owned and operated by Joe Germanotta, father of Lady Gaga. Gaga is also part-o…",
+            "url": "https://dlisted.com/2020/03/29/lady-gagas-dad-started-and-then-took-down-a-gofundme-for-the-staff-of-his-restaurant/",
+            "urlToImage": "https://dlisted.com/wp-content/uploads/2020/03/wenn3711041.jpg",
+            "publishedAt": "2020-03-29T16:39:12Z",
+            "content": "By now, there probably isnt a square inch of NYC that hasnt been touched, literally and figuratively, by the shitty COVID-19 virus. And that includes the famous Joanne Trattoria, owned and operated by JoeGermanotta, father of Lady Gaga. Gaga is also part-owne… [+2305 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lexpress.fr"
+            },
+            "author": "Céline Delbecque",
+            "title": "\"Plus le choix\": les Ehpad se préparent à placer leurs résidents en confinement individuel",
+            "description": "Lors d'une conférence de presse samedi, le ministre de la Santé Olivier Véran a demandé aux Ehpad \"d'aller vers un isolement individuel\" de chaque pensionnaire.",
+            "url": "https://www.lexpress.fr/actualite/societe/plus-le-choix-les-ehpad-se-preparent-a-placer-leurs-residents-en-confinement-individuel_2122313.html",
+            "urlToImage": "https://static.lexpress.fr/medias_12217/w_1815,h_1362,c_crop,x_123,y_0/w_605,h_350,c_fill,g_north/v1585420668/dans-le-couloir-d-un-ehpad-a-brest-debut-mars-2020_6255562.jpg",
+            "publishedAt": "2020-03-29T16:39:07Z",
+            "content": "Résidents fragiles, manque de soignant, maladies chroniques... Depuis le début de l'épidémie de coronavirus en France, les plus de 700 000 personnes âgées en perte d'autonomie hébergées dans les Ehpad du territoire sont en première ligne face au Covid-19. La … [+1009 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Www.bt.dk"
+            },
+            "author": "tnk@berlingskemedia.dk (Thomas Nørmark Krog)",
+            "title": "Trods lukning på grund af coronavirus: Elever og lærere er fortsat på skole",
+            "description": "Læs mere her.",
+            "url": "https://www.bt.dk/samfund/trods-lukning-paa-grund-af-coronavirus-elever-og-laerere-er-fortsat-paa-skole",
+            "urlToImage": "https://bt.bmcdn.dk/media/cache/resolve/image_960x545/image/146/1466949/23385227-skoleleder.jpg",
+            "publishedAt": "2020-03-29T16:39:00Z",
+            "content": "I to uger har landets skoler været lukket ned, så børn og lærere ikke smitter hinanden med corona-virus.\r\nMen det er slet ikke alle skoler, der har sendt samtlige elever og lærere hjem.\r\nI alt tolv elever fra 0. klasse plus tre lærere har hele sidste uge mått… [+2695 chars]"
+        },
+        {
+            "source": {
+                "id": "the-times-of-india",
+                "name": "The Times of India"
+            },
+            "author": "Kalyan Parbat",
+            "title": "Telcos may consider waiving off 1-month charge to aid migrant labourers: COAI",
+            "description": "Rajan Mathews, director general of the Cellular Operators Association of India (COAI), which represents Jio, Airtel and Vodafone Idea, said the telcos “were likely to consider the request” as they have always put the interest of their customers first.",
+            "url": "https://economictimes.indiatimes.com/industry/telecom/telecom-news/telcos-may-consider-waiving-off-1-month-charge-to-aid-migrant-labourers-coai/articleshow/74877842.cms",
+            "urlToImage": "https://img.etimg.com/thumb/msid-74877837,width-1070,height-580,imgsize-510394,overlay-economictimes/photo.jpg",
+            "publishedAt": "2020-03-29T16:38:58Z",
+            "content": "Kolkata: Reliance Jio Infocomm, Bharti Airtel, Vodafone Idea and state-run Bharat Sanchar Nigam are likely to work with the government and work out an action plan after the Congress party urged carriers to waive a month’s call charges for their home-bound mig… [+1784 chars]"
+        },
+        {
+            "source": {
+                "id": "the-hindu",
+                "name": "The Hindu"
+            },
+            "author": "Dennis S. Jesudasan",
+            "title": "‘Time restrictions could increase infection by creating bottle-necks’",
+            "description": "The timing restrictions imposed as part of efforts to contain COVID-19 by Tamil Nadu government for the general public to shop for their essential vegetables and provisional supplies, would only “incr",
+            "url": "https://www.thehindu.com/news/cities/chennai/time-restrictions-could-increase-infection-by-creating-bottle-necks/article31200533.ece",
+            "urlToImage": "https://www.thehindu.com/static/theme/default/base/img/og-image.jpg",
+            "publishedAt": "2020-03-29T16:38:38Z",
+            "content": "The timing restrictions imposed as part of efforts to contain COVID-19 by Tamil Nadu government for the general public to shop for their essential vegetables and provisional supplies, would only increase infection by creating bottle-necks, a U.S.-based epidem… [+1129 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Maisfutebol.iol.pt"
+            },
+            "author": "Redação Maisfutebol",
+            "title": "Covid-19: mais 756 mortes e 5 mil infetados em Itália",
+            "description": "Números de casos e óbitos por dia desceram em relação à véspera",
+            "url": "https://maisfutebol.iol.pt/internacional/coronavirus/covid-19-mais-756-mortes-e-5-mil-infetados",
+            "urlToImage": "https://www.iol.pt/multimedia/oratvi/multimedia/imagem/id/5e733f8e0cf2c472ec732072/",
+            "publishedAt": "2020-03-29T16:38:07Z",
+            "content": "A Proteção Civil de Itália revelou este domingo que morreram mais 756 pessoas no país nas últimas 24 horas devido ao novo coronavírus, que já tirou a vida a 10.779 pessoas.\r\nO número de casos diagnosticados subiu de 92.472 para 97.689, o que dá um aumento de … [+320 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "20minutos.es"
+            },
+            "author": "redaccion@20minutos.es (20M EP)",
+            "title": "Diputación de Álava cifra en 36 los fallecimientos de usuarios de residencias para mayores",
+            "description": "La Diputación de Álava ha cifrado en 36 los fallecimientos de personas usuarias de residencias para mayores desde el inicio de la crisis del Covid-19. De ellas, seis residían en centros forales, dos en equipamientos municipales del territorio y las restantes …",
+            "url": "https://www.20minutos.es/noticia/4209286/0/diputacion-de-alava-cifra-en-36-los-fallecimientos-de-usuarios-de-residencias-para-mayores/",
+            "urlToImage": "https://www.20minutos.es/static/images/20m_es_default.jpg",
+            "publishedAt": "2020-03-29T16:38:07Z",
+            "content": "Según ha informado la entidad foral, del total de fallecimientos, 26 se produjeron en centros hospitalarios, mientras que los restantes 10 tuvieron lugar en las residencias.\r\nTal y como ha dado a conocer la entidad foral, desde el ámbito sanitario se ha comun… [+1271 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Francetvinfo.fr"
+            },
+            "author": "CDB",
+            "title": "Coronavirus : ce qui vous attend pour la circulation d'Ilévia à partir de lundi",
+            "description": "En raison des mesures de confinement en vigueur liées à l'épidémie de coronavirus Covid-19, Ilévia, l'opérateur des transports en commun de la métropole lilloise, continue de réduire la fréquence de circulation de ses métros, tramways et bus avec une adaptati…",
+            "url": "https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/coronavirus-ce-qui-vous-attend-circulation-ilevia-partir-lundi-1808470.html",
+            "urlToImage": "https://france3-regions.francetvinfo.fr/hauts-de-france/sites/regions_france3/files/styles/top_big/public/assets/images/2020/03/29/img_2670-4728370.jpg?itok=rIM2TwFy",
+            "publishedAt": "2020-03-29T16:38:02Z",
+            "content": "Métro\r\nLa fréquence du métro est modifiée avec une rame toutes les 4 minutes 20 pour la Ligne 1 et toutes les 6 minutes pour la Ligne 2, comme la semaine dernière. Tramway\r\nLe tramway circulera avec une fréquence et une amplitude modifiées : toutes les 12 min… [+1319 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Azfamily.com"
+            },
+            "author": "",
+            "title": "17 coronavirus deaths, 919 cases now reported in Arizona",
+            "description": "Arizona Department of Health reported Sunday morning that 17 died from coronavirus in Arizona and that there are now 919 confirmed cases in the state.",
+            "url": "https://www.azfamily.com/news/continuing_coverage/coronavirus_coverage/coronavirus-deaths-cases-now-reported-in-arizona/article_48dcc2c0-71d1-11ea-9f18-4f2bc5350281.html",
+            "urlToImage": "https://bloximages.newyork1.vip.townnews.com/azfamily.com/content/tncms/assets/v3/editorial/c/7e/c7e64a74-68a7-11ea-a904-53287d79feb9/5e715e8c3ff30.image.jpg?resize=1120%2C630",
+            "publishedAt": "2020-03-29T16:38:01Z",
+            "content": "PHOENIX (3TV/CBS 5) - Arizona Department of Health reported Sunday morning that 17 people have died from coronavirus in Arizona and that there are now 919 confirmed cases in the state. \r\nThis is currently still a widespread of coronavirus hitting 14 counties … [+1644 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Sputniknews.com"
+            },
+            "author": null,
+            "title": "Les troupes étrangères quittent l’Irak pour d’autres raisons que le coronavirus, selon la coalition",
+            "description": "La coalition internationale dirigée par les États-Unis a expliqué le départ de ses troupes d’Irak par d’autres raisons que la pandémie de Covid-19, selon le site Baghdad al-Youm.",
+            "url": "https://fr.sputniknews.com/international/202003291043426329-les-troupes-etrangeres-quittent-lirak-pour-dautres-raisons-que-le-coronavirus-selon-la-coalition/",
+            "urlToImage": "https://cdnfr6.img.sputniknews.com/images/101915/47/1019154741.jpg",
+            "publishedAt": "2020-03-29T16:37:47Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Dailycaller.com"
+            },
+            "author": "David Krayden",
+            "title": "Gov. Whitmer: ‘The Enemy Is COVID-19 … Not One Another’",
+            "description": "Democratic Michigan Gov. Gretchen Whitmer offered conciliatory words to the Trump administration Sunday, saying we need to focus on the coronavirus.",
+            "url": "https://dailycaller.com/2020/03/29/gretchen-whitmer-enemy-covid-not-one-another/",
+            "urlToImage": "https://cdn01.dailycaller.com/wp-content/uploads/2020/03/7AB92634-5743-4110-8812-181E555F59FC.jpeg",
+            "publishedAt": "2020-03-29T16:37:14Z",
+            "content": "Democratic Michigan Gov. Gretchen Whitmer offered conciliatory words to the Trump administration Sunday, saying all Americans need to focus on coronavirus.\r\nAfter squabbling on Twitter over coronavirus protective equipment deliveries, Whitmer was asked on NBC… [+1819 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Thestar.com"
+            },
+            "author": "David Rider - City Hall Bureau Chief",
+            "title": "‘C’mon people’ — angry John Tory warns rule-breakers using dog parks and playground equipment",
+            "description": "The mayor and officials ordered the closure Wednesday of dog parks, playgrounds and other park amenities after people were observed ignoring pleas for social distancing to slow the spread of the coronavirus.",
+            "url": "https://www.thestar.com/news/city_hall/2020/03/29/cmon-people-angry-john-tory-warns-rule-breakers-using-dog-parks-and-playground-equipment.html",
+            "urlToImage": "https://images.thestar.com/C5nfgYdL2FHoq-6tEt5JuVrKVk0=/1200x800/smart/filters:cb(1585499831887)/https://www.thestar.com/content/dam/thestar/news/city_hall/2020/03/29/cmon-people-angry-john-tory-warns-rule-breakers-using-dog-parks-and-playground-equipment/covid_kew_gardens.jpg",
+            "publishedAt": "2020-03-29T16:37:11Z",
+            "content": "A visibly exasperated Mayor John Tory is scolding Torontonians breaking an order to not use city dog parks and playground equipment during the COVID-19 crisis, saying they are selfishly putting lives at risk.\r\nTory made the comments Sunday on CP24 after city … [+2611 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Glassdoor.com"
+            },
+            "author": null,
+            "title": "Amazon employee says \"good pay, lots of room to move up\"",
+            "description": "From Amazon Employee(Current Employee)&dash; Rating 4 out of 5 — Sun, 29 Mar 2020 Pros Lots of overtime, paid time off from day one, free to transfer to different areas after pretty much right after you start Cons Lack of communication between managers, they …",
+            "url": "https://www.glassdoor.com/Reviews/Employee-Review-Amazon-RVW32527778.htm",
+            "urlToImage": "https://media.glassdoor.com/sqll/6036/amazon-squarelogo-1552847650117.png",
+            "publishedAt": "2020-03-29T16:37:03Z",
+            "content": "StarStarStarStarStar\r\nI have been working at Amazon full-time for more than 8 years\r\nPros\r\nJeff Bezos and his \"S-Team\" are brilliant and continue to make great decisions for long-term growth. \r\nYou work with smart people, you work on exciting projects, you ar… [+662 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Svet.sme.sk"
+            },
+            "author": "TASR",
+            "title": "Poľská opozícia vyzvala voličov, aby bojkotovali májové prezidentské voľby",
+            "description": "Bojkotujme tieto voľby, vaše životy sú najdôležitejšie, hovorí opozičná kandidátka.",
+            "url": "https://svet.sme.sk/c/22371113/polska-opozicia-vyzvala-volicov-aby-bojkotovali-majove-prezidentske-volby.html",
+            "urlToImage": "https://m.smedata.sk/api-media/media/image/sme/5/61/6120265/6120265_1200x.jpeg?rev=3",
+            "publishedAt": "2020-03-29T16:36:59Z",
+            "content": "Bojkotujme tieto voby, vae ivoty sú najdôleitejie, hovorí opoziná kandidátka.29. mar 2020 o 18:36 TASR VARAVA. Poská opozícia v nedeu vyzvala voliov, aby bojkotovali májové prezidentské voby, ktoré poská vláda odmietla posunú aj napriek riziku v súvislosti s … [+1263 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Benchmark.pl"
+            },
+            "author": "Marta Andronik",
+            "title": "Siedź w domu i graj. Zachęca do tego WHO i branża gier w kampanii #PlayApartTogether",
+            "description": "Światowa Organizacja Zdrowia oraz branża gier wideo łączą siły i promują zachowanie dystansu społecznego. Wszystko odbywa się w ramach kampanii #PlayApartTogether.",
+            "url": "https://www.benchmark.pl/aktualnosci/branza-gier-laczy-sily-z-who-w-kampanii-playaparttogether.html",
+            "urlToImage": "http://cdn.benchmark.pl/uploads/article/75123/MODERNICON/f47c77f5b79900f961d1c7aff86fcafc3370a8fa.jpg",
+            "publishedAt": "2020-03-29T16:36:56Z",
+            "content": "wiatowa Organizacja Zdrowia oraz brana gier wideo cz siy i promuj zachowanie dystansu spoecznego. Wszystko odbywa si w ramach kampanii #PlayApartTogether. \r\n Światowa Organizacja Zdrowia sklasyfikowała uzależnienie od gier jako chorobę psychiczną, która wymag… [+2453 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Cityam.com"
+            },
+            "author": "Stefan Boscia",
+            "title": "Public support for Boris Johnson's coronavirus response soars",
+            "description": "Public approval of Boris Johnson’s handling of the coronavirus has soared in the past week after announcing a police-enforced lockdown. The post Public support for Boris Johnson's coronavirus response soars appeared first on CityAM.",
+            "url": "https://www.cityam.com/public-support-for-boris-johnsons-coronavirus-response-soars/",
+            "urlToImage": "https://www.cityam.com/wp-content/uploads/2020/03/1207377313.jpg",
+            "publishedAt": "2020-03-29T16:36:01Z",
+            "content": "Public approval of Boris Johnson’s handling of the coronavirus has soared in the past week after announcing a police-enforced lockdown.\r\nA new ORB International survey has found that 67 per cent of Britons think the government has handled the coronavirus outb… [+1639 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Fredzone.org"
+            },
+            "author": "Gaël",
+            "title": "Coronavirus : le patron de Xbox assure que le nécessaire sera fait pour une expérience optimale du service",
+            "description": "Devant l’assaut des plates-formes de jeu découlant des mesures de confinement déclarées un peu partout dans le monde, les constructeurs concernés sont aujourd’hui appelés à soigner leurs réseaux respectifs. Phil Spencer, à la tête de la division Xbox chez Mic…",
+            "url": "https://www.fredzone.org/coronavirus-le-patron-de-xbox-assure-que-le-necessaire-sera-fait-pour-une-experience-optimale-du-service-849",
+            "urlToImage": "https://www.fredzone.org/wp-content/uploads/2020/02/xbox.jpg",
+            "publishedAt": "2020-03-29T16:35:53Z",
+            "content": "Devant l’assaut des plates-formes de jeu découlant des mesures de confinement déclarées un peu partout dans le monde, les constructeurs concernés sont aujourd’hui appelés à soigner leurs réseaux respectifs. Phil Spencer, à la tête de la division Xbox chez Mic… [+3378 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Haaretz.com"
+            },
+            "author": "Haaretz Weekly",
+            "title": "LISTEN: Bibi's impossible victory and Israel's coronavirus blind spots",
+            "description": "Netanyahu grinds down Gantz to secure 18 more months at the helm, PLUS: Israel weighs tough measures to halt the spread of COVID-19, but neglect has already taken a toll. LISTEN FREE",
+            "url": "https://www.haaretz.com/israel-news/listen-bibi-s-impossible-victory-and-israel-s-coronavirus-blind-spots-1.8722128",
+            "urlToImage": "https://www.haaretz.com/polopoly_fs/1.8720612.1585500660!/image/2316854950.jpg_gen/derivatives/headline_1200x630/2316854950.jpg",
+            "publishedAt": "2020-03-29T16:35:52Z",
+            "content": "Host Simon Spungin is joined by Haaretz diplomatic correspondent Noa Landau to discuss Prime Minister Benjamin Netanyahu’s last-gasp election victory.\r\nNetanyahu secured his impossible victory when chief rival Benny Gantz accepted an offer to join a Likud-led… [+1135 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Seattlepi.com"
+            },
+            "author": "By JOSEPH WILSON and ANGELA CHARLTON, Associated Press",
+            "title": "Virus forces Europeans to ask: How united do we want to be?",
+            "description": "BARCELONA, Spain (AP) - Europe's fractured union came under new pressure this weekend, as Italy and Spain pleaded for urgent European help to withstand the virus ordeal but Germany showed reluctance to plunge into any radical new solutions. \n The north-south …",
+            "url": "https://www.seattlepi.com/news/medical/article/Virus-forces-Europeans-to-ask-How-united-do-we-15164786.php",
+            "urlToImage": "https://s.hdnux.com/photos/01/11/23/66/19217850/5/rawImage.jpg",
+            "publishedAt": "2020-03-29T16:35:51Z",
+            "content": "<ul><li>European Council President Charles Michel speaks during a media conference after an EU summit by video conference in Brussels, Thursday, March 26, 2020. Following the informal video conference, members of the European Council adopted a statement on th… [+6012 chars]"
+        },
+        {
+            "source": {
+                "id": "fox-news",
+                "name": "Fox News"
+            },
+            "author": "Robert Gearty",
+            "title": "VA hospitals assist New York City with coronavirus response by freeing up 50 beds",
+            "description": "Two VA hospitals in Manhattan and Brooklyn began freeing up beds Sunday to help New York City hospitals deal with an overwhelming surge in coronavirus patients.",
+            "url": "https://www.foxnews.com/us/va-assists-new-york-city-with-coronavirus-response-by-freeing-up-50-beds",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2020/03/brookyn-va.jpg",
+            "publishedAt": "2020-03-29T16:35:41Z",
+            "content": "Get all the latest news on coronavirus and more delivered daily to your inbox.  Sign up here.\r\nTwo Department of Veteran Affairs hospitals in Manhattan and Brooklyn began freeing up beds Sunday to help New York City hospitals deal with an overwhelming surge i… [+1653 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Bostonglobe.com"
+            },
+            "author": "Felice Belman",
+            "title": "Suffolk University, others to provide new beds for city homeless amid coronavirus",
+            "description": "Mayor Martin J. Walsh on Sunday announced several initiatives to help get homeless people off the streets, ease the burden on existing shelters and slow the spread of the fast-moving coronavirus.",
+            "url": "https://www.bostonglobe.com/2020/03/29/metro/suffolk-university-others-provide-new-beds-city-homeless-amid-coronavirus/",
+            "urlToImage": "https://bostonglobe-prod.cdn.arcpublishing.com/resizer/mdjhy8VjKMh8vL7Tljj9W6SpkL0=/506x0/arc-anglerfish-arc2-prod-bostonglobe.s3.amazonaws.com/public/DVYMHN4NHRE5PHDQCCDPTBBMOQ.jpg",
+            "publishedAt": "2020-03-29T16:35:37Z",
+            "content": "Mayor Martin J. Walsh on Sunday announced several initiatives to help get homeless people off the streets, ease the burden on existing shelters, and slow the spread of the fast-moving coronavirus.\r\nSuffolk University will repurpose a dormitory to provide 172 … [+1226 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Uol.com.br"
+            },
+            "author": "UOL",
+            "title": "Pandemia | Com tosse de Flay, web questiona: ' Covid-19 chegou?'",
+            "description": "Flayslane passou a madrugada de hoje conversando com Babu e Prior na área externa do BBB 20. Em tempos de pandemia de coronavírus, a tosse da cantora preocupou os internautas, que comentaram o assunto no Twitter.\"Será que o corona chegou na casa do BBB?\",",
+            "url": "https://tvefamosos.uol.com.br/noticias/redacao/2020/03/29/tosse-de-flayslane-preocupa-web-sera-que-o-coronavirus-chegou-no-bbb.htm",
+            "urlToImage": "https://conteudo.imguol.com.br/c/entretenimento/72/2020/03/29/bbb-20-flayslane-tosse-e-preocupa-web-1585469693961_v2_615x300.jpg",
+            "publishedAt": "2020-03-29T16:35:36Z",
+            "content": "Flayslane passou a madrugada de hoje conversando com Babu e Prior na área externa do BBB 20. Em tempos de pandemia de coronavírus, a tosse da cantora preocupou os internautas, que comentaram o assunto no Twitter.\r\n\"Será que o corona chegou na casa do BBB?\", q… [+1362 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Terra.com.br"
+            },
+            "author": "Estadão Conteúdo",
+            "title": "'Eu, como economista, gostaria da retomada. Como cidadão, quero ficar em casa', diz Guedes",
+            "description": "Em videoconferência, o ministro da Economia disse que a linha de equilíbrio entre saúde e economia é \"difícil\"",
+            "url": "https://www.terra.com.br/noticias/coronavirus/guedes-economista-quer-retomada-cidadao-quer-ficar-em-casa,b87f5688d76dba6ec7a57c59d122dad1v14ry2dl.html",
+            "urlToImage": "http://p2.trrsf.com/image/fget/cf/800/450/middle/images.terra.com/2020/03/27/46007812133301.jpg",
+            "publishedAt": "2020-03-29T16:35:35Z",
+            "content": "O ministro da Economia, Paulo Guedes, afirmou que a estimativa do governo é que a área da saúde precisa de três meses de isolamento para superar o novo coronavírus, mas ponderou que é difícil encontrar um equilíbrio com a economia. \"Eu, como economista, gosta… [+2989 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Dailydot.com"
+            },
+            "author": "Tiffanie Drayton",
+            "title": "Doctor says he was fired for exposing hospital’s coronavirus response on Facebook",
+            "description": "'Healthcare workers are afraid to speak up.' The post Doctor says he was fired for exposing hospital’s coronavirus response on Facebook appeared first on The Daily Dot.",
+            "url": "https://www.dailydot.com/irl/er-doctor-ming-lin-fired-facebook-post/",
+            "urlToImage": "https://www.dailydot.com/wp-content/uploads/2020/03/dr-lin.jpg",
+            "publishedAt": "2020-03-29T16:35:25Z",
+            "content": "Ming Lin, an ER doctor at PeaceHealth St. Joseph Medical Center, claims he was fired for putting the hospital on blast on Facebook and other media outlets.\r\nThe Daily Dot is committed to filtering the noise every day as COVID-19 seizes the internets attention… [+2161 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Expressen.se"
+            },
+            "author": "micke.olander@expressen.se (Micke Ölander)",
+            "title": "Här får resenärerna inte sitta på bussen i Malmö",
+            "description": "På allt fler bussar syns numera en avspärrning vid säten bakom chauffören. I Malmö reagerar flera resenärer. Förklaringen är enkel, och det handlar om Covid-19. Men snart kan även ingång genom framdörrarna spärras. – Vi vill så långt det är möjligt skydda vår…",
+            "url": "https://www.expressen.se/kvallsposten/har-far-resenarerna-inte-sitta-pa-bussen-i-malmo/",
+            "urlToImage": "https://w.cdn-expressen.se/images/3f/5e/3f5ec233406e45cfbbc6bc0ebac1277b/16x9/original.jpg",
+            "publishedAt": "2020-03-29T16:35:15Z",
+            "content": "Nobina finns på flera orter och är inte ensamma om att göra så här.\r\n Det här är en samhällskritisk tjänst som vi utför och det är viktigt att den fungerar så tille xempel elever kan komma till sina skolor och människor kan komma till sina arbetsplatser och h… [+992 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Myfox8.com"
+            },
+            "author": null,
+            "title": "101-year-old Italian man released from hospital after recovering from coronavirus",
+            "description": "(CNN) — A 101-year-old man has been released from hospital after recovering from the novel coronavirus, Gloria Lisi, the deputy mayor of the Italian city of Rimini, has said. The man, who has...",
+            "url": "https://myfox8.com/author/wghpcnnwire/",
+            "urlToImage": "https://kfor.com/wp-content/uploads/sites/3/2020/03/GettyImages-1211194694-1-1.jpg?w=1280&h=720&crop=1",
+            "publishedAt": "2020-03-29T16:35:10Z",
+            "content": "(CNN) — A 101-year-old man has been released from hospital after recovering from the novel coronavirus, Gloria Lisi, the deputy mayor of the Italian city of Rimini, has said.\r\nThe man, who has been named only as “Mr P,” was admitted to hospital in Rimini, nor… [+967 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Libertaddigital.com"
+            },
+            "author": "LD / Agencias",
+            "title": "Marc Márquez: \"Queremos volver pronto, pero primero hay que ganar la batalla al coronavirus\"",
+            "description": "Marc Márquez ha acabado este domingo quinto en la carrera virtual de MotoGP en el circuito de Mugello, que ha ganado su hermano Álex.",
+            "url": "https://www.libertaddigital.com/deportes/motogp/2020-03-29/marc-marquez-queremos-volver-pronto-pero-primero-hay-que-ganar-la-batalla-al-coronavirus-1276654918/",
+            "urlToImage": "https://s.libertaddigital.com/2019/10/27/476/279/1094x353/marquez-2.jpg",
+            "publishedAt": "2020-03-29T16:35:09Z",
+            "content": "El campeón del mundo de MotoGP,Marc Márquez(Repsol Honda), desea poder estar \"pronto\" de nuevo en la pista, después de que el Mundial de motociclismo se viese obligado a parar por el Covid-19, pero ha asegurado que \"primero\" deberán ganar \"la batalla al coron… [+912 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Expresso.pt"
+            },
+            "author": "Maria João Bourbon",
+            "title": "Vizinho estás à janela? Como um bairro em Oeiras combate isolamento com música e solidariedade (veja os vídeos)",
+            "description": "Entre cantorias, concertos de violino, percussão de tachos e panelas, luzes, cachecóis e bandeiras, quase tudo é válido para trazer mais força, alegria e boa-disposição aos vizinhos que, como muitos portugueses, viram as suas rotinas repentinamente alteradas …",
+            "url": "https://expresso.pt/coronavirus/2020-03-29-Vizinho-estas-a-janela--Como-um-bairro-em-Oeiras-combate-isolamento-com-musica-e-solidariedade--veja-os-videos-",
+            "urlToImage": "http://images.impresa.pt/expresso/2020-03-29-Vizinhos-Varandas-do-Jardim-dos-Arcos/fb/wm",
+            "publishedAt": "2020-03-29T16:35:09Z",
+            "content": "Num pequeno bairro no Jardim dos Arcos, em Oeiras, um grupo de vizinhos sai diariamente às varandas e janelas para encontrar dez minutos de comunidade. E nem o coronavírus ou o parque de estacionamento que separa muitos dos prédios é suficiente para os afasta… [+3374 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Memeorandum.com"
+            },
+            "author": null,
+            "title": "OCR Issues Bulletin on Civil Rights Laws and HIPAA Flexibilities That Apply During the COVID-19 Emergency (HHS News Releases)",
+            "description": "HHS News Releases : OCR Issues Bulletin on Civil Rights Laws and HIPAA Flexibilities That Apply During the COVID-19 Emergency — Today, the Office for Civil Rights (OCR) at the U.S Department of Health and Human Services (HHS) is issuing a bulletin to ensure t…",
+            "url": "https://www.memeorandum.com/200329/p39",
+            "urlToImage": "https://www.hhs.gov/sites/default/files/HHS-Twitter-Card-180x180.jpg",
+            "publishedAt": "2020-03-29T16:35:00Z",
+            "content": "memeorandum is an auto-generated summary of the stories that US political commentators are discussing online right now.\r\nUnlike sister sites Techmeme and Mediagazer, it is not a human-edited news outlet, but rather a media-monitoring tool for sophisticated ne… [+12 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Idnes.cz"
+            },
+            "author": "https://www.facebook.com/iDNES.cz",
+            "title": "Chirurg z táborské nemocnice má koronavirus, ambulance omezuje provoz",
+            "description": "Jeden z chirurgů nemocnice v Táboře se nakazil koronavirem. Vedení nemocnice se informaci dozvědělo v sobotu. Nemocnice v návaznosti testuje pacienty i lékaře a dohledává seznam kontaktů nakaženého. V regionu je v neděli večer celkem 85 pozitivních případů ne…",
+            "url": "https://www.idnes.cz/ceske-budejovice/zpravy/koronavirus-covid-19-lekar-tabor-nakazeny-nemocnice.A200329_181913_budejovice-zpravy_vlc",
+            "urlToImage": "https://servis.idnes.cz/fbimg.aspx?foto=KHR615e6f_tabor.jpg",
+            "publishedAt": "2020-03-29T16:35:00Z",
+            "content": "Vichni pacienti na lkách byli v dsledku toho otestováni, dále jsme odebrali vzorky vem lékam, kteí s nakaeným by jen na chvíli pili do kontaktu, ujistil editel nemocnice Ivo Houka. \r\nJsme v kontaktu s Krajskou hygienickou stanicí, které jsme poskytli seznam k… [+790 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Cbslocal.com"
+            },
+            "author": "CBS New York",
+            "title": "Coronavirus Update: Cuomo Says Program Calling For Non-Essential Workers To Stay Home Is Extended Through Apr. 15",
+            "description": "Current projections show New York City will hit the height of its coronavirus cases first, followed by Long Island and Westchester, and then upstate.",
+            "url": "https://newyork.cbslocal.com/2020/03/29/coronavirus-update-cuomo-says-program-calling-for-non-essential-workers-to-stay-home-is-extended-through-apr-15/",
+            "urlToImage": "https://newyork.cbslocal.com/wp-content/uploads/sites/14578484/2020/03/Cuomo-02.jpg?w=1024",
+            "publishedAt": "2020-03-29T16:34:58Z",
+            "content": "ALBANY, N.Y. (CBSNewYork) – Gov. Andrew Cuomo said Sunday local health providers need to be prepared for a “rolling apex” of coronavirus cases.Current projections show New York City will hit the height of its coronavirus cases first, followed by Long Island a… [+2882 chars]"
+        },
+        {
+            "source": {
+                "id": "focus",
+                "name": "Focus"
+            },
+            "author": "FOCUS Online",
+            "title": "Corona-Pandemie - Landkreis München Kreisfreie Stadt: Infizierte, Tote, Fälle pro Einwohner - die aktuellen Zahlen",
+            "description": "Covid-19 ist weiter auf dem Vormarsch. Auch die Landeshauptstadt München verzeichnet eine Vielzahl von SARS-CoV-2 Infizierten.",
+            "url": "https://www.focus.de/gesundheit/news/corona-pandemie-landkreis-muenchen-kreisfreie-stadt-infizierte-tote-faelle-pro-einwohner-die-aktuellen-zahlen_id_11827047.html",
+            "urlToImage": "https://p5.focus.de/img/fotos/crop11823394/8622711622-w1200-h627-o-q75-p5/gettyimages-1205573573-2-.jpg",
+            "publishedAt": "2020-03-29T16:34:57Z",
+            "content": "Covid-19 ist weiter auf dem Vormarsch. Auch die Landeshauptstadt München verzeichnet eine Vielzahl von SARS-CoV-2 Infizierten.Die Landeshauptstadt München ist eine kreisfreie Stadt mit Verwaltungssitz im Regierungsbezirk Oberbayern. Sie ist mit etwa 1,5 Milli… [+385 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Govexec.com"
+            },
+            "author": "Eric Katz, Government Executive",
+            "title": "President Trump Signs $2.2 Trillion Stimulus",
+            "description": "Agencies will receive $340B, helping to boost hiring, telework and office cleaning.",
+            "url": "https://www.govexec.com/management/2020/03/house-sends-stimulus-package-trump-without-federal-workforce-provisions-it-had-pushed/164170/",
+            "urlToImage": "https://cdn.nextgov.com/media/img/upload/2020/03/29/shutterstock_1157861293_2/open-graph.jpg",
+            "publishedAt": "2020-03-29T16:34:36Z",
+            "content": "Federal agencies are in for a massive funding boost after the House on Friday passed a $2.2 trillion stimulus package aimed at revitalizing the economy struggling amid the novel coronavirus pandemic, though many federal workforce provisions were left out of t… [+5673 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Thestar.com"
+            },
+            "author": "Kelly Geraldine Malone - The Canadian Press",
+            "title": "‘There isn’t consistency:’ COVID-19 response varies for children in care",
+            "description": "There are about 10,000 children in care in Manitoba. About 90 per cent are Indigenous.",
+            "url": "https://www.thestar.com/news/canada/2020/03/29/there-isnt-consistency-covid-19-response-varies-for-children-in-care.html",
+            "urlToImage": "https://images.thestar.com/k7Hl3fbFtb28giFba6fTg54rx88=/1200x800/smart/filters:cb(1585499675811)/https://www.thestar.com/content/dam/thestar/news/canada/2020/03/29/there-isnt-consistency-covid-19-response-varies-for-children-in-care/coramorgan.jpg",
+            "publishedAt": "2020-03-29T16:34:35Z",
+            "content": "WINNIPEG—Phones have been ringing continuously at the office of the First Nations family advocate in Manitoba as parents, children and social workers look for answers about what will happen to some of society’s most vulnerable during the COVID-19 pandemic\r\n“I… [+4731 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Abc7.com"
+            },
+            "author": null,
+            "title": "Coronavirus News: Doctor fights for his life after testing positive for COVID-19",
+            "description": "Dr. Weg, who runs every day of the week, has completed 30 marathons. And now the 63-year-old from Queens is in a race for his life.",
+            "url": "https://abc7.com/coronavirus-new-york-news-update-ny/6060594",
+            "urlToImage": "https://cdn.abcotvs.com/dip/images/6059548_032820-doctorpositive.jpg?w=1600",
+            "publishedAt": "2020-03-29T16:34:32Z",
+            "content": "NEW YORK -- Dr. Arnold Weg loves a marathon. He has completed 30 and runs every day of the week. But now the 63-year-old from New York is in a race for his life after testing positive for novel coronavirus.The Queens resident is a primary care physician and g… [+733 chars]"
+        }
+    ]
+}

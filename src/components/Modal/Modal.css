@@ -1,0 +1,26 @@
+.Success {
+    color: green;
+}
+
+.Danger {
+    color: red;
+}
+
+.Warning {
+    color: yellow
+}
+
+.figure {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 540px) {
+    .modalStatus {
+        font-size: 15px;
+    }
+
+    .figure {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,57 @@
+.cardStyle {
+    margin-bottom: 25px;
+    padding-bottom: 0px !important;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.cardStyle:active {
+    cursor: grabbing ;
+}
+
+.cardBody {
+    padding-bottom: 0px !important;
+}
+
+.linkStyle {
+    color: inherit;  
+}
+
+.linkStyle:hover {
+    color: inherit;
+    text-decoration: inherit;
+    opacity: 0.8 !important;
+}
+
+.news-image {
+    height: 150px;
+    width: 100%;
+}
+
+.cardTitle {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    text-align: left;
+}
+
+.cardText {
+    font-size: 10px;
+    text-align: left;
+}
+
+@media screen and (max-width: 420px) {
+    .news-image {
+        height: 120px;
+    }
+
+    .cardTitle {
+        font-size: 13px !important;
+    }
+
+    .cardText {
+        font-size: 8px !important;
+    }
+}
