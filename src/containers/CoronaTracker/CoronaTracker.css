@@ -17,6 +17,11 @@
     display: none;
 }
 
+.caption {
+    margin-bottom: 13px !important;
+    font-size: 12px;
+}
+
 .listItemContainer {
     border-radius: 15px;
     background-color: #343A40 !important;
@@ -55,6 +60,11 @@
 .articleContainer {
     overflow-x: scroll;
 
+}
+
+.mapContainer {
+    text-align: center;
+    width: 100% !important;
 }
 
 @media screen and (max-width: 540px ) {

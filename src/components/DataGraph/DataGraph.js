@@ -9,6 +9,9 @@ class Graph extends Component {
         error: false,
         options: {
             chart: {
+                zoom: {
+                    enabled: false
+                },
                 stacked: false,
                 toolbar: {
                     show: false
@@ -132,8 +135,9 @@ class Graph extends Component {
             })
         });
     }
- 
+    
     render() {
+        console.log("Graph")
         let chart = null    
         if(this.state.error) {
             chart = (

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
-//import DataMap from '../../components/DataMap/DataMap';
+import DataMap from '../../components/DataMap/DataMap';
 import DataGraph from '../../components/DataGraph/DataGraph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
@@ -12,7 +12,7 @@ import Alert from '../../components/Alert/Alert';
 import Article from '../../components/Article/Article';
 import Logo from '../../components/Logo/Logo';
 
-//import data from '../../../src/custom.json'
+import data from '../../../src/country.json'
 import article from '../../Articles/articles.json';
 import axios from 'axios';
 
@@ -32,31 +32,38 @@ class CoronaTracker extends Component {
     }
    
     componentDidMount() {
-        axios.get('https://corona.lmao.ninja/all')
-            .then(response => {
-                this.setState({
-                    totalCases: response.data.cases,
-                    totalDeath: response.data.deaths, 
-                    totalRecovered: response.data.recovered, 
-                    loading: false})
-            }).catch(error => {
-                this.setState({error: error})
-            });
+        const totalInfectionRequest = axios.get('https://corona.lmao.ninja/all')
+        const allCountryInfectionRequest = axios.get('https://corona.lmao.ninja/countries?sort=country')
 
-        axios.get('https://corona.lmao.ninja/countries?sort=cases')
-            .then(response => {
-                this.setState({infectedCountry: response.data.sort((a,b) => b - a)})
-            }).catch(error => {
-                this.setState({error: error})
-            });
-        
-        axios.get('https://newsapi.org/v2/everything?q=COVID&from=2020-03-16&sortBy=publishedAt&apiKey=ad674d6b8efd4b36a15265dde126606e&pageSize=100&page=1%27%20-%20Google%20Search')
-            .then(response => {
-                const news = response.data.articles.slice(0,8)
-                this.setState({latestNews: news})
-            }).catch(error => {
-                this.setState({error: error})
-            });
+        axios.all([totalInfectionRequest, allCountryInfectionRequest])
+            .then(axios.spread((...response) => {
+                this.setState({
+                    totalCases: response[0].data.cases,
+                    totalDeath: response[0].data.deaths, 
+                    totalRecovered: response[0].data.recovered, 
+                    infectedCountry: response[1].data.reverse()
+                })
+            })).catch(error => {
+                this.setState({error: true})
+            })
+
+        // axios.get('https://corona.lmao.ninja/all')
+        //     .then(response => {
+        //         this.setState({
+        //             totalCases: response.data.cases,
+        //             totalDeath: response.data.deaths, 
+        //             totalRecovered: response.data.recovered, 
+        //             loading: false})
+        //     }).catch(error => {
+        //         this.setState({error: error})
+        //     });
+
+        // axios.get('https://corona.lmao.ninja/countries?sort=cases')
+        //     .then(response => {
+        //         this.setState({infectedCountry: response.data})
+        //     }).catch(error => {
+        //         this.setState({error: error})
+        //     });
     }
 
     countrySelectHandler = (country) => {
@@ -73,15 +80,15 @@ class CoronaTracker extends Component {
         let recovered = null;
         
         if(this.state.loading) {
-            infected = spinner
-            death  = spinner
-            recovered = spinner
+            infected = <Modal figure={this.state.totalCases} showSpinner={true} title={"Infected"} status={"Warning"}>{spinner}</Modal>
+            death  = <Modal figure={this.state.totalDeath} showSpinner={true} title={"Death"} status={"Danger"} >{spinner}</Modal>
+            recovered = <Modal figure={this.state.totalRecovered} showSpinner={true} title={"Recovered"} status={"Success"}>{spinner}</Modal>
         }
 
         if(this.state.totalCases) {
-            infected = <Modal figure={this.state.totalCases} title={"Infected"} status={"Warning"} />
-            death = <Modal figure={this.state.totalDeath} title={"Death"} status={"Danger"} />
-            recovered = <Modal figure={this.state.totalRecovered} title={"Recovered"} status={"Success"} />
+            infected = <Modal figure={this.state.totalCases} showSpinner={false} title={"Infected"} status={"Warning"} />
+            death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Death"} status={"Danger"} />
+            recovered = <Modal figure={this.state.totalRecovered} showSpinner={false} title={"Recovered"} status={"Success"} />
         }
 
 
@@ -150,9 +157,9 @@ class CoronaTracker extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={12}>
-                        {/*<DataMap data={data} property="pop_est"/>*/}
-                    </Col>
+                    <div className="mapContainer">
+                        <DataMap data={data} property="pop_est" infections={this.state.infectedCountry} />
+                    </div>
                 </Row>
                 <Row>
                     <Col md={12}>                        
@@ -173,7 +180,7 @@ class CoronaTracker extends Component {
                     </Col>
                     <Col md={9}>
                         <DataGraph countryName={this.state.selectedCountry} />
-                        <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series</p>
+                        <p className="caption" style={{textAlign: 'right'}}>Click category to enable/disable timeline series</p>
                     </Col>
                 </Row>
                 <Row>
@@ -192,7 +199,12 @@ class CoronaTracker extends Component {
                         <h6 className="contentText">Click the column header to sort.</h6>                
                         <DataTable url={countriesData} />                    
                     </Col>
-                </Row>               
+                </Row> 
+                <Row>
+                    <Col xs={12}>
+                        <Alert/>                            
+                    </Col>
+                </Row>              
             </Container>
         )
     }

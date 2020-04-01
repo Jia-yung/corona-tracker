@@ -20,6 +20,7 @@
     margin-bottom: 25px;
     background-color: #343A40;
     padding: 1px !important;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 540px) {

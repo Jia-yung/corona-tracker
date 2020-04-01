@@ -1,76 +1,75 @@
 import React, { useRef, useEffect, useState } from "react";
 import { select, geoPath, geoMercator, min, max, scaleLinear } from "d3";
-import useResizeObserver from "./ResizeObserver";
+import './DataMap.css'
+import axios from 'axios';
+import useResizeObserver from "./ResizeObserver"; 
 
-/**
- * Component that renders a map of Germany.
- */
+function GeoChart({ data, property, infections}) {
+    const svgRef = useRef();
+    const wrapperRef = useRef();
+    const dimensions = useResizeObserver(wrapperRef);
+    const [selectedCountry, setSelectedCountry] = useState(null);
+    // will be called initially and on every data change
 
-function GeoChart({ data, property }) {
-  const svgRef = useRef();
-  const wrapperRef = useRef();
-  const dimensions = useResizeObserver(wrapperRef);
-  const [selectedCountry, setSelectedCountry] = useState(null);
+    useEffect(() => {
+        console.log("here", infections)
+        const svg = select(svgRef.current);
 
-  // will be called initially and on every data change
-  useEffect(() => {
-    const svg = select(svgRef.current);
+        const minProp = min(data.features, feature => feature.properties[property]);
+        const maxProp = max(data.features, feature => feature.properties[property]);
+        const colorScale = scaleLinear()
+        .domain([minProp, maxProp])
+        .range(["#ccc", "red"]);
+        console.log(maxProp)
+        // use resized dimensions
+        // but fall back to getBoundingClientRect, if no dimensions yet.
+        const { width, height } =
+        dimensions || wrapperRef.current.getBoundingClientRect();
 
-    const minProp = min(data.features, feature => feature.properties[property]);
-    const maxProp = max(data.features, feature => feature.properties[property]);
-    const colorScale = scaleLinear()
-      .domain([minProp, maxProp])
-      .range(["#ccc", "red"]);
+        // projects geo-coordinates on a 2D plane
+        const projection = geoMercator()
+        .fitSize([width, height], selectedCountry || data)
+        .precision(100);
 
-    // use resized dimensions
-    // but fall back to getBoundingClientRect, if no dimensions yet.
-    const { width, height } =
-      wrapperRef.current.getBoundingClientRect();
+        // takes geojson data,
+        // transforms that into the d attribute of a path element
+        const pathGenerator = geoPath().projection(projection);
 
-    // projects geo-coordinates on a 2D plane
-    const projection = geoMercator()
-      .fitSize([width, height], selectedCountry || data)
-      .precision(100);
+        // render each country
+        svg
+        .selectAll(".country")
+        .data(data.features)
+        .join("path")
+        .on("click", feature => {
+            setSelectedCountry(selectedCountry === feature ? null : feature);
+        })
+        .attr("class", "country")
+        .transition()
+        .attr("fill", feature => colorScale(feature.properties[property]))
+        .attr("d", feature => pathGenerator(feature));
 
-    // takes geojson data,
-    // transforms that into the d attribute of a path element
-    const pathGenerator = geoPath().projection(projection);
+        // render text
+        svg
+        .selectAll(".label")
+        .data([selectedCountry])
+        .join("text")
+        .attr("class", "label")
+        .text(
+            feature =>
+            feature &&
+            feature.properties.name +
+                ": " +
+                feature.properties[property].toLocaleString()
+        )
+        .attr("x", 10)
+        .attr("y", 25);
+    }, [data, dimensions, property, selectedCountry, infections]);
 
-    // render each country
-    svg
-      .selectAll(".country")
-      .data(data.features)
-      .join("path")
-      .on("click", feature => {
-        setSelectedCountry(selectedCountry === feature ? null : feature);
-      })
-      .attr("class", "country")
-      .transition()
-      .attr("fill", feature => colorScale(feature.properties[property]))
-      .attr("d", feature => pathGenerator(feature));
-
-    // render text
-    svg
-      .selectAll(".label")
-      .data([selectedCountry])
-      .join("text")
-      .attr("class", "label")
-      .text(
-        feature =>
-          feature &&
-          feature.properties.name +
-            ": " +
-            feature.properties[property].toLocaleString()
-      )
-      .attr("x", 10)
-      .attr("y", 25);
-  }, [data, dimensions, property, selectedCountry]);
-
-  return (
-    <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
-      <svg ref={svgRef}></svg>
-    </div>
-  );
+    return (
+        <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+            <svg ref={svgRef}></svg>
+        </div>
+    );
 }
 
 export default GeoChart;
