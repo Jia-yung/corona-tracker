@@ -31,3 +31,13 @@
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .modalStatus {
+        font-size: 12px;
+    }
+
+    .figure {
+        font-size: 15px;
+    }
+}

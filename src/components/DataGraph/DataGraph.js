@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
-import {Button} from 'react-bootstrap';
 import './DataGraph.css';
 import axios from "axios";
 
 class Graph extends Component {
     state = {
         countryName: null,
-        chartType:"bar",
-        category: "Infected",
         error: false,
         options: {
             chart: {
+                stacked: false,
                 toolbar: {
                     show: false
                 }
             },
-            dataLabels: {
-                enabled: false,
+            legend: {
+                show: true,
+                labels: {
+                    colors: 'white'
+                }
             },
             xaxis: {
                 categories: [],
@@ -44,13 +45,22 @@ class Graph extends Component {
                 }
             },
             tooltip: {
-                theme: 'dark'
+                theme: 'dark',
             },
         },
         series: [{
-            name:'infected',
+            name:'Infected',
+            type: 'line',
+            data: [],
+        },{
+            name:'Recovered',
+            type: 'line',
             data: []
-        }],
+        },{
+            name:'Death',
+            type: 'line',
+            data: []
+        }]
     };
 
     componentDidUpdate (prevProps) {
@@ -59,104 +69,100 @@ class Graph extends Component {
             this.getData(this.props.countryName)
         }
     }
-
-    infectedSelectHandler = () => {
-        this.setState({category: "Infected"});
-        if (this.state.countryName === null) {
-            return
-        } else {
-            this.getData(this.props.countryName)
-        }
-    }
-
-    deathsSelectHandler = () => {
-        this.setState({category: "Death"});
-        if (this.state.countryName === null) {
-            return
-        } else {
-            this.getData(this.props.countryName)
-        }
-    } 
-
-    barSelectHandler = () => {
-        this.setState({chartType: "bar"});
-        if (this.state.countryName === null) {
-            return
-        } else {
-            this.getData(this.props.countryName)
-        }
-    } 
-
-    lineSelectHandler = () => {
-        console.log("here")
-        this.setState({chartType: "line"});
-        if (this.state.countryName === null) {
-            return
-        } else {
-            this.getData(this.props.countryName)
-        }
-    } 
     
-
     getData = (countryName) => {
-        axios.get('https://corona.lmao.ninja/v2/historical/' + countryName).then(response => {
-            let historicData = null
-            if (this.state.category === "Infected"){
-                historicData = response.data.timeline.cases
-            } else {
-                historicData = response.data.timeline.deaths
+        const link = "https://corona.lmao.ninja/v2/historical/"
+        axios.get( link + countryName).then(response => {
+ 
+            let historicDataInfected = null
+            let historicDataDeath = null
+            let historicDataRecovered = null
+
+            historicDataInfected = response.data.timeline.cases
+            historicDataDeath = response.data.timeline.deaths
+            historicDataRecovered = response.data.timeline.recovered
+
+            const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
+
+            for (const key of Object.keys(historicDataInfected)) {
+                dateArray.push(key + " GMT")
+                infectedArray.push(historicDataInfected[key])
             }
-            const dateArray = []
-            const figureArray = []
-            const chartTypes = this.state.chartType
-            for (const key of Object.keys(historicData)) {
-                dateArray.push(key)
-                figureArray.push(historicData[key])
+            for (const key of Object.keys(historicDataDeath)) {
+                deathArray.push(historicDataDeath[key])
+            }
+            for (const key of Object.keys(historicDataRecovered)) {
+                recoveredArray.push(historicDataRecovered[key])
             }
             this.setState({
-                chartType: chartTypes,
                 options: {
                     title: {
-                        text: response.data.country.toUpperCase() + ` - ` + this.state.category,
+                        text: response.data.country.toUpperCase(),
                     },
                     xaxis: {
-                        categories: dateArray,
-                    },                            
+                        categories: dateArray
+                    }                         
+                },
+                series: [{
+                    data: infectedArray  
+                },{
+                    data: recoveredArray                   
+                },{
+                    data: deathArray                   
+                }]
+            })            
+        }).catch(error => {
+            this.setState({
+                error: true,
+                options: {
+                    title: {
+                        text: "No Data",
+                    },
+                    xaxis: {
+                        categories:[],
+                    }                         
                 },
                 series: [
                     {
-                    name: this.state.category,
-                    data: figureArray
+                    name: "No Data",
+                    data: [],
                     },
                 ]
-            })            
-        }).catch(error => {
-            this.setState({error: error})
+            
+            })
         });
     }
-
+ 
     render() {
+        let chart = null    
+        if(this.state.error) {
+            chart = (
+                <Chart 
+                    options= {this.state.options}
+                    series={this.state.series}
+                    type="line"
+                    width="100%"
+                    height="300px"
+            /> 
+            )
+        } else {
+            chart = (
+                <Chart
+                    options={this.state.options}
+                    series={this.state.series} 
+                    type="line"                   
+                    width="100%"
+                    height="300px"
+                />
+            )
+        }
         return (
             <div className="chartContainer">            
                 <div className="mixed-chart">
-                    <Chart
-                        options={this.state.options}
-                        series={this.state.series}
-                        type={this.state.chartType}
-                        width="100%"
-                        height="260px"
-                    />
+                    {chart}
                 </div>
-                <div className="float-left leftBtnContainer">
-                    <Button className="btnStyle" onClick= {() => this.infectedSelectHandler()}>Infected</Button>
-                    <Button className="btnStyle" onClick= {() => this.deathsSelectHandler()}>Death</Button>
-                </div>
-                {/* <div className="float-right rightBtnContainer">
-                    <Button className="btnStyle" onClick= {() => this.barSelectHandler()}>Bar</Button>
-                    <Button className="btnStyle" onClick= {() => this.lineSelectHandler()}>Line</Button>
-                </div> */}
             </div>
-        );
+        )
     }
 }
 

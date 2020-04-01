@@ -8,10 +8,21 @@
 }
 
 .logoIcon {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     margin-right: 5px;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 540px) {
+    .logoIcon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logoStyle > p {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 540px) {

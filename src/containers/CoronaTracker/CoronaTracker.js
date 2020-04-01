@@ -12,6 +12,7 @@ import Alert from '../../components/Alert/Alert';
 import Article from '../../components/Article/Article';
 import Logo from '../../components/Logo/Logo';
 
+//import data from '../../../src/custom.json'
 import article from '../../Articles/articles.json';
 import axios from 'axios';
 
@@ -149,6 +150,11 @@ class CoronaTracker extends Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col md={12}>
+                        {/*<DataMap data={data} property="pop_est"/>*/}
+                    </Col>
+                </Row>
+                <Row>
                     <Col md={12}>                        
                         <h4 className="subTitle">Select a country to display cummulative data</h4>
                     </Col>
@@ -156,7 +162,7 @@ class CoronaTracker extends Component {
                 <Row>
                     <Col md={3}> 
                         <div className="listItemContainer">
-                            <p>Infected / Death</p>
+                            <p>Total Cases</p>
                             <h6 style={{textAlign: "left"}}>Country: </h6>
                             <div className="ulContainer">
                                 <ul className="itemStyle">
@@ -167,6 +173,7 @@ class CoronaTracker extends Component {
                     </Col>
                     <Col md={9}>
                         <DataGraph countryName={this.state.selectedCountry} />
+                        <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series</p>
                     </Col>
                 </Row>
                 <Row>
@@ -182,7 +189,7 @@ class CoronaTracker extends Component {
                 <Row>
                     <Col md={12}> 
                         <h4 className="subTitle">Countries Data</h4>  
-                        <h6 style={{textAlign: 'left'}}>Click the column header to sort.</h6>                
+                        <h6 className="contentText">Click the column header to sort.</h6>                
                         <DataTable url={countriesData} />                    
                     </Col>
                 </Row>               

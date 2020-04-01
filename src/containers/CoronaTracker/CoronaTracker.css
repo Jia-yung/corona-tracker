@@ -3,7 +3,7 @@
     padding: 10px;
     height: 100vh !important;
     width: 100% !important;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .toolTipContainer {
@@ -34,7 +34,7 @@
 .ulContainer {
     height: 246px;
     overflow: scroll;
-    
+    -webkit-overflow-scrolling: touch;
 }
 
 .itemStyle {
@@ -48,8 +48,12 @@
     text-align: left;
 }
 
+.contentText {
+    text-align: left;
+}
+
 .articleContainer {
-    overflow-x: scroll !important;
+    overflow-x: scroll;
 
 }
 
