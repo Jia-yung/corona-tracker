@@ -80,9 +80,9 @@ class CoronaTracker extends Component {
         let recovered = null;
         
         if(this.state.loading) {
-            infected = <Modal figure={this.state.totalCases} showSpinner={true} title={"Infected"} status={"Warning"}>{spinner}</Modal>
-            death  = <Modal figure={this.state.totalDeath} showSpinner={true} title={"Death"} status={"Danger"} >{spinner}</Modal>
-            recovered = <Modal figure={this.state.totalRecovered} showSpinner={true} title={"Recovered"} status={"Success"}>{spinner}</Modal>
+            infected = <Modal figure={0} showSpinner={true} title={"Infected"} status={"Warning"}>{spinner}</Modal>
+            death  = <Modal figure={0} showSpinner={true} title={"Death"} status={"Danger"} >{spinner}</Modal>
+            recovered = <Modal figure={0} showSpinner={true} title={"Recovered"} status={"Success"}>{spinner}</Modal>
         }
 
         if(this.state.totalCases) {
@@ -158,7 +158,7 @@ class CoronaTracker extends Component {
                 </Row>
                 <Row>
                     <div className="mapContainer">
-                        <DataMap data={data} property="pop_est" infections={this.state.infectedCountry} />
+                        <DataMap data={data} property="pop_est"/>
                     </div>
                 </Row>
                 <Row>

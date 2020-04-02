@@ -12,15 +12,17 @@ function GeoChart({ data, property, infections}) {
     // will be called initially and on every data change
 
     useEffect(() => {
-        console.log("here", infections)
+        let infectionData = []
+        axios.get('https://corona.lmao.ninja/countries?sort=country').then(response => {
+            infectionData = response
+        })
+        console.log(infectionData)
         const svg = select(svgRef.current);
-
         const minProp = min(data.features, feature => feature.properties[property]);
         const maxProp = max(data.features, feature => feature.properties[property]);
         const colorScale = scaleLinear()
         .domain([minProp, maxProp])
         .range(["#ccc", "red"]);
-        console.log(maxProp)
         // use resized dimensions
         // but fall back to getBoundingClientRect, if no dimensions yet.
         const { width, height } =
@@ -63,7 +65,7 @@ function GeoChart({ data, property, infections}) {
         )
         .attr("x", 10)
         .attr("y", 25);
-    }, [data, dimensions, property, selectedCountry, infections]);
+    }, [data, dimensions, property, selectedCountry]);
 
     return (
         <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>

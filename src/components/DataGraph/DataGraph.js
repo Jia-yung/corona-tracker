@@ -98,6 +98,7 @@ class Graph extends Component {
                 recoveredArray.push(historicDataRecovered[key])
             }
             this.setState({
+                countryName: response.data.country,
                 options: {
                     title: {
                         text: response.data.country.toUpperCase(),
@@ -119,25 +120,24 @@ class Graph extends Component {
                 error: true,
                 options: {
                     title: {
-                        text: "No Data",
+                        text: this.state.countryName.toUpperCase() + " - No Data",
                     },
                     xaxis: {
-                        categories:[],
-                    }                         
+                        categories: []
+                    }                       
                 },
-                series: [
-                    {
-                    name: "No Data",
-                    data: [],
-                    },
-                ]
-            
+                series: [{
+                    data: [] 
+                },{
+                    data: []                  
+                },{
+                    data: []                 
+                }]
             })
         });
     }
     
     render() {
-        console.log("Graph")
         let chart = null    
         if(this.state.error) {
             chart = (
