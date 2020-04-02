@@ -24,9 +24,10 @@ class Graph extends Component {
                 }
             },
             xaxis: {
-                categories: [],
                 type: 'datetime',
+                categories: [],
                 labels: {
+                    show: true,
                     style: {
                         colors: 'white'
                     }
@@ -121,17 +122,20 @@ class Graph extends Component {
                 options: {
                     title: {
                         text: this.state.countryName.toUpperCase() + " - No Data",
-                    },
-                    xaxis: {
-                        categories: []
-                    }                       
+                    }                     
                 },
                 series: [{
-                    data: [] 
+                    name:'Infected',
+                    type: 'line',
+                    data: [],
                 },{
-                    data: []                  
+                    name:'Recovered',
+                    type: 'line',
+                    data: []
                 },{
-                    data: []                 
+                    name:'Death',
+                    type: 'line',
+                    data: []
                 }]
             })
         });

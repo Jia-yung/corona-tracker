@@ -69,7 +69,7 @@ function GeoChart({ data, property, infections}) {
 
     return (
         <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
-            <svg ref={svgRef}></svg>
+            <svg className="svg" ref={svgRef}></svg>
         </div>
     );
 }
