@@ -69,25 +69,35 @@ class Graph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            this.setState({countryName: this.props.countryName})
-            this.getData(this.props.countryName)
+            let request= null
+            if (this.props.countryName !== "Global"){
+                request = this.props.countryName
+                this.setState({countryName: this.props.countryName})
+            } else {
+                request = "all"
+                this.setState({countryName: "Global"})
+            }
+            this.getData(request)
         }
     }
     
-    getData = (countryName) => {
-        const link = "https://corona.lmao.ninja/v2/historical/"
-        axios.get( link + countryName).then(response => {
- 
+    getData = (request) => {
+        axios.get("https://corona.lmao.ninja/v2/historical/" + request).then(response => {
             let historicDataInfected = null
             let historicDataDeath = null
             let historicDataRecovered = null
-
-            historicDataInfected = response.data.timeline.cases
-            historicDataDeath = response.data.timeline.deaths
-            historicDataRecovered = response.data.timeline.recovered
-
+            if(request !== "all"){
+                historicDataInfected = response.data.timeline.cases
+                historicDataDeath = response.data.timeline.deaths
+                historicDataRecovered = response.data.timeline.recovered
+            } else {
+                historicDataInfected = response.data.cases
+                historicDataDeath = response.data.deaths
+                historicDataRecovered = response.data.recovered
+            }
+            
             const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
-
+            
             for (const key of Object.keys(historicDataInfected)) {
                 dateArray.push(key + " GMT")
                 infectedArray.push(historicDataInfected[key])
@@ -99,10 +109,9 @@ class Graph extends Component {
                 recoveredArray.push(historicDataRecovered[key])
             }
             this.setState({
-                countryName: response.data.country,
                 options: {
                     title: {
-                        text: response.data.country.toUpperCase(),
+                        text: this.state.countryName.toUpperCase(),
                     },
                     xaxis: {
                         categories: dateArray

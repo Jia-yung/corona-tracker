@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 
 import DataMap from '../../components/DataMap/DataMap';
 import DataGraph from '../../components/DataGraph/DataGraph';
@@ -11,6 +11,7 @@ import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
 import Article from '../../components/Article/Article';
 import Logo from '../../components/Logo/Logo';
+import EarthLogo from '../../Image/worldwide.svg';
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
 
 import data from '../../../src/country.json'
@@ -68,6 +69,10 @@ class CoronaTracker extends Component {
 
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
+    }
+
+    worldSelectHandler = (global) => {
+       this.setState({selectedCountry: global})
     }
 
     render () {
@@ -161,11 +166,18 @@ class CoronaTracker extends Component {
                             <DataMap data={data} infectedCountry={this.state.infectedCountry} property="pop_est"/>
                             {/*<WorldMap mapData={data} width={1000} height={500} />*/}
                         </div>
-                    </Col>
+                    </Col> 
                 </Row>
                 <Row>
                     <Col md={12}>                        
-                        <h4 className="subTitle">Select a country to display cummulative data</h4>
+                        <h4 className="subTitle">
+                            Select a country to display cummulative data
+                            <Button size="sm" style={{marginLeft: "5px"}} onClick={() => this.countrySelectHandler("all")}>
+                                <img src={EarthLogo} align="middle" />
+                                <p>Global</p>
+                            </Button>
+                            {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
+                        </h4>
                     </Col>
                 </Row>
                 <Row>
@@ -181,7 +193,7 @@ class CoronaTracker extends Component {
                         </div>                       
                     </Col>
                     <Col md={9}>
-                        <DataGraph countryName={this.state.selectedCountry} />
+                        <DataGraph countryName={this.state.selectedCountry}/>
                         <div className="caption">
                             <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series.</p>
                             <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>

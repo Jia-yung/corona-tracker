@@ -62,6 +62,12 @@
 
 }
 
+.globalBtn {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .mapContainer {
     text-align: center;
     width: 100% !important;
