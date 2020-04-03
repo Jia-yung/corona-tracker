@@ -11,6 +11,7 @@ import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
 import Article from '../../components/Article/Article';
 import Logo from '../../components/Logo/Logo';
+import Disclaimer from '../../components/Disclaimer/Disclaimer'
 
 import data from '../../../src/country.json'
 import article from '../../Articles/articles.json';
@@ -26,11 +27,10 @@ class CoronaTracker extends Component {
         totalRecovered: null,
         selectedCountry: null,
         infectedCountry: [],
-        latestNews: [],
         loading: true,
         error: false
     }
-   
+    
     componentDidMount() {
         const totalInfectionRequest = axios.get('https://corona.lmao.ninja/all')
         const allCountryInfectionRequest = axios.get('https://corona.lmao.ninja/countries?sort=country')
@@ -68,7 +68,6 @@ class CoronaTracker extends Component {
 
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
-        //console.log(this.state.selectedCountry)
     }
 
     render () {
@@ -157,9 +156,12 @@ class CoronaTracker extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <div className="mapContainer">
-                        <DataMap data={data} property="pop_est"/>
-                    </div>
+                    <Col xs={12}>
+                        <div className="mapContainer">
+                            <DataMap data={data} infectedCountry={this.state.infectedCountry} property="pop_est"/>
+                            {/*<WorldMap mapData={data} width={1000} height={500} />*/}
+                        </div>
+                    </Col>
                 </Row>
                 <Row>
                     <Col md={12}>                        
@@ -180,7 +182,10 @@ class CoronaTracker extends Component {
                     </Col>
                     <Col md={9}>
                         <DataGraph countryName={this.state.selectedCountry} />
-                        <p className="caption" style={{textAlign: 'right'}}>Click category to enable/disable timeline series</p>
+                        <div className="caption">
+                            <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series.</p>
+                            <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>
+                        </div>
                     </Col>
                 </Row>
                 <Row>
@@ -200,6 +205,11 @@ class CoronaTracker extends Component {
                         <DataTable url={countriesData} />                    
                     </Col>
                 </Row> 
+                <Row>
+                    <Col xs={12}>
+                        <Disclaimer />
+                    </Col>
+                </Row>
                 <Row>
                     <Col xs={12}>
                         <Alert/>                            

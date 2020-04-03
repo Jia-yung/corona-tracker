@@ -1,0 +1,59 @@
+.colorLegend {
+    margin-bottom: 25px;
+}
+
+.colorLegend > h6 {
+    margin-bottom: 2px;
+}
+
+.colorRow > td {
+    width: 100px;
+    height: 10px
+}
+
+.dataRow > td {
+    text-align: left;
+    font-size: 12px;
+}
+
+.colorTable {
+    width: 70%;
+}
+
+.noCases {
+    background-color: white;
+}
+
+.leastCases {
+    background-color: #F4C2C2 ;
+}
+
+.minimalCases {
+    background-color: #FF5C5C;
+}
+
+.averageCases{
+    background-color: #D73B3E;
+}
+
+.moderateCases {
+    background-color:#B22222 ;
+}
+
+.mostCases {
+    background-color: #701C1C;
+}
+
+@media screen and (max-width: 540px) {
+    .dataRow > td {
+        font-size: 9px !important;
+    }
+
+    .colorLegend > h6 {
+        font-size: 11px !important;
+    }
+
+    .colorRow > td {
+        height: 5px
+    }
+}

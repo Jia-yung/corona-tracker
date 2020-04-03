@@ -1,0 +1,21 @@
+.disclaimerContainer {
+    border-radius: 15px;
+    margin-bottom: 25px;
+    background-color: #343A40;
+    padding: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.disclaimerContainer > h4 {
+    text-align: center !important;
+}
+
+.disclaimerContainer > h6 {
+    margin-bottom: 2px;
+}
+
+.disclaimerContainer > p {
+    font-size: 12px;
+    margin-bottom: 10px !important;
+}

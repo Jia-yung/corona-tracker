@@ -3,7 +3,40 @@
     height: 600px;
 }
 
-@media screen and (max-width: 420px) {
+.country:hover {
+    opacity: 0.7 !important;
+}
+
+.labelStyle {
+    color: white !important;
+}
+
+@media screen and (max-width: 900px) {
+    .svg {
+        height: 450px
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .svg {
+        height: 400px
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .svg {
+        height: 350px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .svg {
+        height: 300px
+    }
+}
+
+
+@media screen and (max-width: 500px) {
     .svg {
         height: 250px
     }
