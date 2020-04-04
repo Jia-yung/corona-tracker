@@ -7,7 +7,7 @@ const article = (props) => (
         <Card className="cardStyle card-block rounded-0" bg={'dark'}>
             <a target="_blank" rel="noopener noreferrer" href={props.articleURL} className="linkStyle">
                 <div className="image-section">
-                    <Card.Img variant="top" className="news-image rounded-0" src={props.imgURL} />
+                    <Card.Img variant="top" className="articleImage rounded-0" src={props.imgURL} />
                 </div>
                 <Card.Body className="cardBody">
                     <Card.Title className="cardTitle">{props.title}</Card.Title>

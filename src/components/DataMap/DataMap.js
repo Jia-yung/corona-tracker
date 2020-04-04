@@ -9,8 +9,7 @@ function GeoChart({ data, property, infectedCountry}) {
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
     const [selectedCountry, setSelectedCountry] = useState(null);
-    const [casesCount, setCasesCount] = useState(null)
-    
+
     useEffect(() => {                
         const svg = select(svgRef.current);
         const colorScale = scaleQuantile()
@@ -83,25 +82,25 @@ function GeoChart({ data, property, infectedCountry}) {
             feature => feature && feature.properties["name"]
             )
         .attr("x", '1em')
-        .attr("y", '20em')
+        .attr("y", '15.5em')
         .append("tspan")
         .text(
             feature => feature && "Cases: " + cases
         )
         .attr("x", '1em')
-        .attr("y", '21.5em')
+        .attr("y", '17em')
         .append('tspan')
         .text(
             feature => feature && "Death: " + death
         )
         .attr("x", '1em')
-        .attr("y", '23em')
+        .attr("y", '18.5em')
         .append('tspan')
         .text(
             feature => feature && "Recovered: " + recovered
         )
         .attr("x", '1em')
-        .attr("y", '24.5em')
+        .attr("y", '20em')
         .attr("className", "labelText")
         
         .append("svg:image")
@@ -110,7 +109,7 @@ function GeoChart({ data, property, infectedCountry}) {
         .attr("xlink:href", flag)
         .attr("x", 0)
         .attr("y", 75)
-    }, [data, dimensions, property, selectedCountry, infectedCountry, casesCount]);
+    }, [data, dimensions, property, selectedCountry, infectedCountry]);
 
     return (
         <div>

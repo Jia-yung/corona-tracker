@@ -70,10 +70,8 @@ class Graph extends Component {
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
             let request= null
-            let name = null
             if (this.props.countryName !== "Global"){
                 request = this.props.countryName
-                name= this.props.countryName
             } else {
                 request = "all"
             }

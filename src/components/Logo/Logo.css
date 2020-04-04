@@ -25,13 +25,13 @@
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 350px) {
     .logoIcon {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
     }
 
     .logoStyle > p {
-        font-size: 20px;
+        font-size: 15px;
     }
 }

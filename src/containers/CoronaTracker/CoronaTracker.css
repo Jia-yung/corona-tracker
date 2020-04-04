@@ -59,8 +59,7 @@
 }
 
 .articleContainer {
-    overflow-x: scroll;
-
+    overflow: hidden;
 }
 
 .globalBtn {

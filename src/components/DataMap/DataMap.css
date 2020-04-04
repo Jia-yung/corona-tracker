@@ -52,6 +52,10 @@
     .svg {
         height: 300px
     }
+    .label {
+        font-size: 10px;
+        
+    }
 }
 
 
@@ -62,6 +66,17 @@
 
     .label {
         font-size: 10px;
+        
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .svg {
+        height: 200px
+    }
+
+    .label {
+        font-size: 9px;
         
     }
 }
