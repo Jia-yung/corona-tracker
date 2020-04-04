@@ -37,7 +37,7 @@
 }
 
 .ulContainer {
-    height: 246px;
+    height: 232px;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
 }
@@ -63,9 +63,22 @@
 }
 
 .globalBtn {
-    font-size: 12px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    text-align: left;
+    font-size: 15px;
+    background-color: #A6ACAF;
+    border-radius: 15px;
+    padding: 4px;
+    margin-bottom: 15px;
+    width: 100px;
+}
+
+.globalBtn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.globalBtn:active {
+    cursor: grabbing;
 }
 
 .mapContainer {

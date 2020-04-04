@@ -70,18 +70,19 @@ class Graph extends Component {
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
             let request= null
+            let name = null
             if (this.props.countryName !== "Global"){
                 request = this.props.countryName
-                this.setState({countryName: this.props.countryName})
+                name= this.props.countryName
             } else {
                 request = "all"
-                this.setState({countryName: "Global"})
+                name = "Global"
             }
-            this.getData(request)
+            this.getData(request, name)
         }
     }
     
-    getData = (request) => {
+    getData = (request, name) => {
         axios.get("https://corona.lmao.ninja/v2/historical/" + request).then(response => {
             let historicDataInfected = null
             let historicDataDeath = null
@@ -111,7 +112,7 @@ class Graph extends Component {
             this.setState({
                 options: {
                     title: {
-                        text: this.state.countryName.toUpperCase(),
+                        text: name.toUpperCase(),
                     },
                     xaxis: {
                         categories: dateArray
@@ -130,7 +131,7 @@ class Graph extends Component {
                 error: true,
                 options: {
                     title: {
-                        text: this.state.countryName.toUpperCase() + " - No Data",
+                        text: name.toUpperCase() + " - No Data",
                     }                     
                 },
                 series: [{

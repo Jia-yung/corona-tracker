@@ -3,8 +3,11 @@ import './ListItem.css'
 
 const listItem = (props) => (
     <li onClick={props.clicked}>
-        <div>{props.country} :</div> 
-        <div><b>{props.cases}</b></div>
+        <h6>
+            <img className="itemFlag" src={props.flag} alt="flag" align="middle" />
+            {props.country}
+        </h6>
+        <h6>{props.cases} cases</h6>
     </li>
 )
 

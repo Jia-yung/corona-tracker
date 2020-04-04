@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, Button} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 import DataMap from '../../components/DataMap/DataMap';
 import DataGraph from '../../components/DataGraph/DataGraph';
@@ -103,6 +103,7 @@ class CoronaTracker extends Component {
                     country={data.country}
                     cases={data.cases}
                     deaths={data.deaths}
+                    flag={data.countryInfo.flag}
                     clicked={() => this.countrySelectHandler(data.country)} />
             )
         })
@@ -172,10 +173,7 @@ class CoronaTracker extends Component {
                     <Col md={12}>                        
                         <h4 className="subTitle">
                             Select a country to display cummulative data
-                            <Button size="sm" style={{marginLeft: "5px"}} onClick={() => this.countrySelectHandler("all")}>
-                                <img src={EarthLogo} align="middle" />
-                                <p>Global</p>
-                            </Button>
+                            
                             {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                         </h4>
                     </Col>
@@ -183,8 +181,11 @@ class CoronaTracker extends Component {
                 <Row>
                     <Col md={3}> 
                         <div className="listItemContainer">
-                            <p>Total Cases</p>
-                            <h6 style={{textAlign: "left"}}>Country: </h6>
+                            <p>Country</p>
+                            <h5 className="globalBtn" onClick={() => this.countrySelectHandler("all")}>
+                                <img width="30px" height="20px" src={EarthLogo} alt="Globe" align="middle" />
+                                Global  
+                            </h5>
                             <div className="ulContainer">
                                 <ul className="itemStyle">
                                     {item}                      

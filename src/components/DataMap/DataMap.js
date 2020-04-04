@@ -11,7 +11,6 @@ function GeoChart({ data, property, infectedCountry}) {
     const [selectedCountry, setSelectedCountry] = useState(null);
     // will be called initially and on every data change
     
-    let casesArray=[]
     useEffect(() => {                
         const svg = select(svgRef.current);
         const colorScale = scaleQuantile()
@@ -53,7 +52,6 @@ function GeoChart({ data, property, infectedCountry}) {
             }
             return colorScale(color)
         })
-        let cases = 0
         // render text
         svg
         .selectAll(".label")
