@@ -4,46 +4,47 @@ import './DataMap.css'
 import ColorLegend from './ColorLegend/ColorLegend'
 import useResizeObserver from "./ResizeObserver"; 
 
-
 function GeoChart({ data, property, infectedCountry}) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [casesCount, setCasesCount] = useState(null)
-    // will be called initially and on every data change
     
     useEffect(() => {                
         const svg = select(svgRef.current);
         const colorScale = scaleQuantile()
         .domain([0, 1, 1000, 50000, 80000, 100000])
         .range(["white","#F4C2C2", "#FF5C5C", "#D73B3E","#B22222","#701C1C"]);
-        // use resized dimensions
-        // but fall back to getBoundingClientRect, if no dimensions yet.
+
         const { width, height } =
         dimensions || wrapperRef.current.getBoundingClientRect();
 
-        // projects geo-coordinates on a 2D plane
         const projection = geoMercator()
         .fitSize([width, height], data)
         .precision(100);
 
-        // takes geojson data,
-        // transforms that into the d attribute of a path element
         const pathGenerator = geoPath().projection(projection);
+        
         let color = 0
-        let countryCases = 0
-        // render each country
+        let cases = 0 
+        let death = 0 
+        let recovered = 0
+        let flag = null
+
         svg
         .selectAll(".country")
         .data(data.features)
         .join("path")
-        .on("click", feature => {
+        .on("mouseover", feature => {
+            setSelectedCountry(selectedCountry === feature ? null : feature);
+        })
+        .on("mouseout", feature => {
             setSelectedCountry(selectedCountry === feature ? null : feature);
         })
         .attr("class", "country")
-        .transition().duration(1000)
         .attr("d", feature => pathGenerator(feature))
+        .transition().duration(1000)
         .attr("fill", feature => {
             for (const key of Object.keys(infectedCountry)) {
                 if(feature.properties["iso_a3"] === infectedCountry[key].countryInfo.iso3) {
@@ -55,9 +56,23 @@ function GeoChart({ data, property, infectedCountry}) {
             }
             return colorScale(color)
         })
-        console.log(countryCases)
-        let cases = 0
-        // render text
+        
+        if(selectedCountry) {
+            for (const key of Object.keys(infectedCountry)) {
+                if(selectedCountry.properties["iso_a3"] === infectedCountry[key].countryInfo.iso3) {
+                    cases = infectedCountry[key].cases
+                    death = infectedCountry[key].deaths
+                    recovered = infectedCountry[key].recovered
+                    flag = infectedCountry[key].countryInfo.flag
+                    break
+                } else {
+                    cases = 0
+                    death = 0
+                    recovered = 0
+                }
+            }
+        }
+
         svg
         .selectAll(".label")
         .data([selectedCountry])
@@ -65,24 +80,36 @@ function GeoChart({ data, property, infectedCountry}) {
         .attr("class", "label")
         .style("fill", "white")
         .text(
-            feature => feature && infectedCountry && feature.properties["name"] + ": " + feature.properties[property].toLocaleString()
+            feature => feature && feature.properties["name"]
+            )
+        .attr("x", '1em')
+        .attr("y", '20em')
+        .append("tspan")
+        .text(
+            feature => feature && "Cases: " + cases
         )
-        //  .text(
-        //     feature => {
-        //         for (const key of Object.keys(infectedCountry)) {
-        //             if (infectedCountry[key].countryInfo.iso3 === feature && feature.properties["iso_a3"]) {
-        //                 cases = infectedCountry[key].cases
-        //                 break
-        //             } else {
-        //                 cases = 0
-        //             }
-        //         }
-        //         return (feature && feature.properties.name + ":" + cases)
-        //     }         
-        // )
-        .attr("x", 25)
-        .attr("y", 25)
-        .attr("className", "labelText");
+        .attr("x", '1em')
+        .attr("y", '21.5em')
+        .append('tspan')
+        .text(
+            feature => feature && "Death: " + death
+        )
+        .attr("x", '1em')
+        .attr("y", '23em')
+        .append('tspan')
+        .text(
+            feature => feature && "Recovered: " + recovered
+        )
+        .attr("x", '1em')
+        .attr("y", '24.5em')
+        .attr("className", "labelText")
+        
+        .append("svg:image")
+        .attr('width', 20)
+        .attr('height', 24)
+        .attr("xlink:href", flag)
+        .attr("x", 0)
+        .attr("y", 75)
     }, [data, dimensions, property, selectedCountry, infectedCountry, casesCount]);
 
     return (
