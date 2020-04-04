@@ -11,10 +11,11 @@
     margin-bottom: 25px;
     white-space: nowrap;
     -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .toolTipContainer::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 .caption {
@@ -96,9 +97,7 @@
     }
 
     .listItemContainer > p {
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 900;
+        font-size: 17px;
     }
     .alertContainer {
         font-size: 15px;

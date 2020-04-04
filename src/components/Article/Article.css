@@ -2,14 +2,21 @@
     margin-bottom: 25px;
     padding-bottom: 0px !important;
     height: 290px;
+    margin-right: 10px;
     overflow: hidden;
     cursor: pointer;
     color: white;
     text-decoration: none;
+    transition: transform .2s;
 }
 
 .cardStyle:active {
     cursor: grabbing ;
+}
+
+.cardStyle:hover {
+    opacity: 0.8 !important;
+    transform: scale(1.05);
 }
 
 .cardBody {
@@ -23,7 +30,6 @@
 .linkStyle:hover {
     color: inherit;
     text-decoration: inherit;
-    opacity: 0.8 !important;
 }
 
 .news-image {

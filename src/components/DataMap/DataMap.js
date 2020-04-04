@@ -1,14 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
-import { select, geoPath, geoMercator, scaleQuantile } from "d3";
+import { select, geoPath, geoMercator, scaleQuantile} from "d3";
 import './DataMap.css'
 import ColorLegend from './ColorLegend/ColorLegend'
 import useResizeObserver from "./ResizeObserver"; 
+
 
 function GeoChart({ data, property, infectedCountry}) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
     const [selectedCountry, setSelectedCountry] = useState(null);
+    const [casesCount, setCasesCount] = useState(null)
     // will be called initially and on every data change
     
     useEffect(() => {                
@@ -30,6 +32,7 @@ function GeoChart({ data, property, infectedCountry}) {
         // transforms that into the d attribute of a path element
         const pathGenerator = geoPath().projection(projection);
         let color = 0
+        let countryCases = 0
         // render each country
         svg
         .selectAll(".country")
@@ -52,6 +55,8 @@ function GeoChart({ data, property, infectedCountry}) {
             }
             return colorScale(color)
         })
+        console.log(countryCases)
+        let cases = 0
         // render text
         svg
         .selectAll(".label")
@@ -60,13 +65,9 @@ function GeoChart({ data, property, infectedCountry}) {
         .attr("class", "label")
         .style("fill", "white")
         .text(
-            feature =>
-            feature &&
-            feature.properties["iso_a3"] +
-                ": " +
-                feature.properties[property].toLocaleString()
+            feature => feature && infectedCountry && feature.properties["name"] + ": " + feature.properties[property].toLocaleString()
         )
-        // .text(
+        //  .text(
         //     feature => {
         //         for (const key of Object.keys(infectedCountry)) {
         //             if (infectedCountry[key].countryInfo.iso3 === feature && feature.properties["iso_a3"]) {
@@ -79,11 +80,10 @@ function GeoChart({ data, property, infectedCountry}) {
         //         return (feature && feature.properties.name + ":" + cases)
         //     }         
         // )
-        
         .attr("x", 25)
         .attr("y", 25)
         .attr("className", "labelText");
-    }, [data, dimensions, property, selectedCountry, infectedCountry]);
+    }, [data, dimensions, property, selectedCountry, infectedCountry, casesCount]);
 
     return (
         <div>
