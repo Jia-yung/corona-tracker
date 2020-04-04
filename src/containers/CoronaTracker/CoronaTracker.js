@@ -182,7 +182,7 @@ class CoronaTracker extends Component {
                     <Col md={3}> 
                         <div className="listItemContainer">
                             <p>Country</p>
-                            <h5 className="globalBtn" onClick={() => this.countrySelectHandler("all")}>
+                            <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
                                 <img width="30px" height="20px" src={EarthLogo} alt="Globe" align="middle" />
                                 Global  
                             </h5>
