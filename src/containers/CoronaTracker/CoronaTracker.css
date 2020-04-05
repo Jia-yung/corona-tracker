@@ -3,7 +3,7 @@
     padding: 10px;
     height: 100vh !important;
     width: 100vw !important;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .toolTipContainer {
@@ -39,7 +39,7 @@
 
 .ulContainer {
     height: 232px;
-    overflow: scroll;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -60,7 +60,9 @@
 
 .articleContainer {
     overflow: hidden;
+    margin-bottom: 25px;
     overflow-x: scroll !important;
+    -ms-overflow-style: none;
 }
 
 .globalBtn {

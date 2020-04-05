@@ -82,25 +82,25 @@ function GeoChart({ data, property, infectedCountry}) {
             feature => feature && feature.properties["name"]
             )
         .attr("x", '1em')
-        .attr("y", '15.5em')
+        .attr("y", '16em')
         .append("tspan")
         .text(
             feature => feature && "Cases: " + cases
         )
         .attr("x", '1em')
-        .attr("y", '17em')
+        .attr("y", '17.5em')
         .append('tspan')
         .text(
             feature => feature && "Death: " + death
         )
         .attr("x", '1em')
-        .attr("y", '18.5em')
+        .attr("y", '19em')
         .append('tspan')
         .text(
             feature => feature && "Recovered: " + recovered
         )
         .attr("x", '1em')
-        .attr("y", '20em')
+        .attr("y", '20.5em')
         .attr("className", "labelText")
         
         .append("svg:image")

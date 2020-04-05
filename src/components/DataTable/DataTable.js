@@ -2,26 +2,17 @@ import React, {Component} from 'react';
 import './DataTable.css'
 
 class DataTable extends Component {
-    componentDidMount() {
-        const script = document.createElement("script");
-
-        script.src = "extensions/sticky-header/bootstrap-table-sticky-header.js";
-        script.async = true;
-    
-        document.body.appendChild(script);
-    }
-
     render () {
         return (
             <div className="dataTable">         
                 <table 
                     className="table-custom"
                     data-toggle="table"
-                    data-sticky-header="true"
+                    data-sticky-header = "true"
                     data-classes="table table-bordered"
                     data-url= {this.props.url}                
                     data-search="true" >
-                    <thead className="tableHeader">
+                    <thead className="tableHeader" data-sticky-header="true">
                         <tr className="tableRow">
                             <th data-field="country" data-sortable>Country</th>
                             <th data-field="cases" data-sortable>Infected</th>

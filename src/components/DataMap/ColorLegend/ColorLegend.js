@@ -19,10 +19,10 @@ const colorLegend = () => (
                 <tr className="dataRow">
                     <td>0</td>
                     <td>>1</td>
-                    <td>>1000</td>
-                    <td>>50000</td>
-                    <td>>80000</td>
-                    <td>>100000</td>
+                    <td>>1K</td>
+                    <td>>50K</td>
+                    <td>>80K</td>
+                    <td>>100K</td>
                 </tr>
             </tbody>
         </table>

@@ -1,5 +1,4 @@
 .cardStyle {
-    margin-bottom: 25px;
     padding-bottom: 0px !important;
     height: 290px;
     margin-right: 5px;
@@ -49,8 +48,8 @@
 }
 
 @media screen and (max-width: 420px) {
-    .news-image {
-        height: 120px;
+    .articleImage {
+        height: 120px !important;
     }
 
     .cardTitle {
