@@ -9,3 +9,9 @@
     padding: 10px;
     margin-bottom: 25px;
 }
+
+.tableHeader {
+    position: sticky !important;
+    top: 0 !important;
+}
+

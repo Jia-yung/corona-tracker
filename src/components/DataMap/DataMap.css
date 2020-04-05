@@ -19,7 +19,7 @@
 
 .country:hover {
     stroke: white;
-    stroke-width: 1px;
+    stroke-width: 1.2px;
 }
 
 .label {
@@ -46,6 +46,9 @@
     .svg {
         height: 350px
     }
+    .label {
+        font-size: 12px;     
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -53,8 +56,7 @@
         height: 300px
     }
     .label {
-        font-size: 10px;
-        
+        font-size: 10px;     
     }
 }
 
@@ -63,7 +65,6 @@
     .svg {
         height: 250px
     }
-
     .label {
         font-size: 10px;
         

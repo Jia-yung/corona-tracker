@@ -198,6 +198,7 @@ class CoronaTracker extends Component {
                         <div className="caption">
                             <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series.</p>
                             <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>
+                            <p style={{textAlign: 'right'}}>Updated each day at 23:59 UTC.</p>
                         </div>
                     </Col>
                 </Row>

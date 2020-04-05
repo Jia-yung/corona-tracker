@@ -2,8 +2,8 @@
     background-color: #1F2125;
     padding: 10px;
     height: 100vh !important;
-    width: 100% !important;
-    overflow: auto;
+    width: 100vw !important;
+    overflow: scroll;
 }
 
 .toolTipContainer {
@@ -60,6 +60,7 @@
 
 .articleContainer {
     overflow: hidden;
+    overflow-x: scroll !important;
 }
 
 .globalBtn {

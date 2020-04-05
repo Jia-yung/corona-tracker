@@ -2,7 +2,7 @@
     margin-bottom: 25px;
     padding-bottom: 0px !important;
     height: 290px;
-    margin-right: 10px;
+    margin-right: 5px;
     overflow: hidden;
     cursor: pointer;
     color: white;
@@ -54,7 +54,7 @@
     }
 
     .cardTitle {
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
 
     .cardText {

@@ -80,7 +80,7 @@ class Graph extends Component {
     }
     
     getData = (request) => {
-        axios.get("https://corona.lmao.ninja/v2/historical/" + request).then(response => {
+        axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
             let historicDataInfected = null
             let historicDataDeath = null
             let historicDataRecovered = null
