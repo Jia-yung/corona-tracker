@@ -29,7 +29,6 @@ function GeoChart({ data, property, infectedCountry}) {
         let cases = 0 
         let death = 0 
         let recovered = 0
-        let flag = null
 
         svg
         .selectAll(".country")
@@ -62,7 +61,6 @@ function GeoChart({ data, property, infectedCountry}) {
                     cases = infectedCountry[key].cases
                     death = infectedCountry[key].deaths
                     recovered = infectedCountry[key].recovered
-                    flag = infectedCountry[key].countryInfo.flag
                     break
                 } else {
                     cases = 0
@@ -78,37 +76,28 @@ function GeoChart({ data, property, infectedCountry}) {
         .join("text")
         .attr("class", "label")
         .style("fill", "white")
-        .text(
-            feature => feature && feature.properties["name"]
-            )
-        .attr("x", '1em')
-        .attr("y", '16em')
-        .append("tspan")
-        .text(
-            feature => feature && "Cases: " + cases
-        )
+        
+        .text(feature => feature && "Cases: " + cases.toLocaleString())
         .attr("x", '1em')
         .attr("y", '17.5em')
         .append('tspan')
-        .text(
-            feature => feature && "Death: " + death
-        )
+        
+        .text(feature => feature && "Death: " + death.toLocaleString())
         .attr("x", '1em')
         .attr("y", '19em')
         .append('tspan')
-        .text(
-            feature => feature && "Recovered: " + recovered
-        )
+        
+        .text(feature => feature && "Recovered: " + recovered.toLocaleString())
         .attr("x", '1em')
         .attr("y", '20.5em')
         .attr("className", "labelText")
+        .append("tspan")
         
-        .append("svg:image")
-        .attr('width', 20)
-        .attr('height', 24)
-        .attr("xlink:href", flag)
-        .attr("x", 0)
-        .attr("y", 75)
+        .style("font-weight", "bold")
+        .text(feature => feature && feature.properties["name"])
+        .attr("x", '1em')
+        .attr("y", '16em')
+        .attr("className", "countryName")
     }, [data, dimensions, property, selectedCountry, infectedCountry]);
 
     return (

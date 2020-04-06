@@ -62,7 +62,7 @@
     overflow: hidden;
     margin-bottom: 25px;
     overflow-x: scroll !important;
-    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .globalBtn {

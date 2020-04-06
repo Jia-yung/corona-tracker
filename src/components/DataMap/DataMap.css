@@ -22,6 +22,10 @@
     stroke-width: 1.2px;
 }
 
+.countryName {
+    font-weight: 900;
+}
+
 .label {
     font-size: 18px;
 }

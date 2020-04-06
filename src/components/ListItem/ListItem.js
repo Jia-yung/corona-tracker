@@ -7,7 +7,7 @@ const listItem = (props) => (
             <img className="itemFlag" src={props.flag} alt="flag" align="middle" />
             {props.country}
         </h6>
-        <h6>{props.cases} cases</h6>
+        <h6>{props.cases.toLocaleString()} cases</h6>
     </li>
 )
 

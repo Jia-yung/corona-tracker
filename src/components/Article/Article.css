@@ -47,6 +47,17 @@
     text-align: left;
 }
 
+@media screen and (min-width: 420px) {
+    .cardStyle {
+        margin-right: 15px;
+        height: 350px;
+    }
+
+    .articleImage {
+        height: 170px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .articleImage {
         height: 120px !important;
@@ -59,6 +70,7 @@
     .cardText {
         font-size: 8px !important;
     }
+
 }
 
 @media screen and (max-width: 350px) {
