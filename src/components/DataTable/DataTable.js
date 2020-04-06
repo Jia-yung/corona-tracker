@@ -16,7 +16,7 @@ class DataTable extends Component {
                         <tr className="tableRow">
                             <th data-field="country" data-sortable>Country</th>
                             <th data-field="cases" data-sortable>Infected</th>
-                            <th data-field="todayCases" data-sortable>Today Infections</th>
+                            <th data-field="todayCases" data-sortable>New Cases</th>
                             <th data-field="deaths" data-sortable>Deaths</th>
                             <th data-field="active" data-sortable>Active</th>
                             <th data-field="critical" data-sortable>Critical</th>

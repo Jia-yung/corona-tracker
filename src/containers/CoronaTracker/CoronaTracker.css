@@ -1,9 +1,10 @@
 .main {
     background-color: #1F2125;
     padding: 10px;
-    height: 100vh !important;
+    height: 100% !important;
     width: 100vw !important;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .toolTipContainer {
