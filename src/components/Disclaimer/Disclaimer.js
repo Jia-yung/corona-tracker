@@ -16,6 +16,8 @@ const disclaimer = () => (
             </a>
             official site.
         </p>
+        <h6>Availability of Data</h6>
+        <p>Data for some countries are not displayed due to the unavailability of the data provided.</p>
     </div>
 )
 

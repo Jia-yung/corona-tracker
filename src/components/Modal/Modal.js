@@ -6,7 +6,7 @@ import CountUp from 'react-countup'
     render () {
         return (
             <div className="modalContainer">
-                <CountUp style={{display: this.props.showSpinner? 'none' : 'block'}} className={["figure", this.props.status].join(' ')} start={0} end={this.props.figure} delay={0}></CountUp>
+                <CountUp style={{display: this.props.showSpinner? 'none' : 'block'}} className={["figure", this.props.status].join(' ')} start={0} end={this.props.figure} delay={0} />
                 <h5 style={{display: this.props.showSpinner? 'none' : 'block'}} className="modalStatus">{this.props.title}</h5>
                 {this.props.children}
             </div>

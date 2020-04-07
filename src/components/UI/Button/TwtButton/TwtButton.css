@@ -1,0 +1,11 @@
+.twitterShareBtn {
+    float: right;
+}
+
+@media screen and (max-width: 576px ) {
+    .twitterShareBtn {
+        float: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

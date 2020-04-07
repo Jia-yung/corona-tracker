@@ -85,9 +85,42 @@
     cursor: grabbing;
 }
 
+.twitterShareBtn {
+    float: right;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.fbShareBtn {
+   float: right;
+   display: flex;
+   padding-top: 12px;
+   padding-bottom: 10px;
+   margin-right: 10px;
+}
+
+.fbShareBtn:hover {
+    opacity: 0.7;
+}
+
 .mapContainer {
     margin: auto;
     width: 100% !important;
+}
+
+@media screen and (max-width: 576px ) {
+    .twitterShareBtn {
+        float: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .fbShareBtn {
+        float: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 540px ) {

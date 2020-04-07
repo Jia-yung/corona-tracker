@@ -11,43 +11,30 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="COVID-19 Tracker">
     <meta itemprop="description" content="Get the real time data and visual presentation of the latest COVID-19 data from verified sources.">
-    <meta itemprop="image" content="./thumbnail.png">
+    <meta itemprop="image" content="https://covid19trackeronline.com/./thumbnail.png">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://covid19trackeronline.com">
     <meta property="og:type" content="website">
     <meta property="og:title" content="COVID-19 Tracker">
     <meta property="og:description" content="Get the real time data and visual presentation of the latest COVID-19 data from verified sources.">
-    <meta property="og:image" content="./thumbnail.png">
+    <meta property="og:image" content="https://covid19trackeronline.com/./thumbnail.png">
+    <meta property="og:image:width" content="250">
+    <meta property="og:image:height" content="250">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:widgets:theme" content="dark">
     <meta name="twitter:title" content="COVID-19 Tracker">
     <meta name="twitter:description" content="Get the real time data and visual presentation of the latest COVID-19 data from verified sources.">
-    <meta name="twitter:image" content="./thumbnail.png">
+    <meta name="twitter:image" content="https://covid19trackeronline.com/./thumbnail.png">
 
-
-    <!-- <meta name="website" property="og:type" content="website">
-    <meta name="title" property="og:title" content="COVID-19 Tracker" />
-    <meta name="description" property="og:description" content="Get the real time data and visual presentation of the latest COVID-19 data from verified sources." />
-    <meta name="image" property="og:image" content="./thumbnail.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <meta name="image" property="og:image" content="./thumbnail.png" />
-    <meta name="image:width" property="og:image:width" content="300" />
-    <meta name="image:height" property="og:image:height" content="300" />
-
-    <meta name="twitter:title" content="COVID-19 Tracker" />
-    <meta name="twitter:description" content="Get the real time data and visual presentation of the latest COVID-19 data from verified sources."/>
-    <meta name="twitter:image" content="./thumbnail.png" /> -->
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/thumbnail.png">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/pandemic.svg">
     <!--<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -61,6 +48,8 @@
     <title>COVID-19 Tracker</title>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -75,6 +64,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
   </body>

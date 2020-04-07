@@ -1,5 +1,6 @@
 .logoStyle {
-    text-align: left;
+    
+    float: left;
 }
 
 .logoStyle > p {

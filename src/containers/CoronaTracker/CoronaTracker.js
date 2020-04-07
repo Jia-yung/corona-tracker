@@ -6,6 +6,8 @@ import DataGraph from '../../components/DataGraph/DataGraph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
 import Spinner from '../../components/UI/Spinner/Spinner'
+import FbButton from '../../components/UI/Button/FbButton/FbButton'
+import TweetButton from '../../components/UI/Button/TwtButton/TwtButton'
 import ListItem from '../../components/ListItem/ListItem';
 import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
@@ -115,22 +117,26 @@ class CoronaTracker extends Component {
             <Container fluid className="main">
                 <Row>
                     <Col xs={12}>
-                        <Alert />                            
+                        <Alert /> 
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={12}>
+                    <Col xs={12} sm={7} md={7}>
                         <Logo />
                     </Col>
+                    <Col xs={12} sm={5} md={5}>
+                        <TweetButton />
+                        <FbButton />
+                    </Col>
                 </Row>
                 <Row>
-                    <Col xs={4}>
+                    <Col xs={4} style={{padding: "8px"}}>
                         {recovered}
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={4} style={{padding: "8px"}}>
                         {infected}
                     </Col>
-                    <Col xs={4}>
+                    <Col xs={4} style={{padding: "8px"}}>
                         {death}
                     </Col>                
                 </Row>
