@@ -20,6 +20,11 @@
     margin-bottom: 10px !important;
 }
 
+.links{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 540px ) {
     .disclaimerContainer > h4{
         font-size: 20px;
