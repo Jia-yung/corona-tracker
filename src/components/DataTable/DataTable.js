@@ -18,9 +18,11 @@ class DataTable extends Component {
                             <th data-field="cases" data-sortable>Infected</th>
                             <th data-field="todayCases" data-sortable>New Cases</th>
                             <th data-field="deaths" data-sortable>Deaths</th>
+                            <th data-field="recovered" data-sortable>Recovered</th>
                             <th data-field="active" data-sortable>Active</th>
                             <th data-field="critical" data-sortable>Critical</th>
-                            <th data-field="recovered" data-sortable>Recovered</th>
+                            <th data-field="casesPerOneMillion" data-sortable>Cases/Million</th>
+                            <th data-field="deathsPerOneMillion" data-sortable>Death/Million</th>
                         </tr>
                     </thead>
                 </table>

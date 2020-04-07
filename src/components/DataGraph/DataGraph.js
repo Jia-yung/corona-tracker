@@ -165,7 +165,7 @@ class Graph extends Component {
                 <Chart
                     options={this.state.options}
                     series={this.state.series} 
-                    type="line"                   
+                    type="line"                  
                     width="100%"
                     height="300px"
                 />

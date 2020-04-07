@@ -47,24 +47,6 @@ class CoronaTracker extends Component {
             })).catch(error => {
                 this.setState({error: true})
             })
-
-        // axios.get('https://corona.lmao.ninja/all')
-        //     .then(response => {
-        //         this.setState({
-        //             totalCases: response.data.cases,
-        //             totalDeath: response.data.deaths, 
-        //             totalRecovered: response.data.recovered, 
-        //             loading: false})
-        //     }).catch(error => {
-        //         this.setState({error: error})
-        //     });
-
-        // axios.get('https://corona.lmao.ninja/countries?sort=cases')
-        //     .then(response => {
-        //         this.setState({infectedCountry: response.data})
-        //     }).catch(error => {
-        //         this.setState({error: error})
-        //     });
     }
 
     countrySelectHandler = (country) => {
@@ -94,7 +76,6 @@ class CoronaTracker extends Component {
             death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Death"} status={"Danger"} />
             recovered = <Modal figure={this.state.totalRecovered} showSpinner={false} title={"Recovered"} status={"Success"} />
         }
-
 
         let item = this.state.infectedCountry.map(data => {
             return (
@@ -165,7 +146,6 @@ class CoronaTracker extends Component {
                     <Col xs={12}>
                         <div className="mapContainer">
                             <DataMap data={data} infectedCountry={this.state.infectedCountry} property="pop_est"/>
-                            {/*<WorldMap mapData={data} width={1000} height={500} />*/}
                         </div>
                     </Col> 
                 </Row>
@@ -173,7 +153,6 @@ class CoronaTracker extends Component {
                     <Col md={12}>                        
                         <h4 className="subTitle">
                             Select a country to display cummulative data
-                            
                             {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                         </h4>
                     </Col>
@@ -198,7 +177,7 @@ class CoronaTracker extends Component {
                         <div className="caption">
                             <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series.</p>
                             <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>
-                            <p style={{textAlign: 'right'}}>Updated each day at 23:59 UTC.</p>
+                            <p style={{textAlign: 'right'}}>Timeline are updated each day at 23:59 UTC.</p>
                         </div>
                     </Col>
                 </Row>
