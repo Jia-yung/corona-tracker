@@ -12,12 +12,25 @@
 }
 
 .disclaimerContainer > h6 {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
+.email > p,
 .disclaimerContainer > p {
     font-size: 14px;
-    margin-bottom: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+.envelopeIcon {
+    font-size: 15px;
+    color: white;
+
+}
+
+.emailBtn {
+    margin-right: 5px;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
 }
 
 .links{
@@ -32,6 +45,7 @@
 }
 
 @media screen and (max-width: 420px) {
+    .email > p,
     .disclaimerContainer > p {
         font-size: 10px;
     }
