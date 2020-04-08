@@ -4,7 +4,13 @@
     height: 100% !important;
     width: 100% !important;
     overflow: auto;
+    scrollbar-width: none !important;
     -webkit-overflow-scrolling: touch;
+}
+
+.main::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: grey; 
 }
 
 .toolTipContainer {
@@ -16,7 +22,7 @@
 }
 
 .toolTipContainer::-webkit-scrollbar {
-    display: none !important;
+    
 }
 
 .caption {
@@ -62,9 +68,12 @@
 .articleContainer {
     overflow: hidden;
     margin-bottom: 25px;
+    scrollbar-shadow-color: black;
+    scrollbar-width: thick;
     overflow-x: scroll !important;
-    scrollbar-width: none;
 }
+
+
 
 .globalBtn {
     text-align: left;
@@ -147,6 +156,19 @@
 
     .alertContainer {
         font-size: 8px !important;
+    }
+
+    .modalLeft {
+        padding-right: 5px !important;
+    }
+
+    .modalMiddle {
+        padding-right: 8px !important;
+        padding-left: 8px !important;
+    }
+
+    .modalRight {
+        padding-left: 5px !important;
     }
 }
 

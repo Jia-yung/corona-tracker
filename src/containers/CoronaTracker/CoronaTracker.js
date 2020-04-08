@@ -130,13 +130,13 @@ class CoronaTracker extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={4} style={{padding: "8px"}}>
+                    <Col xs={4} className="modalLeft">
                         {recovered}
                     </Col>
-                    <Col xs={4} style={{padding: "8px"}}>
+                    <Col xs={4} className="modalMiddle">
                         {infected}
                     </Col>
-                    <Col xs={4} style={{padding: "8px"}}>
+                    <Col xs={4} className="modalRight">
                         {death}
                     </Col>                
                 </Row>
