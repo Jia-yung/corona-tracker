@@ -158,7 +158,7 @@ class CoronaTracker extends Component {
                 <Row>
                     <Col md={12}>                        
                         <h4 className="subTitle">
-                            Select a country to display cummulative data
+                            Select a country to display cummulative graph
                             {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                         </h4>
                     </Col>
@@ -181,7 +181,13 @@ class CoronaTracker extends Component {
                     <Col md={9}>
                         <DataGraph countryName={this.state.selectedCountry}/>
                         <div className="caption">
-                            <p style={{textAlign: 'right'}}>Click category to enable/disable timeline series.</p>
+                            <p style={{textAlign: 'right'}}>
+                                Click 
+                                <span className="leftDot"></span>
+                                <span className="middleDot"></span>
+                                <span className="rightDot"></span>
+                                to enable/disable timeline series.
+                            </p>
                             <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>
                             <p style={{textAlign: 'right'}}>Timeline are updated each day at 23:59 UTC.</p>
                         </div>

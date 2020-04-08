@@ -18,12 +18,14 @@ const disclaimer = () => (
         </p>
         <h6>Availability of Data</h6>
         <p>Data for some countries are not displayed due to the unavailability of the data provided.</p>
-        <div className="fa-pull-left email">         
-            <p>
+        <h6>Feedback
                 <a href="mailto:covid19trackeronline@gmail.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline-secondary emailBtn">
                     <span className="fa fa-envelope envelopeIcon" aria-hidden="true"/>
                 </a>
-                Email  about anything related to this tracker.
+        </h6>
+        <div className="fa-pull-left email">         
+            <p>
+                Do drop an email here if you have any suggestions or data corrections about COVID-19 tracker.
             </p>                          
         </div>    
     </div>
