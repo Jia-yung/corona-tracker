@@ -9,7 +9,7 @@
 }
 
 .paypalImg {
-    width: 90px;
+    width: 110px;
     height: 25px; 
     margin-left: 10px;
 }
@@ -28,7 +28,7 @@
 @media screen and (max-width: 540px) {
     .paypalImg {
         width: 80px;
-        height: 22px;
+        height: 22px !important;
     }
 
     .alertText {
@@ -40,5 +40,13 @@
 @media screen and (max-width: 420px) {
     .alertText{
         font-size: 8px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .paypalImg {
+        width: 80px;
+        margin-top: 5px;
+        height: 20px !important;
     }
 }

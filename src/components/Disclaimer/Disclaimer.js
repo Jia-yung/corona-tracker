@@ -25,7 +25,7 @@ const disclaimer = () => (
             <a href="mailto:covid19trackeronline@gmail.com" target="_blank" rel="noopener noreferrer" className="emailLink">
                 here
             </a>
-            if you have any suggestions or data corrections about COVID-19 tracker.
+            if you have any suggestions/improvements or data corrections about COVID-19 tracker.
         </p>                             
     </div>
 )

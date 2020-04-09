@@ -7,6 +7,11 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.mainHolder {
+    max-width: 1150px;
+    margin: auto;
+}
+
 .main::-webkit-scrollbar-thumb {
     background: gray;
     border-radius: 10px;
@@ -150,8 +155,8 @@
     text-align: left;
     font-size: 15px;
     background-color: #A6ACAF;
-    border-radius: 15px;
-    padding: 4px;
+    border-radius: 5px;
+    padding: 5px;
     margin-bottom: 15px;
     width: 100px;
 }
@@ -163,6 +168,10 @@
 
 .globalBtn:active {
     cursor: grabbing;
+}
+
+.sortBtn {
+    margin-left: 10px;
 }
 
 .twitterShareBtn {
