@@ -163,8 +163,10 @@ class CoronaTracker extends Component {
                             <Logo />
                         </Col>
                         <Col xs={12} sm={5} md={5}>
-                            <TweetButton />
-                            <FbButton />
+                            <div className="socialContainer">
+                                <TweetButton />
+                                <FbButton />
+                            </div>
                         </Col>
                     </Row>
                     <Row>
