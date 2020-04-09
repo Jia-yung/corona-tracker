@@ -9,8 +9,6 @@ class DataTable extends Component {
                     data-url= {this.props.url}                
                     data-toggle="table"
                     data-sticky-header = "true"
-                    data-show-columns="true"
-                    data-show-columns-toggle-all="true"
                     data-height = "500"
                     data-classes="table table-bordered table-dark table-striped"
                     data-search="true" >

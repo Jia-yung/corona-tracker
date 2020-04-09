@@ -3,26 +3,46 @@
     padding: 10px;
     height: 100% !important;
     width: 100% !important;
-    overflow: auto;
-    scrollbar-width: none !important;
+    overflow: auto !important;
     -webkit-overflow-scrolling: touch;
 }
 
-.main::-webkit-scrollbar-track {
+.main::-webkit-scrollbar-thumb {
+    background: gray;
     border-radius: 10px;
-    background-color: grey; 
+    border: 1px solid transparent;
+    background-clip: content-box;
+    width: 1px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: black !important;
+    border-radius: 10px;
+}
+
+.main::-webkit-scrollbar {
+    width: 5px;
 }
 
 .toolTipContainer {
     overflow-x: scroll;
+    padding-bottom: 5px;
     margin-bottom: 25px;
     white-space: nowrap;
-    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
 }
 
+.toolTipContainer::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+}
+
 .toolTipContainer::-webkit-scrollbar {
-    
+    background: black !important;
+    border-radius: 10px;
+    height: 7px !important;
 }
 
 .leftDot {
@@ -75,6 +95,20 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.ulContainer::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    width: 1px;
+}
+
+.ulContainer::-webkit-scrollbar {
+    background: black !important;
+    border-radius: 10px;
+    width: 8px;
+}
+
 .itemStyle {
     list-style-type: none;
     padding-left: 0px;
@@ -98,7 +132,19 @@
     overflow-x: scroll !important;
 }
 
+.articleContainer::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    width: 1px;
+}
 
+.articleContainer::-webkit-scrollbar {
+    background: black !important;
+    border-radius: 10px;
+    height: 7px;
+}
 
 .globalBtn {
     text-align: left;
