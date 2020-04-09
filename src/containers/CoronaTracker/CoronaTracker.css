@@ -231,7 +231,7 @@
 
 @media screen and (max-width: 420px) {
     .ulContainer {
-        height: 130px !important;
+        height: 150px !important;
     }
 
     .alertContainer {
