@@ -18,13 +18,6 @@
     font-size: 15px !important;
 }
 
-@media screen and (max-width: 420px) {
-    .paypalImg {
-        width: 60px;
-        height: 16px !important;
-    }
-}
-
 @media screen and (max-width: 540px) {
     .paypalImg {
         width: 80px;
@@ -36,10 +29,14 @@
     }
 }
 
-
 @media screen and (max-width: 420px) {
     .alertText{
         font-size: 8px !important;
+    }
+
+    .paypalImg {
+        width: 60px;
+        height: 16px !important;
     }
 }
 

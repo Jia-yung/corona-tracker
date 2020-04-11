@@ -77,12 +77,12 @@ function GeoChart({ data, property, infectedCountry}) {
         .attr("class", "label")
         .style("fill", "white")
         
-        .text(feature => feature && "Cases: " + cases.toLocaleString())
+        .text(feature => feature && "Infected: " + cases.toLocaleString())
         .attr("x", '1em')
         .attr("y", '18.5em')
         .append('tspan')
         
-        .text(feature => feature && "Death: " + death.toLocaleString())
+        .text(feature => feature && "Deaths: " + death.toLocaleString())
         .attr("x", '1em')
         .attr("y", '20em')
         .append('tspan')

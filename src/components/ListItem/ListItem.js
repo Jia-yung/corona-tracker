@@ -4,10 +4,10 @@ import './ListItem.css'
 class ListItem extends Component {
     render() {
         let figure  = this.props.cases
-        let category = "cases"
+        let category = "infected"
 
         if (this.props.sortBy === "country" || this.props.sortBy === "cases") {
-            category = "cases"
+            category = "infected"
             figure = this.props.cases
         } else if (this.props.sortBy === "deaths") {
             category = "deaths"

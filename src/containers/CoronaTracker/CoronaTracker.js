@@ -47,7 +47,6 @@ class CoronaTracker extends Component {
                     totalRecovered: response[0].data.recovered, 
                     infectedCountry: response[1].data.reverse()
                 })
-                console.log(this.state.infectedCountry)
             })).catch(error => {
                 this.setState({error: true})
             })
@@ -110,7 +109,7 @@ class CoronaTracker extends Component {
 
         if(this.state.totalCases) {
             infected = <Modal figure={this.state.totalCases} showSpinner={false} title={"Infected"} status={"Warning"} />
-            death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Death"} status={"Danger"} />
+            death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Deaths"} status={"Danger"} />
             recovered = <Modal figure={this.state.totalRecovered} showSpinner={false} title={"Recovered"} status={"Success"} />
         }
 
@@ -214,7 +213,7 @@ class CoronaTracker extends Component {
                                     </h5>
                                     <DropdownButton className="sortBtn" title="Sort by" size="sm">
                                         <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => this.sortHandler("cases")}>Cases</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
                                         <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
                                         <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
                                     </DropdownButton>
