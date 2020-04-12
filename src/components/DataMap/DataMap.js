@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { select, geoPath, geoMercator, scaleQuantile} from "d3";
-import './DataMap.css'
-import ColorLegend from './ColorLegend/ColorLegend'
+import ColorLegend from './ColorLegend/ColorLegend';
 import useResizeObserver from "./ResizeObserver"; 
+import './DataMap.css'
 
-function GeoChart({ data, property, infectedCountry}) {
+function GeoChart({ data, infectedCountry}) {
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
@@ -98,11 +98,11 @@ function GeoChart({ data, property, infectedCountry}) {
         .attr("x", '1em')
         .attr("y", '17em')
         .attr("className", "countryName")
-    }, [data, dimensions, property, selectedCountry, infectedCountry]);
+    }, [data, dimensions, selectedCountry, infectedCountry]);
 
     return (
-        <div>
-            <div ref={wrapperRef} style={{ marginBottom: "10px" }}>
+        <div className="mapContainer">
+            <div ref={wrapperRef}>
                 <svg className="svg" ref={svgRef}></svg>
             </div>
             <ColorLegend />

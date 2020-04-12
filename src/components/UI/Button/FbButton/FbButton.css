@@ -1,5 +1,10 @@
 .fbShareBtn {
    margin-left: 10px;
+   float: right;
+   display: flex;
+   padding-top: 12px;
+   padding-bottom: 10px;
+   margin-right: 10px;
 }
 
 .fbShareBtn:hover {

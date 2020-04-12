@@ -1,0 +1,21 @@
+.articleContainer {
+    overflow: hidden;
+    margin-bottom: 25px;
+    scrollbar-shadow-color: black;
+    scrollbar-width: thick;
+    overflow-x: scroll !important;
+}
+
+.articleContainer::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    width: 1px;
+}
+
+.articleContainer::-webkit-scrollbar {
+    background: black !important;
+    border-radius: 10px;
+    height: 7px;
+}
