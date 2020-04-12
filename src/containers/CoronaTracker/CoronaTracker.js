@@ -17,7 +17,7 @@ import EarthLogo from '../../Image/worldwide.svg';
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
 
 import data from '../../../src/country.json'
-import article from '../../Articles/articles.json';
+//import article from '../../Articles/articles.json';
 import axios from 'axios';
 
 import './CoronaTracker.css';
@@ -30,6 +30,7 @@ class CoronaTracker extends Component {
         totalRecovered: null,
         selectedCountry: null,
         infectedCountry: [],
+        nytArticle:[],
         loading: true,
         sort: "country",
         error: false
@@ -38,16 +39,25 @@ class CoronaTracker extends Component {
     componentDidMount() {
         const totalInfectionRequest = axios.get('https://corona.lmao.ninja/all')
         const allCountryInfectionRequest = axios.get('https://corona.lmao.ninja/countries?sort='  + this.state.sort)
-
         axios.all([totalInfectionRequest, allCountryInfectionRequest])
             .then(axios.spread((...response) => {
                 this.setState({
                     totalCases: response[0].data.cases,
                     totalDeath: response[0].data.deaths, 
                     totalRecovered: response[0].data.recovered, 
-                    infectedCountry: response[1].data.reverse()
+                    infectedCountry: response[1].data.reverse(),
                 })
             })).catch(error => {
+                this.setState({error: true})
+            })
+            
+        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&sort=newest&api-key=fgdVTzPCEfGTXV5ryCamEdxzH5rlbPMJ')
+            .then(response => {
+                this.setState({
+                    nytArticle: response.data.response.docs
+                })
+                console.log("nyt", this.state.nytArticle)
+            }).catch(error => {
                 this.setState({error: true})
             })
     }
@@ -93,9 +103,7 @@ class CoronaTracker extends Component {
         }
     }
 
-    render () {
-        const countriesData = 'https://corona.lmao.ninja/countries?sort=cases';       
-        
+    render () { 
         let spinner = <Spinner />
         let infected = null;
         let death = null;
@@ -127,15 +135,58 @@ class CoronaTracker extends Component {
             )
         })
 
-        let articles = article.article.slice(0, 10).map(data => {
+        // let articles = article.article.slice(0, 10).map(data => {
+        //     return (
+        //         <Article
+        //             key={data.source.id} 
+        //             title={data.title} 
+        //             description={data.description}
+        //             imgURL={data.urlToImage}
+        //             articleURL={data.url}
+        //             source={data.source.name} />
+        //     )
+        // })
+        
+        let articles = this.state.nytArticle.map(data => {
+            let img = ""
+            let subAbstract = ""
+            let dots = "...."
+            if(data.multimedia.length === 0){
+                if(data.source === "AP"){
+                    img = "https://apnews.com/images/ShareLogo2.png"
+                } else if(data.source === "The New York Times") {
+                    img = "https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=621"
+                } else if (data.source === "Reuters"){
+                    img = "https://s2.reutersmedia.net/resources/r/?m=02&d=20180611&t=2&i=1271299693&r=LYNXMPEE5A04D&w=1280"
+                } else {
+                    img = "https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=621"
+                }
+            } else{
+                img ="http://www.nytimes.com/" + data.multimedia[0].url
+            }
+            
+            if (data.abstract.length > 180) {
+                subAbstract = data.abstract.slice(0,180) + dots
+            } else {
+                subAbstract = data.abstract
+            }
+
             return (
                 <Article
-                    key={data.source.id} 
-                    title={data.title} 
-                    description={data.description}
-                    imgURL={data.urlToImage}
-                    articleURL={data.url}
-                    source={data.source.name} />
+                    key={data._id} 
+                    year={data.pub_date.slice(0,4)}
+                    month={data.pub_date.slice(5,7)}
+                    day={data.pub_date.slice(8,10)}
+                    hour={data.pub_date.slice(11,13)}
+                    minute={data.pub_date.slice(14,16)}
+                    seconds={data.pub_date.slice(17,19)}
+                    title={data.headline.main} 
+                    abstract={subAbstract}
+                    imgURL= {img}
+                    articleURL={data.web_url}
+                    source={data.source}
+                    date={(data.pub_date.slice(0,10))}
+                    />
             )
         })
         
@@ -237,13 +288,13 @@ class CoronaTracker extends Component {
                                     to enable/disable timeline series.
                                 </p>
                                 <p style={{textAlign: 'right'}}>Drag/Click on the graph for more information.</p>
-                                <p style={{textAlign: 'right'}}>Timeline are updated each day at 23:59 UTC.</p>
+                                <p style={{textAlign: 'right'}}>Timeline is updated each day at 23:59 UTC.</p>
                             </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col md={12}>
-                            <h4 className="subTitle">Related Articles</h4>
+                            <h4 className="subTitle">Latest Articles</h4>
                             <div className="container-fluid">
                                 <div className="articleContainer row flex-nowrap">
                                     {articles}                                
@@ -255,7 +306,7 @@ class CoronaTracker extends Component {
                         <Col md={12}> 
                             <h4 className="subTitle">Affected Countries List</h4>  
                             <h6 className="contentText">Click the column header to sort.</h6>                
-                            <DataTable url={countriesData} />                    
+                            <DataTable />                    
                         </Col>
                     </Row> 
                     <Row>

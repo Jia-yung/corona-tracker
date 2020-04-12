@@ -9,7 +9,7 @@ import CountUp from 'react-countup'
                 <CountUp 
                     style={{display: this.props.showSpinner? 'none' : 'block'}} 
                     className={["figure", this.props.status].join(' ')} 
-                    duration={3} 
+                    duration={2.5} 
                     separator="," 
                     start={0} 
                     end={this.props.figure} 

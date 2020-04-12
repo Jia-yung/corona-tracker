@@ -1,9 +1,11 @@
 .cardStyle {
-    padding-bottom: 0px !important;
-    height: 290px;
+    padding-bottom: 10px !important;
+    height: 350px;
+    width: 300px;
+    border-radius: 0px !important;
     margin-right: 5px;
     margin-bottom: 10px;
-    overflow: hidden;
+    overflow: hidden !important;
     cursor: pointer;
     color: white;
     text-decoration: none;
@@ -20,7 +22,12 @@
 }
 
 .cardBody {
-    padding-bottom: 0px !important;
+    overflow: hidden;
+}
+
+.cardText {
+    text-align: left;
+    font-size: 11px;
 }
 
 .linkStyle {
@@ -38,30 +45,29 @@
 }
 
 .cardTitle {
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
     text-align: left;
 }
 
-.cardText {
+.publish {
     font-size: 10px;
     text-align: left;
+    margin-left: 20px;
+    color:silver
 }
 
-@media screen and (min-width: 420px) {
-    .cardStyle {
-        margin-right: 15px;
-        height: 350px;
-    }
-
-    .articleImage {
-        height: 170px;
-    }
+.timeAgo {
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 420px) {
+    .cardStyle {
+        width: 220px;
+    }
+
     .articleImage {
-        height: 120px !important;
+        height: 135px !important;
     }
 
     .cardTitle {
@@ -69,6 +75,10 @@
     }
 
     .cardText {
+        font-size: 10px;
+    }
+
+    .publish {
         font-size: 8px !important;
     }
 
@@ -76,10 +86,10 @@
 
 @media screen and (max-width: 350px) {
     .cardTitle {
-        font-size: 11px !important;
+        font-size: 10px !important;
     }
 
-    .cardText {
-        font-size: 7px !important;
+    .publish {
+        font-size: 8px !important;
     }
 }
