@@ -1,28 +1,11 @@
 import React, { Component } from 'react';
 import Article from './Article/Article';
-import axios from 'axios';
 
 import './Articles.css';
 
 class Articles extends Component {
-    state={
-        nytArticle: [],
-        error: false
-    }
-
-    componentDidMount() {
-        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&sort=newest&api-key=fgdVTzPCEfGTXV5ryCamEdxzH5rlbPMJ')
-            .then(response => {
-                this.setState({
-                    nytArticle: response.data.response.docs,
-                })
-            }).catch(error => {
-                this.setState({error: true})
-            })
-    }
-
     render(){
-        let articles = this.state.nytArticle.map(data => {
+        let articles = this.props.data.map(data => {
             let img = ""
             let subAbstract = ""
 

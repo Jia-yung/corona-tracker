@@ -28,6 +28,7 @@ class CoronaTracker extends Component {
         totalRecovered: null,
         selectedCountry: null,
         infectedCountry: [],
+        nytArticle: [],
         sort: "country",
         loading: true,
         error: false
@@ -45,6 +46,15 @@ class CoronaTracker extends Component {
                     infectedCountry: response[1].data.reverse(),
                 })
             })).catch(error => {
+                this.setState({error: true})
+            })
+
+        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&sort=newest&api-key=fgdVTzPCEfGTXV5ryCamEdxzH5rlbPMJ')
+            .then(response => {
+                this.setState({
+                    nytArticle: response.data.response.docs,
+                })
+            }).catch(error => {
                 this.setState({error: true})
             })
     }
@@ -224,7 +234,7 @@ class CoronaTracker extends Component {
                     <Row>
                         <Col md={12}>
                             <h4 className="subTitle">Latest Articles</h4>
-                            <Articles />                                
+                            <Articles data={this.state.nytArticle} />                                
                         </Col>
                     </Row>
                     <Row>

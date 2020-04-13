@@ -9,16 +9,10 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
-    transition: transform .2s;
 }
 
 .cardStyle:active {
     cursor: grabbing ;
-}
-
-.cardStyle:hover {
-    opacity: 0.8 !important;
-    transform: scale(1.05);
 }
 
 .cardBody {
@@ -59,6 +53,17 @@
 
 .timeAgo {
     margin-top: 10px;
+}
+
+@media screen and (min-width:420px){
+    .cardStyle {
+        transition: transform .2s;
+    }
+
+    .cardStyle:hover {
+        opacity: 0.8 !important;
+        transform: scale(1.05);
+    } 
 }
 
 @media screen and (max-width: 420px) {
