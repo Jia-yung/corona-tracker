@@ -132,6 +132,11 @@
     cursor: grabbing;
 }
 
+.globalBtn > img {
+    width:30px ;
+    height: 20px;
+}
+
 .sortBtn {
     margin-left: 10px;
 }

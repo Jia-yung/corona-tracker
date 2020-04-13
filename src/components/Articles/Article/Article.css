@@ -1,11 +1,11 @@
 .cardStyle {
-    padding-bottom: 10px !important;
+    padding-bottom: 10px;
+    border-radius: 0px !important;
     height: 350px;
     width: 300px;
-    border-radius: 0px !important;
-    margin-right: 5px;
+    margin-right: 15px;
     margin-bottom: 10px;
-    overflow: hidden !important;
+    overflow: hidden;
     cursor: pointer;
     color: white;
     text-decoration: none;
@@ -61,7 +61,7 @@
     }
 
     .cardStyle:hover {
-        opacity: 0.8 !important;
+        opacity: 0.8;
         transform: scale(1.05);
     } 
 }
@@ -69,6 +69,10 @@
 @media screen and (max-width: 420px) {
     .cardStyle {
         width: 220px;
+    }
+
+    .cardBody {
+        padding: 10px !important;
     }
 
     .articleImage {

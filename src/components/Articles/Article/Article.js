@@ -1,6 +1,6 @@
 import React from 'react'
+import {Card} from 'react-bootstrap'
 import './Article.css'
-import {Col, Card} from 'react-bootstrap'
 
 const article = (props) => {
 
@@ -36,12 +36,12 @@ const article = (props) => {
     var minute = dateObj.getUTCMinutes();
     var seconds = dateObj.getUTCSeconds();
     
-    var d = new Date(year, month, day, hour, minute, seconds);
-    let publishTimeAgo = timeAgo(d, new Date(props.year, props.month, props.day, props.hour, props.minute, props.seconds));
+    var currentTime = new Date(year, month, day, hour, minute, seconds);
+    let publishTimeAgo = timeAgo(currentTime, new Date(props.year, props.month, props.day, props.hour, props.minute, props.seconds));
 
     return (
-        <Col style={{padding:'0px', marginRight: '15px'}}>
-            <a target="_blank" rel="noopener noreferrer" href={props.articleURL} className="linkStyle">
+        <div>
+            <a className="linkStyle" target="_blank" rel="noopener noreferrer" href={props.articleURL} >
                 <Card className="cardStyle card-block shadow-lg d-flex flex-column" bg={'dark'}>
                     <div className="image-section">
                         <Card.Img variant="top" className="articleImage rounded-0" src={props.imgURL}/>
@@ -56,7 +56,7 @@ const article = (props) => {
                     </div>
                 </Card>
             </a>
-        </Col>
+        </div>
     )
 }
 

@@ -198,7 +198,7 @@ class CoronaTracker extends Component {
                                 <p>Country</p>
                                 <div className="listContainerBtn">
                                     <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
-                                        <img width="30px" height="20px" src={EarthLogo} alt="Globe" align="middle" />
+                                        <img src={EarthLogo} alt="Globe" align="middle" />
                                         Global  
                                         {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                                     </h5>
