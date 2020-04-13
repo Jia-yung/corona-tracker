@@ -40,7 +40,7 @@ const article = (props) => {
     let publishTimeAgo = timeAgo(currentTime, new Date(props.year, props.month, props.day, props.hour, props.minute, props.seconds));
 
     return (
-        <div>
+        <div className="article">
             <a className="linkStyle" target="_blank" rel="noopener noreferrer" href={props.articleURL} >
                 <Card className="cardStyle card-block shadow-lg d-flex flex-column" bg={'dark'}>
                     <div className="image-section">

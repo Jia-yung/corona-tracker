@@ -1,9 +1,12 @@
+.article{
+    margin-right: 15px;
+}
+
 .cardStyle {
     padding-bottom: 10px;
     border-radius: 0px !important;
     height: 350px;
     width: 300px;
-    margin-right: 15px;
     margin-bottom: 10px;
     overflow: hidden;
     cursor: pointer;
