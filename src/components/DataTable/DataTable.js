@@ -15,11 +15,11 @@ class DataTable extends Component {
                     data-search="true" >
                     <thead className="thead-dark">
                         <tr className="tableRow">
-                            <th data-field="country" data-sortable data-show-columns="true" data-switchable="true">Country</th>
-                            <th data-field="cases" data-sortable data-switchable="true">Infected</th>
+                            <th data-field="country" data-sortable>Country</th>
+                            <th data-field="cases" className="infected" data-sortable>Infected</th>
                             <th data-field="todayCases" data-sortable>New Cases</th>
-                            <th data-field="deaths" data-sortable data-show-footer>Deaths</th>
-                            <th data-field="recovered" data-sortable>Recovered</th>
+                            <th data-field="deaths" className="death" data-sortable>Deaths</th>
+                            <th data-field="recovered" className="recovered" data-sortable>Recovered</th>
                             <th data-field="active" data-sortable>Active</th>
                             <th data-field="critical" data-sortable>Critical</th>
                             <th data-field="casesPerOneMillion" data-sortable>Cases/Million</th>

@@ -270,18 +270,7 @@ class CoronaTracker extends Component {
                             </div>                       
                         </Col>
                         <Col md={9}>
-                            <DataGraph countryName={this.state.selectedCountry}/>
-                            <div className="caption">
-                                <p>
-                                    Click 
-                                    <span className="leftDot"></span>
-                                    <span className="middleDot"></span>
-                                    <span className="rightDot"></span>
-                                    to enable/disable timeline series.
-                                </p>
-                                <p>Drag/Click on the graph for more information.</p>
-                                <p>Timeline is updated each day at 23:59 UTC.</p>
-                            </div>
+                            <DataGraph countryName={this.state.selectedCountry}/>                           
                         </Col>
                     </Row>
                     <Row>

@@ -5,3 +5,18 @@
     padding: 10px;
     margin-bottom: 25px;
 }
+
+.recovered {
+    color: #32CD32;
+    font-weight: 700;
+}
+
+.death {
+    color: red;
+    font-weight: 700;
+}
+
+.infected {
+    color: yellow;
+    font-weight: 700;
+}

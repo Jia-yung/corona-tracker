@@ -149,32 +149,28 @@ class Graph extends Component {
     }
     
     render() {
-        let chart = null    
-        if(this.state.error) {
-            chart = (
-                <Chart 
-                    options= {this.state.options}
-                    series={this.state.series}
-                    type="line"
-                    width="100%"
-                    height="300px"
-            /> 
-            )
-        } else {
-            chart = (
-                <Chart
-                    options={this.state.options}
-                    series={this.state.series} 
-                    type="line"                  
-                    width="100%"
-                    height="300px"
-                />
-            )
-        }
         return (
-            <div className="chartContainer">            
-                <div className="mixed-chart">
-                    {chart}
+            <div>
+                <div className="chartContainer">            
+                    <div className="mixed-chart">
+                        <Chart
+                            options={this.state.options}
+                            series={this.state.series} 
+                            type="line"                  
+                            width="100%"
+                            height="300px"/>
+                    </div>
+                </div>
+                <div className="caption">
+                    <p>
+                        Click 
+                        <span className="leftDot"></span>
+                        <span className="middleDot"></span>
+                        <span className="rightDot"></span>
+                        to enable/disable timeline series.
+                    </p>
+                    <p>Drag/Click on the graph for more information.</p>
+                    <p>Timeline is updated each day at 23:59 UTC.</p>
                 </div>
             </div>
         )
