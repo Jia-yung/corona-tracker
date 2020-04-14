@@ -1,0 +1,20 @@
+[
+    {
+        "country": "World",
+        "countryInfo": {
+            "_id":  0,
+            "iso2": "World",
+            "iso3": "World",
+            "flag": "EarthLogo"
+        }
+    },
+    {
+        "country": "USA",
+        "countryInfo": {
+            "_id":  1,
+            "iso2": "US",
+            "iso3": "USA",
+            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/us.png"
+        }
+    }
+]

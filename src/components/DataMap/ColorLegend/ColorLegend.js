@@ -1,7 +1,7 @@
 import React from 'react'
 import './ColorLegend.css'
 
-const colorLegend = () => (
+const colorLegend = (props) => (
     <div className="colorLegend">
         <h6>Total Cases</h6>
         <table className="colorTable" align="center">
@@ -17,12 +17,12 @@ const colorLegend = () => (
             </thead>
             <tbody>
                 <tr className="dataRow">
-                    <td>0</td>
-                    <td>>1</td>
-                    <td>>1K</td>
-                    <td>>50K</td>
-                    <td>>80K</td>
-                    <td>>100K</td>
+                    <td>{props.scale1}</td>
+                    <td>{props.scale2}</td>
+                    <td>{props.scale3}</td>
+                    <td>{props.scale4}</td>
+                    <td>{props.scale5}</td>
+                    <td>{props.scale6}</td>
                 </tr>
             </tbody>
         </table>

@@ -51,7 +51,7 @@ const article = (props) => {
                         <Card.Text className="cardText">{props.abstract}</Card.Text>
                     </Card.Body>                
                     <div className="mt-auto publish">
-                        <p className="timeAgo">{publishTimeAgo}</p>
+                        <p>{publishTimeAgo}</p>
                         <p>Source: {props.source}</p>
                     </div>
                 </Card>

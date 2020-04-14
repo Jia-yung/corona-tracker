@@ -20,7 +20,7 @@ class Articles extends Component {
                     img = "https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=621"
                 }
             } else{
-                img ="http://www.nytimes.com/" + data.multimedia[0].url
+                img ="https://www.nytimes.com/" + data.multimedia[0].url
             }
             
             if (data.abstract.length > 180) {
