@@ -104,7 +104,11 @@ function GeoChart({ data, infectedCountry}) {
             <div ref={wrapperRef}>
                 <svg className="svg" ref={svgRef}></svg>
             </div>
-            <ColorLegend scale1={"0"} scale2={">1"} scale3={">1K"} scale4={">50K"} scale5={">80K"} scale6={">100K"} />
+            <ColorLegend 
+                colorScale3={1000/1000} 
+                colorScale4={50000/1000} 
+                colorScale5={80000/1000} 
+                colorScale6={100000/1000} />
         </div>
     );
 }

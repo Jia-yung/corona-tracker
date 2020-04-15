@@ -4,7 +4,7 @@ import ColorLegend from './ColorLegend/ColorLegend';
 import useResizeObserver from "./ResizeObserver"; 
 import './DataMap.css'
 
-function countryGeoChart({ data, infectedProvince, scale1}){
+function countryGeoChart({ data, infectedProvince, scale3, scale4, scale5, scale6}){
     const svgRef = useRef();
     const wrapperRef = useRef();
     const dimensions = useResizeObserver(wrapperRef);
@@ -13,7 +13,7 @@ function countryGeoChart({ data, infectedProvince, scale1}){
     useEffect(() => {                
         const svg = select(svgRef.current);
         const colorScale = scaleQuantile()
-        .domain([0, 1, 1000, 5000, 10000, 100000, 1000000])
+        .domain([0, 1, scale3, scale4, scale5, scale6, 1000000])
         .range(["white","#F4C2C2", "#FF5C5C", "#D73B3E","#B22222","#701C1C"]);
 
         const { width, height } =
@@ -97,14 +97,20 @@ function countryGeoChart({ data, infectedProvince, scale1}){
         .attr("x", '1em')
         .attr("y", '17em')
         .attr("className", "countryName")
-    }, [data, dimensions, selectedCountry, infectedProvince, scale1]);
+    }, [data, dimensions, selectedCountry, infectedProvince, scale3, scale4, scale5, scale6]);
 
     return (
         <div className="mapContainer">
             <div ref={wrapperRef}>
                 <svg className="svg" ref={svgRef}></svg>
             </div>
-            <ColorLegend scale1={scale1} scale2={scale1} scale3={">1K"} scale4={">5K"} scale5={">10K"} scale6={">100K"} />
+            <ColorLegend 
+                scale1={0} 
+                scale2={1} 
+                colorScale3={scale3/1000} 
+                colorScale4={scale4/1000} 
+                colorScale5={scale5/1000} 
+                colorScale6={scale6/1000} />
         </div>
     );
 }

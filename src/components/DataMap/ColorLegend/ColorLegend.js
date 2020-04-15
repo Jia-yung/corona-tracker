@@ -17,12 +17,12 @@ const colorLegend = (props) => (
             </thead>
             <tbody>
                 <tr className="dataRow">
-                    <td>{props.scale1}</td>
-                    <td>>{props.scale2}</td>
-                    <td>>{props.scale3}K</td>
-                    <td>>{props.scale4}K</td>
-                    <td>>{props.scale5}K</td>
-                    <td>>{props.scale6}K</td>
+                    <td>0</td>
+                    <td>>1</td>
+                    <td>>{props.colorScale3}K</td>
+                    <td>>{props.colorScale4}K</td>
+                    <td>>{props.colorScale5}K</td>
+                    <td>>{props.colorScale6}K</td>
                 </tr>
             </tbody>
         </table>

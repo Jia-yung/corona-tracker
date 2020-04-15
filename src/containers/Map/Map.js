@@ -52,16 +52,17 @@ class Map extends Component {
                 map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
                 break;
             case "Australia":
-                map = <CountryMap data={australiaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                map = <CountryMap data={australiaGeoData} infectedProvince={this.state.infectedProvince} scale3={100} scale4={500} scale5={1000} scale6={5000}/>
                 break;
             case "Canada":
-                map = <CountryMap data={canadaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                map = <CountryMap data={canadaGeoData} infectedProvince={this.state.infectedProvince} scale3={100} scale4={1000} scale5={5000} scale6={10000}/>
                 break;
             case "USA":
-                map =  <CountryMap data={usaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                map =  <CountryMap data={usaGeoData} infectedProvince={this.state.infectedProvince} scale3={1000} scale4={5000} scale5={10000} scale6={100000}/>
                 break;
             default:
                 map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
+                break;
         }
 
         let countryMapList = mapList.map(data => {
