@@ -17,8 +17,6 @@
 
 .dropdown-menu {
     padding: 5px !important;
-    height: 150px;
-    overflow: auto;
 }
 
 @media screen and (max-width: 575px) {

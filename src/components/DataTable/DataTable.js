@@ -6,7 +6,7 @@ class DataTable extends Component {
         return (
             <div className="dataTable">         
                 <table 
-                    data-url= 'https://corona.lmao.ninja/countries?sort=cases'                
+                    data-url= 'https://corona.lmao.ninja/v2/countries?sort=cases'                
                     data-toggle="table"
                     data-sticky-header = "true"
                     data-show-refresh="true"

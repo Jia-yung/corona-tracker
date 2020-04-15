@@ -23,6 +23,7 @@ class Map extends Component {
     }
 
     componentDidMount(){
+        //for country by province
         axios.get('https://corona.lmao.ninja/v2/jhucsse')
         .then(response => {
             this.setState({
@@ -31,8 +32,8 @@ class Map extends Component {
         }).catch(error => {
             this.setState({error: true})
         })  
-        
-        axios.get("https://corona.lmao.ninja/countries?sort=cases")
+        //for worldwide
+        axios.get("https://corona.lmao.ninja/v2/countries?sort=cases")
         .then(response => {
             this.setState({
                 infectedCountry: response.data
