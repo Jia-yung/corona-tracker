@@ -78,24 +78,24 @@ function countryGeoChart({ data, infectedProvince, scale3, scale4, scale5, scale
         
         .text(feature => feature && "Infected: " + cases.toLocaleString())
         .attr("x", '1em')
-        .attr("y", '18.5em')
+        .attr("y", '20.5em')
         .append('tspan')
         
         .text(feature => feature && "Deaths: " + death.toLocaleString())
         .attr("x", '1em')
-        .attr("y", '20em')
+        .attr("y", '22em')
         .append('tspan')
         
         .text(feature => feature && "Recovered: " + recovered.toLocaleString())
         .attr("x", '1em')
-        .attr("y", '21.5em')
+        .attr("y", '23.5em')
         .attr("className", "labelText")
         .append("tspan")
         
         .style("font-weight", "bold")
         .text(feature => feature && feature.properties["NAME"])
         .attr("x", '1em')
-        .attr("y", '17em')
+        .attr("y", '19em')
         .attr("className", "countryName")
     }, [data, dimensions, selectedCountry, infectedProvince, scale3, scale4, scale5, scale6]);
 

@@ -9,6 +9,7 @@ import globalGeoData from '../../../src/Maps/GeoData/global.json'
 import usaGeoData from '../../../src/Maps/GeoData/usa.json'
 import canadaGeoData from '../../../src/Maps/GeoData/canada.json'
 import australiaGeoData from '../../../src/Maps/GeoData/australia.json'
+import chinaGeoData from '../../../src/Maps/GeoData/china.json'
 
 import './Map.css';
 import axios from 'axios';
@@ -59,6 +60,9 @@ class Map extends Component {
                 break;
             case "USA":
                 map =  <CountryMap data={usaGeoData} infectedProvince={this.state.infectedProvince} scale3={1000} scale4={5000} scale5={10000} scale6={100000}/>
+                break;
+            case "China":
+                map =  <CountryMap data={chinaGeoData} infectedProvince={this.state.infectedProvince} scale3={1000} scale4={5000} scale5={10000} scale6={50000}/>
                 break;
             default:
                 map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>

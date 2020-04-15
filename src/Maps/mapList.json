@@ -27,9 +27,18 @@
         }
     },
     {
+        "country": "China",
+        "countryInfo": {
+            "_id":  4,
+            "iso2": "US",
+            "iso3": "USA",
+            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/cn.png"
+        }
+    },
+    {
         "country": "USA",
         "countryInfo": {
-            "_id":  3,
+            "_id":  5,
             "iso2": "US",
             "iso3": "USA",
             "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/us.png"
