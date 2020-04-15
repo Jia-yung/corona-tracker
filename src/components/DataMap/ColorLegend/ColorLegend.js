@@ -18,11 +18,11 @@ const colorLegend = (props) => (
             <tbody>
                 <tr className="dataRow">
                     <td>{props.scale1}</td>
-                    <td>{props.scale2}</td>
-                    <td>{props.scale3}</td>
-                    <td>{props.scale4}</td>
-                    <td>{props.scale5}</td>
-                    <td>{props.scale6}</td>
+                    <td>>{props.scale2}</td>
+                    <td>>{props.scale3}K</td>
+                    <td>>{props.scale4}K</td>
+                    <td>>{props.scale5}K</td>
+                    <td>>{props.scale6}K</td>
                 </tr>
             </tbody>
         </table>

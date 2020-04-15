@@ -16,5 +16,23 @@
             "iso3": "USA",
             "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/us.png"
         }
+    },
+    {
+        "country": "Canada",
+        "countryInfo": {
+            "_id":  1,
+            "iso2": "CA",
+            "iso3": "CA",
+            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/ca.png"
+        }
+    },
+    {
+        "country": "Australia",
+        "countryInfo": {
+            "_id":  1,
+            "iso2": "AUS",
+            "iso3": "AUS",
+            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/au.png"
+        }
     }
 ]

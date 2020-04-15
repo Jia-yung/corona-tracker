@@ -1,0 +1,26 @@
+.countryMapBtn {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 575px) {
+    .countryMapBtn {
+        text-align: left;
+    }
+}
+
+.dropdown-item {
+    padding-right: 0px !important;
+}
+
+.dropdown-item:hover {
+    background-color: silver !important;
+}
+
+.dropdownBtnFlag {
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    padding: 5px !important;
+}

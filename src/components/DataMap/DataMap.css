@@ -22,6 +22,11 @@
     position: absolute;
 }
 
+.country {
+    stroke: gray;
+    stroke-width: 0.4px;
+}
+
 .country:hover {
     stroke: white;
     stroke-width: 1.2px;

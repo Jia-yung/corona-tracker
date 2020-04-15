@@ -42,8 +42,6 @@ function GeoChart({ data, infectedCountry}) {
         })
         .attr("class", "country")
         .attr("d", feature => pathGenerator(feature))
-        .transition()
-        .duration(2500)
         .attr("fill", feature => {
             for (const key of Object.keys(infectedCountry)) {
                 if(feature.properties["iso_a3"] === infectedCountry[key].countryInfo.iso3) {

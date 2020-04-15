@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
 
-import GlobalMap from '../../components/DataMap/GlobalMap';
-import USMap from '../../components/DataMap/USMap';
 import DataGraph from '../../components/DataGraph/DataGraph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
@@ -12,16 +10,13 @@ import TweetButton from '../../components/UI/Button/TwtButton/TwtButton'
 import ListItem from '../../components/ListItem/ListItem';
 import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
-import Articles from '../../components/Articles/Articles';
+import Articles from '../Articles/Articles';
 import Logo from '../../components/Logo/Logo';
 import EarthLogo from '../../Image/worldwide.svg';
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
+import Map from '../Map/Map.js';
 
-import globalGeoData from '../../../src/Maps/GeoData/global.json'
-import usaGeoData from '../../../src/Maps/GeoData/usa.json'
-import mapList from '../../../src/Maps/mapList.json';
 import axios from 'axios';
-
 import './CoronaTracker.css';
 
 class CoronaTracker extends Component {
@@ -31,9 +26,6 @@ class CoronaTracker extends Component {
         totalRecovered: null,
         selectedCountry: null,
         infectedCountry: [],
-        infectedUSA: [],
-        nytArticle: [],
-        selectedMap: "World",
         sort: "country",
         loading: true,
         error: false
@@ -50,41 +42,13 @@ class CoronaTracker extends Component {
                     totalRecovered: response[0].data.recovered, 
                     infectedCountry: response[1].data.reverse(),
                 })
-                console.log(this.state.infectedCountry)
             })).catch(error => {
                 this.setState({error: true})
-            })
-
-        axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?q=coronavirus&sort=newest&api-key=fgdVTzPCEfGTXV5ryCamEdxzH5rlbPMJ')
-            .then(response => {
-                this.setState({
-                    nytArticle: response.data.response.docs,
-                })
-            }).catch(error => {
-                this.setState({error: true})
-            })
-
-        axios.get('https://corona.lmao.ninja/states')
-        .then(response => {
-            this.setState({
-                infectedUSA: response.data
-            })
-            console.log("us state", this.state.infectedUSA)
-        }).catch(error => {
-            this.setState({error: true})
-        })   
+            }) 
     }
 
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
-    }
-
-    mapSelectHandler = (map) => {
-        this.setState({selectedMap: map})
-    }
-
-    worldSelectHandler = (global) => {
-       this.setState({selectedCountry: global})
     }
 
     compareValues = (key, order = "asc") => {
@@ -125,7 +89,6 @@ class CoronaTracker extends Component {
         let infected = null;
         let death = null;
         let recovered = null;
-        let map = null;
         
         if(this.state.loading) {
             infected = <Modal figure={0} showSpinner={true} title={"Infected"} status={"Warning"}>{spinner}</Modal>
@@ -138,13 +101,7 @@ class CoronaTracker extends Component {
             death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Deaths"} status={"Danger"} />
             recovered = <Modal figure={this.state.totalRecovered} showSpinner={false} title={"Recovered"} status={"Success"} />
         }
-
-        if(this.state.selectedMap === "World"){
-            map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
-        } else if (this.state.selectedMap === "USA"){
-            map = <USMap data={usaGeoData} infectedUSA={this.state.infectedUSA}/>
-        }
-      
+    
         let item = this.state.infectedCountry.map(data => {
             return (
                 <ListItem 
@@ -164,28 +121,10 @@ class CoronaTracker extends Component {
                 <CountryToolTip 
                     key={data.country} 
                     country={data.country} 
-                    flag={data.countryInfo.flag}
-                    clicked={() => this.countrySelectHandler(data.country)} />
+                    flag={data.countryInfo.flag} />
             )
         })
 
-         let countryMapList = mapList.map(data => {
-            let img = ""
-            if(data.country !== "World"){
-                img = <img height="15px" width="25px" className="dropdownBtnFlag" src={data.countryInfo.flag} alt=""/>
-            } else {
-                img = <img height="20px" width="20px" className="dropdownBtnFlag" src={require("../../Image/worldwide.svg")} alt=""/>
-            }
-            return (
-                <Dropdown.Item 
-                    key={data.countryInfo._id}
-                    onClick={() => this.mapSelectHandler(data.country)}>
-                    {img}
-                    {data.country}
-                </Dropdown.Item>
-            )
-        })
-      
         return (
             <Container fluid className="main">
                 <div className="mainHolder">
@@ -224,20 +163,7 @@ class CoronaTracker extends Component {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col xs={12}>
-                            <div style={{display: 'inline'}}>
-                                <DropdownButton alignRight className="countryMapBtn" title={this.state.selectedMap + " Map"} size="sm">
-                                   {countryMapList}
-                                </DropdownButton>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12}>
-                            {map}
-                        </Col> 
-                    </Row>
+                    <Map/>
                     <Row>
                         <Col md={12}>                        
                             <h4 className="subTitle">
@@ -276,7 +202,7 @@ class CoronaTracker extends Component {
                     <Row>
                         <Col md={12}>
                             <h4 className="subTitle">Latest Articles</h4>
-                            <Articles data={this.state.nytArticle} />                                
+                            <Articles />                                
                         </Col>
                     </Row>
                     <Row>
