@@ -12,7 +12,7 @@ import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
 import Articles from '../Articles/Articles';
 import Logo from '../../components/Logo/Logo';
-import EarthLogo from '../../Image/worldwide.svg';
+import EarthLogo from '../../Images/worldwide.svg';
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
 import Map from '../Map/Map.js';
 

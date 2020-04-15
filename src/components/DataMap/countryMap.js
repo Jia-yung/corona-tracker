@@ -13,7 +13,7 @@ function countryGeoChart({ data, infectedProvince, scale1}){
     useEffect(() => {                
         const svg = select(svgRef.current);
         const colorScale = scaleQuantile()
-        .domain([scale1, 1, 1000, 5000, 10000, 100000, 1000000])
+        .domain([0, 1, 1000, 5000, 10000, 100000, 1000000])
         .range(["white","#F4C2C2", "#FF5C5C", "#D73B3E","#B22222","#701C1C"]);
 
         const { width, height } =

@@ -46,16 +46,22 @@ class Map extends Component {
     }
 
     render() {
-        let map = null
-
-        if(this.state.selectedMap === "World"){
-            map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
-        } else if (this.state.selectedMap === "USA"){
-            map = <CountryMap data={usaGeoData} infectedProvince={this.state.infectedProvince} scale1={0} />
-        } else if (this.state.selectedMap === "Canada"){
-            map = <CountryMap data={canadaGeoData} infectedProvince={this.state.infectedProvince} scale1={0}/>
-        } else if (this.state.selectedMap === "Australia"){
-            map = <CountryMap data={australiaGeoData} infectedProvince={this.state.infectedProvince} scale1={0}/>
+        var map;
+        switch (this.state.selectedMap) {
+            case "World":
+                map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
+                break;
+            case "Australia":
+                map = <CountryMap data={australiaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                break;
+            case "Canada":
+                map = <CountryMap data={canadaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                break;
+            case "USA":
+                map =  <CountryMap data={usaGeoData} infectedProvince={this.state.infectedProvince} scale3={0} scale4={0} scale5={0} scale6={0}/>
+                break;
+            default:
+                map = <GlobalMap data={globalGeoData} infectedCountry={this.state.infectedCountry}/>
         }
 
         let countryMapList = mapList.map(data => {
@@ -63,7 +69,7 @@ class Map extends Component {
             if(data.country !== "World"){
                 img = <img height="15px" width="25px" className="dropdownBtnFlag" src={data.countryInfo.flag} alt=""/>
             } else {
-                img = <img height="20px" width="20px" className="dropdownBtnFlag" src={require("../../Image/worldwide.svg")} alt=""/>
+                img = <img height="20px" width="20px" className="dropdownBtnFlag" src={require("../../Images/worldwide.svg")} alt=""/>
             }
             return (
                 <Dropdown.Item 
@@ -75,7 +81,6 @@ class Map extends Component {
             )
         })
         
-
         return (
             <div>
                 <Row>

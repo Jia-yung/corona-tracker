@@ -1,6 +1,6 @@
 import React from 'react'
 import './Logo.css'
-import logoImage from '../../Image/virus.png';
+import logoImage from '../../Images/pandemic.svg';
 
 const logo = () => (
     <div className="logoStyle">
