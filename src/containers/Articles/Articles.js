@@ -20,6 +20,7 @@ class Articles extends Component {
             this.setState({error: true})
         }) 
     }
+    
     render(){
         let articles = this.state.nytArticle.map(data => {
             let img = ""

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
 
-import DataGraph from '../../components/DataGraph/DataGraph';
+import Graph from '../Graph/Graph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
 import Spinner from '../../components/UI/Spinner/Spinner'
@@ -196,7 +196,7 @@ class CoronaTracker extends Component {
                             </div>                       
                         </Col>
                         <Col md={9}>
-                            <DataGraph countryName={this.state.selectedCountry}/>                           
+                            <Graph countryName={this.state.selectedCountry}/>                           
                         </Col>
                     </Row>
                     <Row>
