@@ -29,7 +29,7 @@
 
 .country:hover {
     stroke: white;
-    stroke-width: 1.2px;
+    stroke-width: 1.5px;
 }
 
 .countryName {

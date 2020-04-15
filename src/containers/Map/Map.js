@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Row, Col, Dropdown, DropdownButton} from 'react-bootstrap';
 
 import GlobalMap from '../../components/DataMap/GlobalMap';
-import CountryMap from '../../components/DataMap/countryMap';
+import CountryMap from '../../components/DataMap/CountryMap';
 
 import mapList from '../../../src/Maps/mapList.json';
 import globalGeoData from '../../../src/Maps/GeoData/global.json'
