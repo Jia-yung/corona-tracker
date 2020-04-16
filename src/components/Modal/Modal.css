@@ -10,17 +10,41 @@
     color: yellow
 }
 
+.arrow {
+    margin-bottom: 0px;
+    margin-right: 2px;
+}
+
+.null {
+    margin-bottom: 0px;
+}
+
 .figure {
     font-weight: 600;
     font-size: 30px;
 }
 
+.figureIncrement {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
 .modalContainer {
     border-radius: 15px;
     margin-bottom: 15px;
     background-color: #343A40;
-    padding: 1px !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px;
     overflow: hidden;
+}
+
+.modalStatus {
+    margin-bottom: 0px;
+}
+
+.todayUpdate {
+    justify-content: center;
 }
 
 @media screen and (max-width: 540px) {
@@ -28,17 +52,35 @@
         font-size: 15px;
     }
 
+    .null,
+    .arrow {
+       font-size: 18px;
+    }
+
     .figure {
         font-size: 18px;
+    }
+
+    .figureIncrement {
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 350px) {
+    .null,
+    .arrow {
+        font-size: 11px;
+    }
+
     .modalStatus {
         font-size: 12px;
     }
 
     .figure {
         font-size: 13px;
+    }
+
+    .figureIncrement {
+        font-size: 11px;
     }
 }

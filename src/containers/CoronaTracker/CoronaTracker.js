@@ -22,6 +22,8 @@ class CoronaTracker extends Component {
         totalCases: null,
         totalDeath: null,
         totalRecovered: null,
+        todayCases: null,
+        todayDeaths: null,
         infectedCountry: [],
         loading: true,
         error: false
@@ -33,7 +35,9 @@ class CoronaTracker extends Component {
             this.setState({
                 totalCases: response.data.cases,
                 totalDeath: response.data.deaths, 
-                totalRecovered: response.data.recovered
+                totalRecovered: response.data.recovered,
+                todayCases: response.data.todayCases,
+                todayDeaths: response.data.todayDeaths
             })
         }).catch(error => {
             this.setState({error: true})
@@ -56,15 +60,15 @@ class CoronaTracker extends Component {
         let recovered = null;
         
         if(this.state.loading) {
-            infected = <Modal figure={0} showSpinner={true} title={"Infected"} status={"Warning"}>{spinner}</Modal>
-            death  = <Modal figure={0} showSpinner={true} title={"Death"} status={"Danger"} >{spinner}</Modal>
-            recovered = <Modal figure={0} showSpinner={true} title={"Recovered"} status={"Success"}>{spinner}</Modal>
+            infected = <Modal figure={0} showSpinner={true} today={0} title={"Infected"} status={"Warning"}>{spinner}</Modal>
+            death  = <Modal figure={0} showSpinner={true} today={0} title={"Death"} status={"Danger"} >{spinner}</Modal>
+            recovered = <Modal figure={0} showSpinner={true} today={0} title={"Recovered"} status={"Success"}>{spinner}</Modal>
         }
 
         if(this.state.totalCases) {
-            infected = <Modal figure={this.state.totalCases} showSpinner={false} title={"Infected"} status={"Warning"} />
-            death = <Modal figure={this.state.totalDeath} showSpinner={false} title={"Deaths"} status={"Danger"} />
-            recovered = <Modal figure={this.state.totalRecovered} showSpinner={false} title={"Recovered"} status={"Success"} />
+            infected = <Modal figure={this.state.totalCases} today={this.state.todayCases} showSpinner={false} title={"Infected"} status={"Warning"} />
+            death = <Modal figure={this.state.totalDeath} today={this.state.todayDeaths} showSpinner={false} title={"Deaths"} status={"Danger"} />
+            recovered = <Modal figure={this.state.totalRecovered} today={0} showSpinner={false} title={"Recovered"} status={"Success"} />
         }
            
         let countryToolTip = this.state.infectedCountry.map(data => {

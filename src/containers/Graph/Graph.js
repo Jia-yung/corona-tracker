@@ -9,10 +9,9 @@ import axios from "axios";
 class Graph extends Component {
     state = {
         countryName: null,
-        infectedCountry: [],
         selectedCountry: null,
+        infectedCountry: [],
         error: false,
-        sort: "country",
         options: {
             chart: {
                 zoom: {
@@ -74,7 +73,7 @@ class Graph extends Component {
     };
 
     componentDidMount() {
-        axios.get("https://corona.lmao.ninja/v2/countries?sort=" + this.state.sort)
+        axios.get("https://corona.lmao.ninja/v2/countries?sort=country")
         .then(response => {
             this.setState({
                 infectedCountry: response.data.reverse()
@@ -109,7 +108,6 @@ class Graph extends Component {
     }
 
     sortHandler = (type) => {
-        this.setState({sort: type})
         if (type === "country") {
             this.state.infectedCountry.sort(this.compareValues(type, 'asc'))
         } else {

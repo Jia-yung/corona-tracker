@@ -34,7 +34,7 @@
 
 .countryName {
     font-weight: 900;
-    z-index: 1000 !important;
+    z-index: 5000 !important;
 }
 
 .label {
