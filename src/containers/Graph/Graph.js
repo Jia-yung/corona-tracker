@@ -12,6 +12,7 @@ class Graph extends Component {
         selectedCountry: null,
         infectedCountry: [],
         error: false,
+        sort: "country",
         options: {
             chart: {
                 zoom: {
@@ -108,6 +109,7 @@ class Graph extends Component {
     }
 
     sortHandler = (type) => {
+        this.setState({sort: type})
         if (type === "country") {
             this.state.infectedCountry.sort(this.compareValues(type, 'asc'))
         } else {
