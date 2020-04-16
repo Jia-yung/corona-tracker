@@ -11,7 +11,6 @@ import './Modal.css'
                         <h4 className="arrow">↑</h4>
                         <h4 className="null" style={{display: this.props.today? 'none' : 'block'}}>--</h4>
                         <CountUp 
-                            style={{display: this.props.showSpinner? 'none' : 'block'}} 
                             className={["figureIncrement", this.props.status].join(' ')} 
                             duration={2.5} 
                             separator="," 

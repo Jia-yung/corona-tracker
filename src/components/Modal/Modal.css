@@ -13,6 +13,7 @@
 .arrow {
     margin-bottom: 0px;
     margin-right: 2px;
+    text-shadow: 3px 3px black
 }
 
 .null {
@@ -34,7 +35,7 @@
     border-radius: 15px;
     margin-bottom: 15px;
     background-color: #343A40;
-    padding-top: 7px !important;
+    padding-top: 7px;
     padding-bottom: 7px;
     overflow: hidden;
 }
@@ -55,6 +56,7 @@
     .null,
     .arrow {
        font-size: 18px;
+       text-shadow: 2.5px 2.5px black;
     }
 
     .figure {
