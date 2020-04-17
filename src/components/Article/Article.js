@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Card, Row, Col} from 'react-bootstrap'
 import './Article.css'
 
 const article = (props) => {
@@ -40,23 +40,27 @@ const article = (props) => {
     let publishTimeAgo = timeAgo(currentTime, new Date(props.year, props.month, props.day, props.hour, props.minute, props.seconds));
 
     return (
-        <div className="article">
-            <a className="linkStyle" target="_blank" rel="noopener noreferrer" href={props.articleURL} >
-                <Card className="cardStyle card-block shadow-lg d-flex flex-column" bg={'dark'}>
-                    <div className="image-section">
-                        <Card.Img variant="top" className="articleImage rounded-0" src={props.imgURL}/>
-                    </div>
-                    <Card.Body className="cardBody">
-                        <Card.Title className="cardTitle">{props.title}</Card.Title>
-                        <Card.Text className="cardText">{props.abstract}</Card.Text>
-                    </Card.Body>                
-                    <div className="mt-auto publish">
-                        <p>{publishTimeAgo}</p>
-                        <p>Source: {props.source}</p>
-                    </div>
-                </Card>
-            </a>
-        </div>
+      <Row>
+        <Col xs={12}>
+          <div className="article">
+              <a className="linkStyle" target="_blank" rel="noopener noreferrer" href={props.articleURL} >
+                  <Card className="cardStyle card-block shadow-lg d-flex flex-column" bg={'dark'}>
+                      <div className="image-section">
+                          <Card.Img variant="top" className="articleImage rounded-0" src={props.imgURL}/>
+                      </div>
+                      <Card.Body className="cardBody">
+                          <Card.Title className="cardTitle">{props.title}</Card.Title>
+                          <Card.Text className="cardText">{props.abstract}</Card.Text>
+                      </Card.Body>                
+                      <div className="mt-auto publish">
+                          <p>{publishTimeAgo}</p>
+                          <p>Source: {props.source}</p>
+                      </div>
+                  </Card>
+              </a>
+          </div>
+        </Col>
+      </Row>
     )
 }
 
