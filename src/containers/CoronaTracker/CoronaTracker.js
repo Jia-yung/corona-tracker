@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
-import Graph from '../Graph/Graph';
+import SelectionGraph from '../Graph/SelectionGraph/SelectionGraph';
+import ComparisonGraph from '../Graph/ComparisonGraph/ComparisonGraph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
 import Spinner from '../../components/UI/Spinner/Spinner'
@@ -126,7 +127,8 @@ class CoronaTracker extends Component {
                             </h4>
                         </Col>
                     </Row>
-                    <Graph />
+                    <SelectionGraph />
+                    <ComparisonGraph />
                     <Row>
                         <Col md={12}>
                             <h4 className="subTitle">Latest Articles</h4>
