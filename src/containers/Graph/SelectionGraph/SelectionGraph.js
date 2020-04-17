@@ -1,9 +1,10 @@
 import React, { Component} from "react";
 import {Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
-import EarthLogo from '../../Images/worldwide.svg';
-import ListItem from '../../components/ListItem/ListItem';
+import EarthLogo from '../../../Images/worldwide.svg';
+import ListItem from '../../../components/ListItem/ListItem';
 import Chart from "react-apexcharts";
-import './Graph.css';
+import Caption from '../../../components/Caption/Caption';
+import './SelectionGraph.css';
 import axios from "axios";
 
 class Graph extends Component {
@@ -23,6 +24,7 @@ class Graph extends Component {
                     show: false
                 }
             },
+            colors: ["#FEB01A", "#00E396", "#FF4560"],
             legend: {
                 show: true,
                 labels: {
@@ -250,17 +252,7 @@ class Graph extends Component {
                                 height="300px"/>
                         </div>
                     </div>
-                    <div className="caption">
-                        <p>
-                            Click 
-                            <span className="leftDot"></span>
-                            <span className="middleDot"></span>
-                            <span className="rightDot"></span>
-                            to enable/disable timeline series.
-                        </p>
-                        <p>Drag/Click on the graph for more information.</p>
-                        <p>Timeline is updated each day at 23:59 UTC.</p>
-                    </div>
+                    <Caption/>
                 </Col>
             </Row>
         )
