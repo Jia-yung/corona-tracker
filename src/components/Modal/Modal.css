@@ -7,17 +7,18 @@
 }
 
 .Warning {
-    color: yellow
+    color: yellow;
 }
 
 .arrow {
     margin-bottom: 0px;
     margin-right: 2px;
-    text-shadow: 3px 3px black
+    text-shadow: 3px 3px black;
 }
 
 .null {
     margin-bottom: 0px;
+    text-shadow: 3px 3px black;
 }
 
 .figure {
