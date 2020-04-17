@@ -231,7 +231,7 @@ class ComparisonGraph extends Component {
             <Row>
                 <Col xs={12}>
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                        <h4 className="subTitle">Comparison of multiple country</h4>
+                        <h4 className="subTitle">Comparison of multiple countries</h4>
                         <DropdownButton className="compareBtn" title="Compare" size="sm">
                             <Dropdown.Item onClick={() => this.getData("Infection")}>Infected</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.getData("Death")}>Deaths</Dropdown.Item>
