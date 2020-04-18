@@ -120,13 +120,6 @@ class CoronaTracker extends Component {
                         </Col>
                     </Row>
                     <Map/>
-                    <Row>
-                        <Col xs={12}>                        
-                            <h4 className="subTitle">
-                                Select a country to display cummulative graph
-                            </h4>
-                        </Col>
-                    </Row>
                     <SelectionGraph />
                     <ComparisonGraph />
                     <Row>
