@@ -10,7 +10,8 @@ import axios from "axios";
 class Graph extends Component {
     state = {
         countryName: null,
-        selectedCountry: null,
+        selectedCountry: "Global",
+        graphType: "Linear",
         infectedCountry: [],
         error: false,
         sort: "country",
@@ -46,7 +47,8 @@ class Graph extends Component {
                     style: {
                         colors: 'white'
                     }
-                }
+                },
+                logarithmic: false,
             },
             title: {
                 text: "Select a country",
@@ -84,6 +86,7 @@ class Graph extends Component {
         }).catch(error => {
             this.setState({error: true})
         }) 
+        this.getData("all", this.state.logarithmic)
     }
 
     compareValues = (key, order = "asc") => {
@@ -119,6 +122,23 @@ class Graph extends Component {
         }
     }
 
+    graphHandler = (type) => {
+        let request = null
+        if (this.state.selectedCountry !== "Global"){
+            request = this.state.selectedCountry
+        } else {
+            request = "all"
+        }
+
+        if (type === "log") {
+            this.setState({logarithmic:true, graphType: "Logarithmic"})
+            this.getData(request, true)
+        } else if (type === "linear") {
+            this.setState({logarithmic:false, graphType: "Linear"})
+            this.getData(request, false)
+        }
+    }
+
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
         
@@ -129,10 +149,10 @@ class Graph extends Component {
         } else {
             request = "all"
         }
-        this.getData(request)
+        this.getData(request, this.state.logarithmic)
     }
     
-    getData = (request) => {
+    getData = (request, graph) => {
         axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
             let historicDataInfected = null
             let historicDataDeath = null
@@ -151,13 +171,25 @@ class Graph extends Component {
             
             for (const key of Object.keys(historicDataInfected)) {
                 dateArray.push(key + " GMT")
-                infectedArray.push(historicDataInfected[key])
+                if (historicDataInfected[key] === 0 && this.state.logarithmic){
+                    infectedArray.push(null)
+                } else {
+                    infectedArray.push(historicDataInfected[key])
+                }
             }
             for (const key of Object.keys(historicDataDeath)) {
-                deathArray.push(historicDataDeath[key])
+                if (historicDataDeath[key] === 0 && this.state.logarithmic){
+                    deathArray.push(null)
+                } else {
+                    deathArray.push(historicDataDeath[key])
+                }
             }
             for (const key of Object.keys(historicDataRecovered)) {
-                recoveredArray.push(historicDataRecovered[key])
+                if (historicDataRecovered[key] === 0 && this.state.logarithmic){
+                    recoveredArray.push(null)
+                } else {
+                    recoveredArray.push(historicDataRecovered[key])
+                }
             }
             this.setState({
                 options: {
@@ -166,7 +198,15 @@ class Graph extends Component {
                     },
                     xaxis: {
                         categories: dateArray
-                    }                         
+                    },
+                    yaxis: {
+                        labels: {
+                            style: {
+                                colors: 'white'
+                            }
+                        },
+                        logarithmic: graph,
+                    },                
                 },
                 series: [{
                     data: infectedArray  
@@ -217,44 +257,59 @@ class Graph extends Component {
         })
 
         return (
-            <Row>
-                <Col md={3}> 
-                    <div className="listContainer">
-                        <p>Country</p>
-                        <div className="listContainerBtn">
-                            <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
-                                <img src={EarthLogo} alt="Globe" align="middle" />
-                                Global  
-                                {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
-                            </h5>
-                            <DropdownButton className="sortBtn" title="Sort by" size="sm">
-                                <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
+            <div>
+                <Row>
+                    <Col xs={12}> 
+                        <div style={{display: "flex", justifyContent: "space-between"}}>                      
+                            <h4 className="subTitle">
+                                Select a country to display graph
+                            </h4>
+                            <DropdownButton className="sortBtn" title={this.state.graphType} size="sm">
+                                        <Dropdown.Item onClick={() => this.graphHandler("linear")}>Linear</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => this.graphHandler("log")}>Logarithmic</Dropdown.Item>
                             </DropdownButton>
                         </div>
-                        <div className="ulContainer">
-                            <ul className="itemStyle">
-                                {item}                      
-                            </ul>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={3}> 
+                        <div className="listContainer">
+                            <p>Country</p>
+                            <div className="listContainerBtn">
+                                <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
+                                    <img src={EarthLogo} alt="Globe" align="middle" />
+                                    Global  
+                                    {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
+                                </h5>
+                                <DropdownButton className="sortBtn" title="Sort by" size="sm">
+                                    <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
+                                </DropdownButton>
+                            </div>
+                            <div className="ulContainer">
+                                <ul className="itemStyle">
+                                    {item}                      
+                                </ul>
+                            </div>
+                        </div>                       
+                    </Col>
+                    <Col md={9}>
+                        <div className="chartContainer">            
+                            <div className="mixed-chart">
+                                <Chart
+                                    options={this.state.options}
+                                    series={this.state.series} 
+                                    type="line"                  
+                                    width="100%"
+                                    height="300px"/>
+                            </div>
                         </div>
-                    </div>                       
-                </Col>
-                <Col md={9}>
-                    <div className="chartContainer">            
-                        <div className="mixed-chart">
-                            <Chart
-                                options={this.state.options}
-                                series={this.state.series} 
-                                type="line"                  
-                                width="100%"
-                                height="300px"/>
-                        </div>
-                    </div>
-                    <Caption/>
-                </Col>
-            </Row>
+                        <Caption/>
+                    </Col>
+                </Row>
+            </div>
         )
     }
 }
