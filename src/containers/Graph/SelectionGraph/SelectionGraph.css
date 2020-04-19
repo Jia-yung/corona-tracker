@@ -46,7 +46,8 @@
 .globalBtn {
     text-align: left;
     font-size: 15px;
-    background-color: #A6ACAF;
+    /*background-color: #A6ACAF;*/
+    background-color: #6D757D;
     border-radius: 3px;
     padding: 5px;
     margin-bottom: 15px;
@@ -69,6 +70,10 @@
 
 .sortBtn {
     margin-left: 10px;
+}
+
+.graphBtn {
+    text-align: right;
 }
 /* Graph */
 .chartContainer {

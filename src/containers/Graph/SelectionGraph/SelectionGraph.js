@@ -10,9 +10,13 @@ import axios from "axios";
 class Graph extends Component {
     state = {
         countryName: null,
-        selectedCountry: "Global",
+        selectedCountry: null,
         graphType: "Linear",
         infectedCountry: [],
+        InfectedHistory: [],
+        deathHistory: [],
+        recoveredHistory: [],
+        countryListError: false,
         error: false,
         sort: "country",
         options: {
@@ -43,12 +47,13 @@ class Graph extends Component {
                 }
             },
             yaxis: {
+                showAlways:true,
                 labels: {
                     style: {
                         colors: 'white'
                     }
                 },
-                logarithmic: false,
+                logarithmic: false
             },
             title: {
                 text: "Select a country",
@@ -84,9 +89,8 @@ class Graph extends Component {
                 infectedCountry: response.data.reverse()
             })
         }).catch(error => {
-            this.setState({error: true})
+            this.setState({countryListError: true})
         }) 
-        this.getData("all", this.state.logarithmic)
     }
 
     compareValues = (key, order = "asc") => {
@@ -123,19 +127,16 @@ class Graph extends Component {
     }
 
     graphHandler = (type) => {
-        let request = null
-        if (this.state.selectedCountry !== "Global"){
-            request = this.state.selectedCountry
-        } else {
-            request = "all"
-        }
-
-        if (type === "log") {
-            this.setState({logarithmic:true, graphType: "Logarithmic"})
-            this.getData(request, true)
+        if (type === "logarithmic") {
+            this.setState({graphType: "Logarithmic", logarithmic: true})
+            if (this.state.selectedCountry) {
+                this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, true)
+            }
         } else if (type === "linear") {
-            this.setState({logarithmic:false, graphType: "Linear"})
-            this.getData(request, false)
+            this.setState({graphType: "Linear", logarithmic: false})
+            if (this.state.selectedCountry) {
+                this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, false)
+            }
         }
     }
 
@@ -151,44 +152,30 @@ class Graph extends Component {
         }
         this.getData(request, this.state.logarithmic)
     }
-    
-    getData = (request, graph) => {
-        axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
-            let historicDataInfected = null
-            let historicDataDeath = null
-            let historicDataRecovered = null
-            if(request !== "all"){
-                historicDataInfected = response.data.timeline.cases
-                historicDataDeath = response.data.timeline.deaths
-                historicDataRecovered = response.data.timeline.recovered
-            } else {
-                historicDataInfected = response.data.cases
-                historicDataDeath = response.data.deaths
-                historicDataRecovered = response.data.recovered
-            }
-            
-            const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
-            
-            for (const key of Object.keys(historicDataInfected)) {
+
+    computeGraph = (Death, Infected, Recovered, log) => {
+        const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
+        if(!this.state.error) {
+            for (const key of Object.keys(Infected)) {
                 dateArray.push(key + " GMT")
-                if (historicDataInfected[key] === 0 && this.state.logarithmic){
+                if (Infected[key] === 0 && log){
                     infectedArray.push(null)
                 } else {
-                    infectedArray.push(historicDataInfected[key])
+                    infectedArray.push(Infected[key])
                 }
             }
-            for (const key of Object.keys(historicDataDeath)) {
-                if (historicDataDeath[key] === 0 && this.state.logarithmic){
+            for (const key of Object.keys(Death)) {
+                if (Death[key] === 0 && log){
                     deathArray.push(null)
                 } else {
-                    deathArray.push(historicDataDeath[key])
+                    deathArray.push(Death[key])
                 }
             }
-            for (const key of Object.keys(historicDataRecovered)) {
-                if (historicDataRecovered[key] === 0 && this.state.logarithmic){
+            for (const key of Object.keys(Recovered)) {
+                if (Recovered[key] === 0 && log){
                     recoveredArray.push(null)
                 } else {
-                    recoveredArray.push(historicDataRecovered[key])
+                    recoveredArray.push(Recovered[key])
                 }
             }
             this.setState({
@@ -200,12 +187,13 @@ class Graph extends Component {
                         categories: dateArray
                     },
                     yaxis: {
+                        showAlways: true,
                         labels: {
                             style: {
                                 colors: 'white'
                             }
                         },
-                        logarithmic: graph,
+                        logarithmic: log,
                     },                
                 },
                 series: [{
@@ -215,29 +203,56 @@ class Graph extends Component {
                 },{
                     data: deathArray                   
                 }]
-            })            
-        }).catch(error => {
+            })          
+        } else {
             this.setState({
-                error: true,
                 options: {
                     title: {
                         text: this.state.selectedCountry.toUpperCase() + " - No Data",
-                    }                     
-                },
+                    }              
+                }, 
+                yaxis: {
+                    show:true,
+                    showAlways: true,
+                    labels: {
+                        style: {
+                            colors: 'white'
+                        }
+                    }
+                },  
                 series: [{
-                    name:'Infected',
-                    type: 'line',
-                    data: [],
+                    data: [] 
                 },{
-                    name:'Recovered',
-                    type: 'line',
-                    data: []
+                    data: []                  
                 },{
-                    name:'Death',
-                    type: 'line',
-                    data: []
+                    data: []                
                 }]
+            })    
+        }
+    }
+    
+    getData = (request, graph) => {
+        axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
+            this.setState({error:false})
+            if(request !== "all"){
+                this.setState({
+                    InfectedHistory: response.data.timeline.cases,
+                    deathHistory: response.data.timeline.deaths,
+                    recoveredHistory: response.data.timeline.recovered
+                })
+            } else {
+                this.setState({
+                    InfectedHistory: response.data.cases,
+                    deathHistory: response.data.deaths,
+                    recoveredHistory: response.data.recovered
+                })
+            }
+            this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, graph)           
+        }).catch(error => {
+            this.setState({
+                error: true
             })
+            this.computeGraph([], [], [], graph)
         });
     }
     
@@ -264,9 +279,9 @@ class Graph extends Component {
                             <h4 className="subTitle">
                                 Select a country to display graph
                             </h4>
-                            <DropdownButton className="sortBtn" title={this.state.graphType} size="sm">
+                            <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
                                         <Dropdown.Item onClick={() => this.graphHandler("linear")}>Linear</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => this.graphHandler("log")}>Logarithmic</Dropdown.Item>
+                                        <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
                             </DropdownButton>
                         </div>
                     </Col>
@@ -281,7 +296,7 @@ class Graph extends Component {
                                     Global  
                                     {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                                 </h5>
-                                <DropdownButton className="sortBtn" title="Sort by" size="sm">
+                                <DropdownButton className="sortBtn" title="Sort by" variant="secondary" size="sm">
                                     <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
