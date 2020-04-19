@@ -53,6 +53,7 @@ class Graph extends Component {
                 showNullDataPoints:false
             },
             yaxis: {
+                show:true,
                 showAlways:true,
                 labels: {
                     style: {
@@ -161,7 +162,7 @@ class Graph extends Component {
 
     computeGraph = (Death, Infected, Recovered, log) => {
         const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
-        if(!this.state.error) {
+        if(!this.state.getDataError) {
             for (const key of Object.keys(Infected)) {
                 dateArray.push(key + " GMT")
                 if (Infected[key] === 0 && log){
@@ -193,7 +194,6 @@ class Graph extends Component {
                         categories: dateArray
                     },
                     yaxis: {
-                        tickAmount: 4,
                         showAlways: true,
                         labels: {
                             style: {
