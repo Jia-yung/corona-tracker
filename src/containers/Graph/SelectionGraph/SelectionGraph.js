@@ -193,6 +193,7 @@ class Graph extends Component {
                         categories: dateArray
                     },
                     yaxis: {
+                        tickAmount: 4,
                         showAlways: true,
                         labels: {
                             style: {
@@ -256,7 +257,10 @@ class Graph extends Component {
             this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, graph)           
         }).catch(error => {
             this.setState({
-                getDataError: true
+                getDataError: true,
+                infectedHistory: [],
+                deathHistory: [],
+                recoveredHistory: []
             })
             this.computeGraph([], [], [], graph)
         });

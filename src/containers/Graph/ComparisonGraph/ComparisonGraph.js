@@ -53,6 +53,7 @@ class ComparisonGraph extends Component {
                 showNullDataPoints:false
             },
             yaxis: {
+                tickAmount:4,
                 logarithmic:false
             },
             title: {
@@ -263,6 +264,7 @@ class ComparisonGraph extends Component {
                 },
                 yaxis: {
                     showAlways: true,
+                    tickAmount:4,
                     labels: {
                         style: {
                             colors: 'white'
