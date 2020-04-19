@@ -9,7 +9,6 @@ class DataTable extends Component {
                     data-url= 'https://corona.lmao.ninja/v2/countries?sort=cases'                
                     data-toggle="table"
                     data-sticky-header = "true"
-                    data-show-refresh="true"
                     data-height = "500"
                     data-classes="table table-bordered table-dark table-striped"
                     data-search="true" >
