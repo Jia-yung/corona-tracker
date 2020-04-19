@@ -27,7 +27,8 @@ class CoronaTracker extends Component {
         todayDeaths: null,
         infectedCountry: [],
         loading: true,
-        error: false
+        getAllError: false,
+        getCountryError:false
     }
     
     componentDidMount() {
@@ -38,10 +39,11 @@ class CoronaTracker extends Component {
                 totalDeath: response.data.deaths, 
                 totalRecovered: response.data.recovered,
                 todayCases: response.data.todayCases,
-                todayDeaths: response.data.todayDeaths
+                todayDeaths: response.data.todayDeaths,
+                loading: false
             })
         }).catch(error => {
-            this.setState({error: true})
+            this.setState({getAllError: true})
         })  
         
         axios.get('https://corona.lmao.ninja/v2/countries?sort=country')
@@ -50,7 +52,7 @@ class CoronaTracker extends Component {
                 infectedCountry: response.data.reverse(),
             })
         }).catch(error => {
-            this.setState({error: true})
+            this.setState({getCountryError: true})
         }) 
     }
 
