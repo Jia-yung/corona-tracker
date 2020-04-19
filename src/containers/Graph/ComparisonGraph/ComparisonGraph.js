@@ -49,6 +49,9 @@ class ComparisonGraph extends Component {
                     }
                 }
             },
+            markers: {
+                showNullDataPoints:false
+            },
             yaxis: {
                 logarithmic:false
             },
@@ -60,7 +63,7 @@ class ComparisonGraph extends Component {
                 }
             },
             tooltip: {
-                theme: 'dark',
+                theme: 'dark'
             },
         },
         series: [{
@@ -298,7 +301,7 @@ class ComparisonGraph extends Component {
                     <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                         <DropdownButton className="compareBtn" title={this.state.compareBy} size="sm">
                             <Dropdown.Item onClick={() => this.compareHandler("Infection")}>Infection</Dropdown.Item>
-                            <Dropdown.Item onClick={() => this.compareHandler("Death")}>Deaths</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.compareHandler("Death")}>Death</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.compareHandler("Recovery")}>Recovery</Dropdown.Item>
                         </DropdownButton>
                         <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">

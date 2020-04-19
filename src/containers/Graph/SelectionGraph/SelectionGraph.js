@@ -46,6 +46,9 @@ class Graph extends Component {
                     }
                 }
             },
+            markers: {
+                showNullDataPoints:false
+            },
             yaxis: {
                 showAlways:true,
                 labels: {
