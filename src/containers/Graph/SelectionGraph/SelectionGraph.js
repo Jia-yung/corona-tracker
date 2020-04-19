@@ -13,11 +13,11 @@ class Graph extends Component {
         selectedCountry: null,
         graphType: "Linear",
         infectedCountry: [],
-        InfectedHistory: [],
+        infectedHistory: [],
         deathHistory: [],
         recoveredHistory: [],
         countryListError: false,
-        error: false,
+        getDataError: false,
         sort: "country",
         options: {
             chart: {
@@ -133,12 +133,12 @@ class Graph extends Component {
         if (type === "logarithmic") {
             this.setState({graphType: "Logarithmic", logarithmic: true})
             if (this.state.selectedCountry) {
-                this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, true)
+                this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, true)
             }
         } else if (type === "linear") {
             this.setState({graphType: "Linear", logarithmic: false})
             if (this.state.selectedCountry) {
-                this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, false)
+                this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, false)
             }
         }
     }
@@ -236,24 +236,24 @@ class Graph extends Component {
     
     getData = (request, graph) => {
         axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
-            this.setState({error:false})
+            this.setState({getDataError:false})
             if(request !== "all"){
                 this.setState({
-                    InfectedHistory: response.data.timeline.cases,
+                    infectedHistory: response.data.timeline.cases,
                     deathHistory: response.data.timeline.deaths,
                     recoveredHistory: response.data.timeline.recovered
                 })
             } else {
                 this.setState({
-                    InfectedHistory: response.data.cases,
+                    infectedHistory: response.data.cases,
                     deathHistory: response.data.deaths,
                     recoveredHistory: response.data.recovered
                 })
             }
-            this.computeGraph(this.state.deathHistory, this.state.InfectedHistory, this.state.recoveredHistory, graph)           
+            this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, graph)           
         }).catch(error => {
             this.setState({
-                error: true
+                getDataError: true
             })
             this.computeGraph([], [], [], graph)
         });
