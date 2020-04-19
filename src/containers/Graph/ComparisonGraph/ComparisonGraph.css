@@ -1,11 +1,23 @@
-.chartCompareContainer {
+.comparisonChartContainer {
     background-color: #343A40;
     border-radius: 15px;
     margin-bottom: 5px;
     padding-top: 10px;
 }
 
-.graphBtn {
+.compGraphBtn {
     margin-left: 10px;
+}
+
+.compBtnContainer {
+    display: flex;
+    justify-content: flex-end ;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:576px) {
+    .compBtnContainer {
+        justify-content: flex-start !important;
+    }
 }
 

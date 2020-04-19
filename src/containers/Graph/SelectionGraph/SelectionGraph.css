@@ -10,7 +10,7 @@
     border-radius: 15px;
     background-color: #343A40 !important;
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .listContainer > p {
@@ -74,9 +74,10 @@
 
 .graphBtn {
     text-align: right;
+    margin-bottom: 10px;
 }
 /* Graph */
-.chartContainer {
+.selectionChartContainer {
     background-color: #343A40;
     border-radius: 15px;
     margin-bottom: 5px;
@@ -86,6 +87,12 @@
 .apexcharts-legend-text,
 .apexcharts-legend-marker {
     margin-top: 10px;
+}
+
+@media screen and (max-width:576px) {
+    .graphBtn {
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 540px) {

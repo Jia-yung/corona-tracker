@@ -277,16 +277,16 @@ class Graph extends Component {
         return (
             <div>
                 <Row>
-                    <Col xs={12}> 
-                        <div style={{display: "flex", justifyContent: "space-between"}}>                      
-                            <h4 className="subTitle">
-                                Select a country to display graph
-                            </h4>
-                            <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
-                                        <Dropdown.Item onClick={() => this.graphHandler("linear")}>Linear</Dropdown.Item>
-                                        <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
-                            </DropdownButton>
-                        </div>
+                    <Col xs={12} sm={8}> 
+                        <h4 className="subTitle">
+                            Select a country to display graph
+                        </h4>
+                    </Col>
+                    <Col xs={12} sm={4}>
+                        <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
+                            <Dropdown.Item onClick={() => this.graphHandler("linear")}>Linear</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
+                        </DropdownButton>        
                     </Col>
                 </Row>
                 <Row>
@@ -314,7 +314,7 @@ class Graph extends Component {
                         </div>                       
                     </Col>
                     <Col md={9}>
-                        <div className="chartContainer">            
+                        <div className="selectionChartContainer">            
                             <div className="mixed-chart">
                                 <Chart
                                     options={this.state.options}

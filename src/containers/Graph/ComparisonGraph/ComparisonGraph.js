@@ -294,24 +294,24 @@ class ComparisonGraph extends Component {
     render() {
         return (
             <Row>
-                <Col xs={7}>
+                <Col xs={12} sm={8}>
                     <h4 className="subTitle">Comparison of multiple countries</h4>
                 </Col>
-                <Col xs={5}>
-                    <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                <Col xs={12} sm={4}>
+                    <div className="compBtnContainer">
                         <DropdownButton className="compareBtn" title={this.state.compareBy} size="sm">
                             <Dropdown.Item onClick={() => this.compareHandler("Infection")}>Infection</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.compareHandler("Death")}>Death</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.compareHandler("Recovery")}>Recovery</Dropdown.Item>
                         </DropdownButton>
-                        <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
+                        <DropdownButton className="compGraphBtn" title={this.state.graphType} size="sm">
                             <Dropdown.Item onClick={() => this.graphHandler("Linear")}>Linear</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.graphHandler("Logarithmic")}>Logarithmic</Dropdown.Item>
                         </DropdownButton>
                     </div>
                 </Col>
                 <Col xs={12}>
-                    <div className="chartCompareContainer">            
+                    <div className="comparisonChartContainer">            
                         <div className="mixed-chart">
                             <Chart
                                 options={this.state.options}
