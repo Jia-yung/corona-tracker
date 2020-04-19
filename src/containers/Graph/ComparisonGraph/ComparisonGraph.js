@@ -15,6 +15,8 @@ class ComparisonGraph extends Component {
         germany: [],
         spain:[],
         iran:[],
+        compareBy: "Infection",
+        graphType: "Linear",
         error: false,
         options: {
             chart: {
@@ -48,14 +50,9 @@ class ComparisonGraph extends Component {
                 }
             },
             yaxis: {
-                labels: {
-                    style: {
-                        colors: 'white'
-                    }
-                }
+                logarithmic:false
             },
             title: {
-                text: "",
                 align: 'Center',
                 style: {
                     color: 'white',
@@ -123,14 +120,38 @@ class ComparisonGraph extends Component {
                     spain: response[6].data.timeline,
                     iran: response[7].data.timeline
                 })
-                console.log(this.state.usa)
-                this.getData("Infection")
+                this.computeGraph("Infection")
         })).catch(error => {
-            this.setState({error: true})
+            this.setState({
+                error:true,
+                options: {
+                    title: {
+                        text: "Error getting data"
+                    }                     
+                }
+            })     
         })
     }
 
-    getData = (type) => {
+    graphHandler = (type) => {
+        if (type === "Logarithmic" && !this.state.error) {
+            this.setState({graphType: "Logarithmic", logarithmic: true})
+            this.computeGraph(this.state.compareBy, true)
+        } else if (type === "Linear" && !this.state.error) {
+            this.setState({graphType: "Linear", logarithmic: false})
+            this.computeGraph(this.state.compareBy, false)
+        }
+    }
+
+    compareHandler = (type) => {
+        if(!this.state.error){
+            this.computeGraph(type, this.state.logarithmic)
+        }
+    }
+
+    computeGraph = (type, log) => {
+        this.setState({compareBy: type})
+
         let usaHistory = []
         let chinaHistory = []
         let italyHistory = []
@@ -173,28 +194,60 @@ class ComparisonGraph extends Component {
         
         for (const key of Object.keys(usaHistory)) {
             dateArray.push(key + " GMT")
-            usaArray.push(usaHistory[key])
+            if (usaHistory[key] === 0 && log){
+                usaArray.push(null)
+            } else {
+                usaArray.push(usaHistory[key])
+            }
         }
         for (const key of Object.keys(chinaHistory)) {
-            chinaArray.push(chinaHistory[key])
+            if (chinaHistory[key] === 0 && log){
+                chinaArray.push(null)
+            } else {
+                chinaArray.push(chinaHistory[key])
+            }
         }
         for (const key of Object.keys(italyHistory)) {
-            italyArray.push(italyHistory[key])
+            if (italyHistory[key] === 0 && log){
+                italyArray.push(null)
+            } else {
+                italyArray.push(italyHistory[key])
+            }
         }
         for (const key of Object.keys(ukHistory)) {
-            ukArray.push(ukHistory[key])
+            if (ukHistory[key] === 0 && log){
+                ukArray.push(null)
+            } else {
+                ukArray.push(ukHistory[key])
+            }
         }
         for (const key of Object.keys(franceHistory)) {
-            franceArray.push(franceHistory[key])
+            if (franceHistory[key] === 0 && log){
+                franceArray.push(null)
+            } else {
+                franceArray.push(franceHistory[key])
+            }
         }
         for (const key of Object.keys(germanyHistory)) {
-            germanyArray.push(germanyHistory[key])
+            if (germanyHistory[key] === 0 && log){
+                germanyArray.push(null)
+            } else {
+                germanyArray.push(germanyHistory[key])
+            }
         }
         for (const key of Object.keys(spainHistory)) {
-            spainArray.push(spainHistory[key])
+            if (spainHistory[key] === 0 && log){
+                spainArray.push(null)
+            } else {
+                spainArray.push(spainHistory[key])
+            }
         }
         for (const key of Object.keys(iranHistory)) {
-            iranArray.push(iranHistory[key])
+            if (iranHistory[key] === 0 && log){
+                iranArray.push(null)
+            } else {
+                iranArray.push(iranHistory[key])
+            }
         }
 
         this.setState({
@@ -204,7 +257,16 @@ class ComparisonGraph extends Component {
                 },
                 title: {
                     text: "Countries by " + type
-                }                        
+                },
+                yaxis: {
+                    showAlways: true,
+                    labels: {
+                        style: {
+                            colors: 'white'
+                        }
+                    },
+                    logarithmic:log
+                }                     
             },
             series: [{
                 data: usaArray  
@@ -229,13 +291,19 @@ class ComparisonGraph extends Component {
     render() {
         return (
             <Row>
-                <Col xs={12}>
-                    <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                        <h4 className="subTitle">Comparison of multiple countries</h4>
-                        <DropdownButton className="compareBtn" title="Compare" size="sm">
-                            <Dropdown.Item onClick={() => this.getData("Infection")}>Infected</Dropdown.Item>
-                            <Dropdown.Item onClick={() => this.getData("Death")}>Deaths</Dropdown.Item>
-                            <Dropdown.Item onClick={() => this.getData("Recovery")}>Recovered</Dropdown.Item>
+                <Col xs={7}>
+                    <h4 className="subTitle">Comparison of multiple countries</h4>
+                </Col>
+                <Col xs={5}>
+                    <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                        <DropdownButton className="compareBtn" title={this.state.compareBy} size="sm">
+                            <Dropdown.Item onClick={() => this.compareHandler("Infection")}>Infection</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.compareHandler("Death")}>Deaths</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.compareHandler("Recovery")}>Recovery</Dropdown.Item>
+                        </DropdownButton>
+                        <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
+                            <Dropdown.Item onClick={() => this.graphHandler("Linear")}>Linear</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.graphHandler("Logarithmic")}>Logarithmic</Dropdown.Item>
                         </DropdownButton>
                     </div>
                 </Col>
