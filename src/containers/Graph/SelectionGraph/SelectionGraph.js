@@ -29,6 +29,9 @@ class Graph extends Component {
                     show: false
                 }
             },
+            stroke: {
+                width: 4    
+            },
             colors: ["#FEB01A", "#00E396", "#FF4560"],
             legend: {
                 show: true,
