@@ -53,8 +53,6 @@ class Graph extends Component {
                 showNullDataPoints:false
             },
             yaxis: {
-                show:true,
-                showAlways:true,
                 labels: {
                     style: {
                         colors: 'white'
@@ -194,13 +192,14 @@ class Graph extends Component {
                         categories: dateArray
                     },
                     yaxis: {
+                        tickAmount: 4,
                         showAlways: true,
+                        logarithmic: log,
                         labels: {
                             style: {
                                 colors: 'white'
                             }
-                        },
-                        logarithmic: log,
+                        }
                     },                
                 },
                 series: [{
@@ -221,6 +220,7 @@ class Graph extends Component {
                 yaxis: {
                     show:true,
                     showAlways: true,
+                    tickAmount:4,
                     labels: {
                         style: {
                             colors: 'white'
