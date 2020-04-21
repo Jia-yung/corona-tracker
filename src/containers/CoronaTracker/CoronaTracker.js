@@ -33,27 +33,27 @@ class CoronaTracker extends Component {
     
     componentDidMount() {
         axios.get('https://corona.lmao.ninja/v2/all?')
-        .then(response => {
-            this.setState({
-                totalCases: response.data.cases,
-                totalDeath: response.data.deaths, 
-                totalRecovered: response.data.recovered,
-                todayCases: response.data.todayCases,
-                todayDeaths: response.data.todayDeaths,
-                loading: false
-            })
-        }).catch(error => {
-            this.setState({getAllError: true})
-        })  
+            .then(response => {
+                this.setState({
+                    totalCases: response.data.cases,
+                    totalDeath: response.data.deaths, 
+                    totalRecovered: response.data.recovered,
+                    todayCases: response.data.todayCases,
+                    todayDeaths: response.data.todayDeaths,
+                    loading: false
+                })
+            }).catch(error => {
+                this.setState({getAllError: true})
+            })  
         
         axios.get('https://corona.lmao.ninja/v2/countries?sort=country')
-        .then(response => {
-            this.setState({
-                infectedCountry: response.data.reverse(),
-            })
-        }).catch(error => {
-            this.setState({getCountryError: true})
-        }) 
+            .then(response => {
+                this.setState({
+                    infectedCountry: response.data.reverse(),
+                })
+            }).catch(error => {
+                this.setState({getCountryError: true})
+            }) 
     }
 
     render () { 
@@ -123,7 +123,13 @@ class CoronaTracker extends Component {
                     </Row>
                     <Map/>
                     <SelectionGraph />
-                    <ComparisonGraph />
+                    <ComparisonGraph /> 
+                    <Row>
+                        <Col xs={12}>
+                            <h4 className="subTitle">Timelapse Data Visualisation</h4>                 
+                            <div className="racingChart flourish-embed flourish-bar-chart-race" data-src="visualisation/2009352" data-url="https://flo.uri.sh/visualisation/2009352/embed"></div>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col xs={12}>
                             <h4 className="subTitle">Latest Articles</h4>
@@ -146,7 +152,7 @@ class CoronaTracker extends Component {
                         <Col xs={12}>
                             <Alert/>                            
                         </Col>
-                    </Row>              
+                    </Row>            
                 </div>
             </Container>
         )

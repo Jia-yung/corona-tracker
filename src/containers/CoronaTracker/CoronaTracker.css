@@ -68,6 +68,11 @@
     height: 7px !important;
 }
 
+/* Chart Race */
+.racingChart {
+    margin-bottom: 25px;
+}
+
 @media screen and (max-width: 576px ) {
     .socialContainer {
         justify-content: flex-start;
