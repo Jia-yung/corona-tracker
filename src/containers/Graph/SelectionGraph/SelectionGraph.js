@@ -11,7 +11,7 @@ class Graph extends Component {
     state = {
         countryName: null,
         selectedCountry: null,
-        graphType: "Linear",
+        graphType: "Cummulative",
         infectedCountry: [],
         infectedHistory: [],
         deathHistory: [],
@@ -137,8 +137,8 @@ class Graph extends Component {
             if (this.state.selectedCountry) {
                 this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, true)
             }
-        } else if (type === "linear") {
-            this.setState({graphType: "Linear", logarithmic: false})
+        } else if (type === "cummulative") {
+            this.setState({graphType: "Cummulative", logarithmic: false})
             if (this.state.selectedCountry) {
                 this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, false)
             }
@@ -291,7 +291,7 @@ class Graph extends Component {
                     </Col>
                     <Col xs={12} sm={4}>
                         <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
-                            <Dropdown.Item onClick={() => this.graphHandler("linear")}>Linear</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.graphHandler("cummulative")}>Cummulative</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
                         </DropdownButton>        
                     </Col>

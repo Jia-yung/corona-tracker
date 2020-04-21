@@ -16,7 +16,7 @@ class ComparisonGraph extends Component {
         spain:[],
         iran:[],
         compareBy: "Infection",
-        graphType: "Linear",
+        graphType: "Cummulative",
         error: false,
         options: {
             chart: {
@@ -141,8 +141,8 @@ class ComparisonGraph extends Component {
         if (type === "Logarithmic" && !this.state.error) {
             this.setState({graphType: "Logarithmic", logarithmic: true})
             this.computeGraph(this.state.compareBy, true)
-        } else if (type === "Linear" && !this.state.error) {
-            this.setState({graphType: "Linear", logarithmic: false})
+        } else if (type === "Cummulative" && !this.state.error) {
+            this.setState({graphType: "Cummulative", logarithmic: false})
             this.computeGraph(this.state.compareBy, false)
         }
     }
@@ -307,7 +307,7 @@ class ComparisonGraph extends Component {
                             <Dropdown.Item onClick={() => this.compareHandler("Recovery")}>Recovery</Dropdown.Item>
                         </DropdownButton>
                         <DropdownButton className="compGraphBtn" title={this.state.graphType} size="sm">
-                            <Dropdown.Item onClick={() => this.graphHandler("Linear")}>Linear</Dropdown.Item>
+                            <Dropdown.Item onClick={() => this.graphHandler("Cummulative")}>Cummulative</Dropdown.Item>
                             <Dropdown.Item onClick={() => this.graphHandler("Logarithmic")}>Logarithmic</Dropdown.Item>
                         </DropdownButton>
                     </div>
