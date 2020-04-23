@@ -1,0 +1,17 @@
+.dailyChartContainer {
+    background-color: #343A40;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.categoryBtn {
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width:576px) {
+    .categoryBtn {
+        text-align: left;
+    }
+}
