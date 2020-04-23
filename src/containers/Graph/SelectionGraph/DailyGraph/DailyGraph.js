@@ -6,7 +6,7 @@ import axios from "axios";
 
 class DailyGraph extends Component {
     state = {
-        error: false,
+        getDataError: false,
         selectedCountry: null,
         category:"Infected",
         infectedDaily:[],
