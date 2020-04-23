@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
-import SelectionGraph from '../Graph/SelectionGraph/SelectionGraph';
+import SelectionGraph from '../Graph/SelectionGraph/Selection';
 import ComparisonGraph from '../Graph/ComparisonGraph/ComparisonGraph';
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
