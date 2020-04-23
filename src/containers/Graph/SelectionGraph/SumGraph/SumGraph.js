@@ -237,9 +237,9 @@ class SumGraph extends Component {
         return (
             <div>
                 <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
-                                <Dropdown.Item onClick={() => this.graphHandler("cummulative")}>Cummulative</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
-                            </DropdownButton>        
+                    <Dropdown.Item onClick={() => this.graphHandler("cummulative")}>Cummulative</Dropdown.Item>
+                    <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
+                </DropdownButton>        
                 <div className="selectionChartContainer">            
                     <div className="mixed-chart">
                         <Chart
