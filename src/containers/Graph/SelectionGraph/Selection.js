@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import {Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
+import {Row, Col, DropdownButton, Dropdown, Button} from 'react-bootstrap';
 import EarthLogo from '../../../Images/worldwide.svg';
 import ListItem from '../../../components/ListItem/ListItem';
 import DailyGraph from './DailyGraph/DailyGraph.js'
@@ -85,19 +85,19 @@ class Graph extends Component {
         return (
             <div>
                 <Row>
-                    <Col xs={12} md={3}> 
+                    <Col xs={12} md={3} className="countryListColumn"> 
                     <h4 className="subTitle">
                             Data Graph
                         </h4>
                         <div className="listContainer">
                             <p>Country</p>
                             <div className="listContainerBtn">
-                                <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
-                                    <img className="globe" src={EarthLogo} alt="Globe" align="middle" />
+                                <Button className="globalBtn" size="sm" variant="secondary" onClick={() => this.countrySelectHandler("Global")}>
+                                    <img src={EarthLogo} alt="Globe" align="middle" />
                                     Global  
                                     {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
-                                </h5>
-                                <DropdownButton className="sortBtn" title="Sort by" variant="secondary" size="sm">
+                                </Button>
+                                <DropdownButton className="sortBtn" title="Sort" variant="secondary" size="sm">
                                     <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>

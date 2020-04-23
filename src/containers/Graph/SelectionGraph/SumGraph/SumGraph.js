@@ -241,14 +241,12 @@ class SumGraph extends Component {
                     <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
                 </DropdownButton>        
                 <div className="selectionChartContainer">            
-                    <div className="mixed-chart">
-                        <Chart
-                            options={this.state.options}
-                            series={this.state.series} 
-                            type="line"                  
-                            width="100%"
-                            height="275px"/>
-                    </div>
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series} 
+                        type="line"                  
+                        width="100%"
+                        height="275px"/>
                 </div>
             </div>
         )

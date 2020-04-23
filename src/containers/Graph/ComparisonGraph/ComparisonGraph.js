@@ -314,14 +314,12 @@ class ComparisonGraph extends Component {
                 </Col>
                 <Col xs={12}>
                     <div className="comparisonChartContainer">            
-                        <div className="mixed-chart">
-                            <Chart
-                                options={this.state.options}
-                                series={this.state.series} 
-                                type="line"                  
-                                width="100%"
-                                height="400px"/>
-                        </div>
+                        <Chart
+                            options={this.state.options}
+                            series={this.state.series} 
+                            type="line"                  
+                            width="100%"
+                            height="400px"/>
                     </div>
                     <Caption/>
                 </Col>

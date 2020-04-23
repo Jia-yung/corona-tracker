@@ -248,15 +248,13 @@ class DailyGraph extends Component {
                     </DropdownButton>
                 </Col>
                 <Col xs={12}>
-                    <div className="dailyChartContainer">            
-                        <div className="mixed-chart">
-                            <Chart
-                                options={this.state.options}
-                                series={this.state.series}                
-                                type="area"
-                                width="100%"
-                                height="275px"/>
-                        </div>
+                    <div className="dailyChartContainer">                                    
+                        <Chart
+                            options={this.state.options}
+                            series={this.state.series}                
+                            type="area"
+                            width="100%"
+                            height="275px"/>                        
                     </div>
                 </Col>
             </Row>
