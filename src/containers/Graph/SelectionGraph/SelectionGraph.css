@@ -24,7 +24,7 @@
 }
 
 .ulContainer {
-    height: 229px;
+    height: 556px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -74,13 +74,13 @@
 
 .graphBtn {
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 /* Graph */
 .selectionChartContainer {
     background-color: #343A40;
     border-radius: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     padding-top: 10px;
 }
 
@@ -89,9 +89,31 @@
     margin-top: 10px;
 }
 
+.caption {
+    margin-bottom: 25px;
+    font-size: 12px;
+    text-align: right;
+}
+
+@media screen and (max-width:888px) {
+    .globe{
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 5px;
+    }
+
+
+}
+
 @media screen and (max-width:576px) {
     .graphBtn {
         text-align: left;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .ulContainer {
+        height: 275px;
     }
 }
 

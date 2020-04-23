@@ -2,10 +2,10 @@ import React, { Component} from "react";
 import {Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
 import EarthLogo from '../../../Images/worldwide.svg';
 import ListItem from '../../../components/ListItem/ListItem';
-import Chart from "react-apexcharts";
-import Caption from '../../../components/Caption/Caption';
+import DailyGraph from './DailyGraph/DailyGraph.js'
 import './SelectionGraph.css';
 import axios from "axios";
+import SumGraph from "./SumGraph/SumGraph";
 
 class Graph extends Component {
     state = {
@@ -13,78 +13,9 @@ class Graph extends Component {
         selectedCountry: null,
         graphType: "Cummulative",
         infectedCountry: [],
-        infectedHistory: [],
-        deathHistory: [],
-        recoveredHistory: [],
         countryListError: false,
-        getDataError: false,
         sort: "country",
-        options: {
-            chart: {
-                zoom: {
-                    enabled: false
-                },
-                stacked: false,
-                toolbar: {
-                    show: false
-                }
-            },
-            stroke: {
-                width: 4    
-            },
-            colors: ["#FEB01A", "#00E396", "#FF4560"],
-            legend: {
-                show: true,
-                labels: {
-                    colors: 'white'
-                }
-            },
-            xaxis: {
-                type: 'datetime',
-                categories: [],
-                labels: {
-                    show: true,
-                    style: {
-                        colors: 'white'
-                    }
-                }
-            },
-            markers: {
-                showNullDataPoints:false
-            },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: 'white'
-                    }
-                },
-                logarithmic: false
-            },
-            title: {
-                text: "Select a country",
-                align: 'Center',
-                style: {
-                    color: 'white',
-                    fontSize: '20px'
-                }
-            },
-            tooltip: {
-                theme: 'dark',
-            },
-        },
-        series: [{
-            name:'Infected',
-            type: 'line',
-            data: [],
-        },{
-            name:'Recovered',
-            type: 'line',
-            data: []
-        },{
-            name:'Death',
-            type: 'line',
-            data: []
-        }]
+        loading:true,
     };
 
     componentDidMount() {
@@ -131,141 +62,10 @@ class Graph extends Component {
         }
     }
 
-    graphHandler = (type) => {
-        if (type === "logarithmic") {
-            this.setState({graphType: "Logarithmic", logarithmic: true})
-            if (this.state.selectedCountry) {
-                this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, true)
-            }
-        } else if (type === "cummulative") {
-            this.setState({graphType: "Cummulative", logarithmic: false})
-            if (this.state.selectedCountry) {
-                this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, false)
-            }
-        }
-    }
-
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
-        
-        let request= null
-
-        if (country !== "Global"){
-            request = country
-        } else {
-            request = "all"
-        }
-        this.getData(request, this.state.logarithmic)
     }
 
-    computeGraph = (Death, Infected, Recovered, log) => {
-        const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
-        if(!this.state.getDataError) {
-            for (const key of Object.keys(Infected)) {
-                dateArray.push(key + " GMT")
-                if (Infected[key] === 0 && log){
-                    infectedArray.push(null)
-                } else {
-                    infectedArray.push(Infected[key])
-                }
-            }
-            for (const key of Object.keys(Death)) {
-                if (Death[key] === 0 && log){
-                    deathArray.push(null)
-                } else {
-                    deathArray.push(Death[key])
-                }
-            }
-            for (const key of Object.keys(Recovered)) {
-                if (Recovered[key] === 0 && log){
-                    recoveredArray.push(null)
-                } else {
-                    recoveredArray.push(Recovered[key])
-                }
-            }
-            this.setState({
-                options: {
-                    title: {
-                        text: this.state.selectedCountry.toUpperCase(),
-                    },
-                    xaxis: {
-                        categories: dateArray
-                    },
-                    yaxis: {
-                        tickAmount: 4,
-                        showAlways: true,
-                        logarithmic: log,
-                        labels: {
-                            style: {
-                                colors: 'white'
-                            }
-                        }
-                    },                
-                },
-                series: [{
-                    data: infectedArray  
-                },{
-                    data: recoveredArray                   
-                },{
-                    data: deathArray                   
-                }]
-            })          
-        } else {
-            this.setState({
-                options: {
-                    title: {
-                        text: this.state.selectedCountry.toUpperCase() + " - No Data",
-                    }              
-                }, 
-                yaxis: {
-                    show:true,
-                    showAlways: true,
-                    tickAmount:4,
-                    labels: {
-                        style: {
-                            colors: 'white'
-                        }
-                    }
-                },  
-                series: [{
-                    data: [] 
-                },{
-                    data: []                  
-                },{
-                    data: []                
-                }]
-            })    
-        }
-    }
-    
-    getData = (request, graph) => {
-        axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=all").then(response => {
-            this.setState({getDataError:false})
-            if(request !== "all"){
-                this.setState({
-                    infectedHistory: response.data.timeline.cases,
-                    deathHistory: response.data.timeline.deaths,
-                    recoveredHistory: response.data.timeline.recovered
-                })
-            } else {
-                this.setState({
-                    infectedHistory: response.data.cases,
-                    deathHistory: response.data.deaths,
-                    recoveredHistory: response.data.recovered
-                })
-            }
-            this.computeGraph(this.state.deathHistory, this.state.infectedHistory, this.state.recoveredHistory, graph)           
-        }).catch(error => {
-            this.setState({
-                getDataError: true,
-                infectedHistory: [],
-                deathHistory: [],
-                recoveredHistory: []
-            })
-            this.computeGraph([], [], [], graph)
-        });
-    }
-    
     render() {
         let item = this.state.infectedCountry.map(data => {
             return (
@@ -284,25 +84,15 @@ class Graph extends Component {
         return (
             <div>
                 <Row>
-                    <Col xs={12} sm={8}> 
-                        <h4 className="subTitle">
-                            Select a country to display graph
+                    <Col xs={12} md={3}> 
+                    <h4 className="subTitle">
+                            Data Graph
                         </h4>
-                    </Col>
-                    <Col xs={12} sm={4}>
-                        <DropdownButton className="graphBtn" title={this.state.graphType} size="sm">
-                            <Dropdown.Item onClick={() => this.graphHandler("cummulative")}>Cummulative</Dropdown.Item>
-                            <Dropdown.Item onClick={() => this.graphHandler("logarithmic")}>Logarithmic</Dropdown.Item>
-                        </DropdownButton>        
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={3}> 
                         <div className="listContainer">
                             <p>Country</p>
                             <div className="listContainerBtn">
                                 <h5 className="globalBtn" onClick={() => this.countrySelectHandler("Global")}>
-                                    <img src={EarthLogo} alt="Globe" align="middle" />
+                                    <img className="globe" src={EarthLogo} alt="Globe" align="middle" />
                                     Global  
                                     {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                                 </h5>
@@ -320,18 +110,19 @@ class Graph extends Component {
                             </div>
                         </div>                       
                     </Col>
-                    <Col md={9}>
-                        <div className="selectionChartContainer">            
-                            <div className="mixed-chart">
-                                <Chart
-                                    options={this.state.options}
-                                    series={this.state.series} 
-                                    type="line"                  
-                                    width="100%"
-                                    height="300px"/>
-                            </div>
+                    <Col xs={12} md={9}>
+                        <Row>
+                            <Col md={12}>
+                                <SumGraph countryName={this.state.selectedCountry} />
+                            </Col>
+                            <Col md={12}>
+                                <DailyGraph countryName={this.state.selectedCountry} />
+                            </Col>
+                        </Row>
+                        <div className="caption">
+                            <p>Drag/Click on the graph for more information.</p>
+                            <p>Timeline is updated each day at 23:59 UTC.</p>
                         </div>
-                        <Caption/>
                     </Col>
                 </Row>
             </div>
