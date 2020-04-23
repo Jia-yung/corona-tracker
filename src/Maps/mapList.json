@@ -14,7 +14,7 @@
             "_id":  1,
             "iso2": "AUS",
             "iso3": "AUS",
-            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/au.png"
+            "flag": "https://corona.lmao.ninja/assets/img/flags/au.png"
         }
     },
     {
@@ -23,7 +23,7 @@
             "_id":  2,
             "iso2": "CA",
             "iso3": "CA",
-            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/ca.png"
+            "flag": "https://corona.lmao.ninja/assets/img/flags/ca.png"
         }
     },
     {
@@ -32,7 +32,7 @@
             "_id":  4,
             "iso2": "US",
             "iso3": "USA",
-            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/cn.png"
+            "flag": "https://corona.lmao.ninja/assets/img/flags/cn.png"
         }
     },
     {
@@ -41,7 +41,7 @@
             "_id":  5,
             "iso2": "US",
             "iso3": "USA",
-            "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/us.png"
+            "flag": "https://corona.lmao.ninja/assets/img/flags/us.png"
         }
     }
 ]
