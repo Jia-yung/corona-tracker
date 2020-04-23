@@ -126,8 +126,8 @@ class CoronaTracker extends Component {
                     <ComparisonGraph /> 
                     <Row>
                         <Col xs={12}>
-                            <h4 className="subTitle">Timelapse Data Visualisation</h4>                 
-                            <div className="racingChart flourish-embed flourish-bar-chart-race" data-src="visualisation/2009352" data-url="https://flo.uri.sh/visualisation/2009352/embed"></div>
+                            <h4 className="subTitle">Time-lapse Data Visualisation</h4>                 
+                            {/*<div className="racingChart flourish-embed flourish-bar-chart-race" data-src="visualisation/2009352" data-url="https://flo.uri.sh/visualisation/2009352/embed"></div>*/}
                         </Col>
                     </Row>
                     <Row>
