@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import {Row, Col, DropdownButton, Dropdown} from 'react-bootstrap';
+import {DropdownButton, Dropdown} from 'react-bootstrap';
 import Chart from "react-apexcharts";
 import './DailyGraph.css';
 import axios from "axios";
@@ -29,8 +29,8 @@ class DailyGraph extends Component {
             },
             colors:["#FEB01A"],
             legend: {
-                show:true,
                 showForSingleSeries: true,
+                showForZeroSeries: true,
                 labels: {
                     colors: 'white'
                 },
@@ -43,8 +43,7 @@ class DailyGraph extends Component {
                 gradient: {
                     type:'vertical',
                     opacityFrom: 0.7,
-                    opacityTo: 0.9,
-                    
+                    opacityTo: 0.9,    
                 }
             },
             xaxis: {
@@ -58,8 +57,6 @@ class DailyGraph extends Component {
                 }
             },
             yaxis: {
-                show:true,
-                showAlways: true,
                 labels: {
                     style: {
                         colors: 'white'
@@ -80,7 +77,6 @@ class DailyGraph extends Component {
         },
         series: [{
             name:'Infected',
-            type:'area',
             data: [],
         }]
     };
@@ -98,15 +94,19 @@ class DailyGraph extends Component {
     }
 
     categoryHandler = (category) => {
+        let data = []
         if(category === "Infected"){
             this.setState({category: "Infected"})
+            data = this.state.infectedDaily
         } else if (category === "Recovered") {
             this.setState({category: "Recovered"})
+            data = this.state.recoveredDaily
         } else if (category === "Death") {
             this.setState({category: "Death"})
+            data = this.state.deathDaily
         }
         if (this.state.selectedCountry) {
-            this.computeGraph(this.state.deathDaily, this.state.infectedDaily, this.state.recoveredDaily, category)
+            this.computeGraph(data, category)
         }
     }
 
@@ -126,8 +126,17 @@ class DailyGraph extends Component {
                     recoveredDaily: response.data.recovered
                 })
             }
-            this.computeGraph(this.state.deathDaily, this.state.infectedDaily, this.state.recoveredDaily,this.state.category) 
-            this.setState({loading:true})          
+
+            let data = []
+            if(this.state.category === "Infected"){
+                data = this.state.infectedDaily
+            } else if (this.state.category === "Recovered") {
+                data = this.state.recoveredDaily
+            } else if (this.state.category === "Death") {
+                data = this.state.deathDaily
+            }
+            this.computeGraph(data,this.state.category)  
+
         }).catch(error => {
             this.setState({
                 getDataError: true,
@@ -135,47 +144,29 @@ class DailyGraph extends Component {
                 deathDaily: [],
                 recoveredDaily: []
             })
-            this.computeGraph([], [], [],this.state.category)
+            this.computeGraph([], this.state.category)
         });
     }
 
-    computeGraph = (Death, Infected, Recovered, category) => {
-        const dateArray = [], infectedArray = [], deathArray = [], recoveredArray = []
+    computeGraph = (data, category) => {
+        const dateArray = [], dailyArray = []
         if(!this.state.getDataError) {
-            let infected = Object.entries(Infected)
-            let death = Object.entries(Death)
-            let recovered = Object.entries(Recovered)
+            let daily = Object.entries(data)
 
-            for (const key of Object.keys(Infected)) {
+            for (const key of Object.keys(data)) {
                 dateArray.push(key + " GMT")
             }
 
-            infectedArray.push(infected[0][1])
-            for (let x = 0; x < infected.length-1; x++){
-                infectedArray.push(infected[x+1][1] - infected[x][1])
+            dailyArray.push(daily[0][1])
+            for (let x = 0; x < daily.length-1; x++){
+                dailyArray.push(daily[x+1][1] - daily[x][1])
             }
 
-            deathArray.push(death[0][1])
-            for (let x = 0; x < death.length-1; x++){
-                deathArray.push(death[x+1][1] - death[x][1])
-            }
+            let seriesColor = "#FEB01A"
 
-            recoveredArray.push(recovered[0][1])
-            for (let x = 0; x < recovered.length-1; x++){
-                recoveredArray.push(recovered[x+1][1] - recovered[x][1])
-            }
-
-            let dataArray = []
-            let seriesColor = ""
-
-            if(category === "Infected"){
-                dataArray = infectedArray
-                seriesColor = "#FEB01A"
-            } else if (category === "Recovered") {
-                dataArray = recoveredArray
+            if (category === "Recovered") {
                 seriesColor = "#00E396"
-            } else {
-                dataArray = deathArray
+            } else if (category === "Death") {
                 seriesColor = "#FF4560"
             }
 
@@ -187,29 +178,11 @@ class DailyGraph extends Component {
                     xaxis: {
                         categories: dateArray
                     },
-                    colors:[seriesColor],
-                    yaxis: {
-                        show:true,
-                        showAlways: true,
-                        labels: {
-                            style: {
-                                colors: 'white'
-                            }
-                        }
-                    }              
-                },
-                legend: {
-                    show: true,
-                    labels: {
-                        colors: 'white'
-                    },
-                    onItemClick: {
-                        toggleDataSeries: false
-                    }
+                    colors:[seriesColor],              
                 },
                 series: [{
                     name: category,
-                    data: dataArray
+                    data: dailyArray
                 }]
             })          
         } else {
@@ -219,18 +192,8 @@ class DailyGraph extends Component {
                         text: this.props.countryName + " - No Data",
                     }              
                 }, 
-                yaxis: {
-                    show:true,
-                    showAlways: true,
-                    labels: {
-                        style: {
-                            colors: 'white'
-                        }
-                    }
-                },  
                 series: [{
                     name: category,
-                    type:'area',
                     data: [] 
                 }]
             })    
@@ -239,25 +202,21 @@ class DailyGraph extends Component {
     
     render() {
         return (
-            <Row>
-                <Col xs={12}>
-                    <DropdownButton className="categoryBtn" title={this.state.category} size="sm">
-                        <Dropdown.Item onClick={() => this.categoryHandler("Infected")}>Infected</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.categoryHandler("Recovered")}>Recovered</Dropdown.Item>
-                        <Dropdown.Item onClick={() => this.categoryHandler("Death")}>Death</Dropdown.Item>
-                    </DropdownButton>
-                </Col>
-                <Col xs={12}>
-                    <div className="dailyChartContainer">                                    
-                        <Chart
-                            options={this.state.options}
-                            series={this.state.series}                
-                            type="area"
-                            width="100%"
-                            height="275px"/>                        
-                    </div>
-                </Col>
-            </Row>
+            <div>
+                <DropdownButton className="categoryBtn" title={this.state.category} size="sm">
+                    <Dropdown.Item onClick={() => this.categoryHandler("Infected")}>Infected</Dropdown.Item>
+                    <Dropdown.Item onClick={() => this.categoryHandler("Recovered")}>Recovered</Dropdown.Item>
+                    <Dropdown.Item onClick={() => this.categoryHandler("Death")}>Death</Dropdown.Item>
+                </DropdownButton>
+                <div className="dailyChartContainer">                                    
+                    <Chart
+                        options={this.state.options}
+                        series={this.state.series}                
+                        type="area"
+                        width="100%"
+                        height="275px"/>                        
+                </div>
+            </div>
         )
     }
 }
