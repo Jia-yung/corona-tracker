@@ -2,6 +2,7 @@ import React, { Component} from "react";
 import {Row, Col, DropdownButton, Dropdown, Button} from 'react-bootstrap';
 import EarthLogo from '../../../Images/worldwide.svg';
 import ListItem from '../../../components/ListItem/ListItem';
+import Spinner from '../../../components/UI/Spinner/Spinner';
 import DailyGraph from './DailyGraph/DailyGraph.js'
 import SumGraph from "./SumGraph/SumGraph";
 
@@ -10,23 +11,23 @@ import axios from "axios";
 
 class Graph extends Component {
     state = {
-        countryName: null,
-        selectedCountry: null,
-        graphType: "Cummulative",
-        infectedCountry: [],
-        countryListError: false,
         sort: "country",
+        infectedCountry: [],
+        selectedCountry: null,
+        error: false,
         loading:true,
     };
 
     componentDidMount() {
         axios.get("https://corona.lmao.ninja/v2/countries?sort=country")
-        .then(response => {
-            this.setState({
-                infectedCountry: response.data.reverse()
-            })
+            .then(response => {
+                this.setState({
+                    error: false,
+                    loading:false,
+                    infectedCountry: response.data.reverse()
+                })
         }).catch(error => {
-            this.setState({countryListError: true})
+            this.setState({error: true})
         }) 
     }
 
@@ -68,19 +69,26 @@ class Graph extends Component {
     }
 
     render() {
-        let item = this.state.infectedCountry.map(data => {
-            return (
-                <ListItem 
-                    key={data.country}
-                    country={data.country}
-                    cases={data.cases}
-                    deaths={data.deaths}
-                    recovered={data.recovered}
-                    sortBy={this.state.sort}
-                    flag={data.countryInfo.flag}
-                    clicked={() => this.countrySelectHandler(data.country)} />
-            )
-        })
+        let item = null
+        if(this.state.error) {
+            item = <h5>Error loading country . . .</h5>
+        } else if(this.state.loading) {
+            item = <Spinner />
+        } else if (!this.state.loading)  {
+            item = this.state.infectedCountry.map(data => {
+                return (
+                    <ListItem 
+                        key={data.country}
+                        country={data.country}
+                        cases={data.cases}
+                        deaths={data.deaths}
+                        recovered={data.recovered}
+                        sortBy={this.state.sort}
+                        flag={data.countryInfo.flag}
+                        clicked={() => this.countrySelectHandler(data.country)} />
+                )
+            })
+        } 
 
         return (
             <div>
