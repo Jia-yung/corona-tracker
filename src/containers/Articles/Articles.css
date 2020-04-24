@@ -19,3 +19,7 @@
     border-radius: 10px;
     height: 7px;
 }
+
+.errorMsg {
+    margin: 0 auto;
+}

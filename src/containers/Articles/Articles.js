@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from '../../components/Article/Article';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 import axios from 'axios';
 import './Articles.css';
@@ -7,7 +8,8 @@ import './Articles.css';
 class Articles extends Component {
     state = {
         nytArticle: [],
-        error: false
+        error: false,
+        loading:true
     }
 
     componentDidMount() {
@@ -15,6 +17,7 @@ class Articles extends Component {
         .then(response => {
             this.setState({
                 nytArticle: response.data.response.docs,
+                loading:false
             })
         }).catch(error => {
             this.setState({error: true})
@@ -23,7 +26,11 @@ class Articles extends Component {
     
     render(){
         let articles = null
-        if(!this.state.error){
+        if(this.state.error) {
+            articles = <h5 className="errorMsg">Error loading articles . . .</h5>
+        } else if (this.state.loading) {
+            articles = <Spinner />
+        } else if(!this.state.loading){
             articles = this.state.nytArticle.map(data => {
                 let img = ""
                 let subAbstract = ""
@@ -64,9 +71,7 @@ class Articles extends Component {
                         date={(data.pub_date.slice(0,10))} />
                 )
             })
-        } else {
-            articles = <h5>(Error loading articles)</h5>
-        }
+        } 
         
         return (
             <div className="container-fluid">
