@@ -3,8 +3,9 @@ import {Row, Col, DropdownButton, Dropdown, Button} from 'react-bootstrap';
 import EarthLogo from '../../../Images/worldwide.svg';
 import ListItem from '../../../components/ListItem/ListItem';
 import Spinner from '../../../components/UI/Spinner/Spinner';
-import DailyGraph from './DailyGraph/DailyGraph.js'
-import SumGraph from "./SumGraph/SumGraph";
+import DailyGraph from './DailyGraph/DailyGraph'
+import SumGraph from './SumGraph/SumGraph';
+import RadialGraph from './RadialGraph/RadialGraph';
 
 import './Selection.css';
 import axios from "axios";
@@ -13,7 +14,10 @@ class Graph extends Component {
     state = {
         sort: "country",
         infectedCountry: [],
-        selectedCountry: null,
+        selectedCountry: "Country",
+        infected:0,
+        recovered: 0,
+        death:0,
         error: false,
         loading:true,
     };
@@ -64,8 +68,11 @@ class Graph extends Component {
         }
     }
 
-    countrySelectHandler = (country) => {
+    countrySelectHandler = (country, infections, deaths, recoveries) => {
         this.setState({selectedCountry: country});
+        this.setState({infected:infections})
+        this.setState({death:deaths})
+        this.setState({recovered:recoveries})
     }
 
     render() {
@@ -85,7 +92,7 @@ class Graph extends Component {
                         recovered={data.recovered}
                         sortBy={this.state.sort}
                         flag={data.countryInfo.flag}
-                        clicked={() => this.countrySelectHandler(data.country)} />
+                        clicked={() => this.countrySelectHandler(data.country, data.cases, data.deaths, data.recovered)} />
                 )
             })
         } 
@@ -94,15 +101,15 @@ class Graph extends Component {
             <div>
                 <Row>
                     <Col xs={12} md={3} className="countryListColumn"> 
-                    <h4 className="subTitle">
-                            Data Graph
+                        <h4 className="subTitle">
+                            Overview
                         </h4>
                         <div className="listContainer">
                             <p>Country</p>
                             <div className="listContainerBtn">
-                                <Button className="globalBtn" size="sm" variant="secondary" onClick={() => this.countrySelectHandler("Global")}>
+                                <Button className="globalBtn" size="sm" variant="secondary" onClick={() => this.countrySelectHandler("World", this.props.infected, this.props.death, this.props.recovered)}>
                                     <img src={EarthLogo} alt="Globe" align="middle" />
-                                    Global  
+                                    World  
                                     {/*Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>*/}
                                 </Button>
                                 <DropdownButton className="sortBtn" title="Sort" variant="secondary" size="sm">
@@ -117,7 +124,18 @@ class Graph extends Component {
                                     {item}                      
                                 </ul>
                             </div>
-                        </div>                       
+                        </div>
+                        <Row>
+                            <Col xs={12}>
+                                <h4 className="radialGraphTitle" >{this.state.selectedCountry + " - Rate"}</h4>
+                            </Col>
+                            <Col xs={6} md={12}>
+                                <RadialGraph countryName={this.state.selectedCountry} infected={this.state.infected} data={this.state.recovered} category="Recovery" color="#00E396" />                      
+                            </Col>
+                            <Col xs={6} md={12}>
+                                <RadialGraph countryName={this.state.selectedCountry} infected={this.state.infected} data={this.state.death} category="Fatality" color="#FF4560" />                      
+                            </Col>
+                        </Row>
                     </Col>
                     <Col xs={12} md={9}>
                         <Row>
