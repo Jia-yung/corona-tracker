@@ -7,16 +7,16 @@
 }
 
 .recovered {
-    color: #32CD32;
+    color: #2FCC40;
     font-weight: 700;
 }
 
 .death {
-    color: red;
+    color: #FF2800;
     font-weight: 700;
 }
 
 .infected {
-    color: yellow;
+    color: #FFE31E;
     font-weight: 700;
 }
