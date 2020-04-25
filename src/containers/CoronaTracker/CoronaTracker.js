@@ -63,15 +63,15 @@ class CoronaTracker extends Component {
         let recovered = null;
         
         if(this.state.loading) {
-            infected = <Modal figure={0} showSpinner={true} today={0} title={"Infected"} status={"Warning"}>{spinner}</Modal>
-            death  = <Modal figure={0} showSpinner={true} today={0} title={"Death"} status={"Danger"} >{spinner}</Modal>
-            recovered = <Modal figure={0} showSpinner={true} today={0} title={"Recovered"} status={"Success"}>{spinner}</Modal>
+            infected = <Modal figure={0} showSpinner={true} today={1} title={"Infected"} status={"infected"}>{spinner}</Modal>
+            death  = <Modal figure={0} showSpinner={true}  today={1} title={"Death"} status={"death"} >{spinner}</Modal>
+            recovered = <Modal figure={0} showSpinner={true}  today={0} title={"Recovered"} status={"recovered"}>{spinner}</Modal>
         }
 
         if(this.state.totalCases) {
-            infected = <Modal figure={this.state.totalCases} today={this.state.todayCases} showSpinner={false} title={"Infected"} status={"Warning"} />
-            death = <Modal figure={this.state.totalDeath} today={this.state.todayDeaths} showSpinner={false} title={"Deaths"} status={"Danger"} />
-            recovered = <Modal figure={this.state.totalRecovered} today={0} showSpinner={false} title={"Recovered"} status={"Success"} />
+            infected = <Modal figure={this.state.totalCases} today={this.state.todayCases} showSpinner={false} title={"Infected"} status={"infected"} />
+            death = <Modal figure={this.state.totalDeath} today={this.state.todayDeaths} showSpinner={false} title={"Deaths"} status={"death"} />
+            recovered = <Modal figure={this.state.totalRecovered} today={0} showSpinner={false} title={"Recovered"} status={"recovered"} />
         }
            
         let countryToolTip = this.state.infectedCountry.map(data => {
@@ -122,7 +122,7 @@ class CoronaTracker extends Component {
                         </Col>
                     </Row>
                     <Map/>
-                    <SelectionGraph />
+                    <SelectionGraph infected={this.state.totalCases} recovered={this.state.totalRecovered} death={this.state.totalDeath}  />
                     <ComparisonGraph /> 
                     <Row>
                         <Col xs={12}>
