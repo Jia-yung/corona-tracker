@@ -64,7 +64,7 @@ class DailyGraph extends Component {
                 }                
             },
             title: {
-                text: 'Select a Country',
+                text: 'Select a Country - Daily',
                 align: 'Center',
                 style: {
                     color: 'white',
@@ -83,11 +83,11 @@ class DailyGraph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            if (this.props.countryName !== "Global") {
+            if (this.props.countryName !== "World") {
                 this.setState({selectedCountry: this.props.countryName})
                 this.getData(this.props.countryName)
             } else {
-                this.setState({selectedCountry: "Global"})
+                this.setState({selectedCountry: "World"})
                 this.getData("all")
             }
         }
