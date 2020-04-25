@@ -106,7 +106,7 @@
     }
 
     .modalLeft {
-        padding-right: 5px !important;
+        padding-right: 0px !important;
     }
 
     .modalMiddle {
@@ -115,7 +115,7 @@
     }
 
     .modalRight {
-        padding-left: 5px !important;
+        padding-left: 0px !important;
     }
 }
 
