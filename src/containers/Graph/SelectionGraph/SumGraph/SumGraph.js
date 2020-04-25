@@ -62,7 +62,7 @@ class SumGraph extends Component {
                 logarithmic: false
             },
             title: {
-                text: "Select a country",
+                text: "Select a country - Total",
                 align: 'Center',
                 style: {
                     color: 'white',
@@ -90,11 +90,11 @@ class SumGraph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            if (this.props.countryName !== "Global") {
+            if (this.props.countryName !== "World") {
                 this.setState({selectedCountry: this.props.countryName})
                 this.getData(this.props.countryName, this.state.logarithmic)
             } else {
-                this.setState({selectedCountry: "Global"})
+                this.setState({selectedCountry: "World"})
                 this.getData("all", this.state.logarithmic)
             }
         }
@@ -117,7 +117,7 @@ class SumGraph extends Component {
     countrySelectHandler = (country) => {
         this.setState({selectedCountry: country});
 
-        if (country !== "Global"){
+        if (country !== "World"){
             this.getData(country, this.state.logarithmic)
         } else {
             this.getData("all", this.state.logarithmic)
