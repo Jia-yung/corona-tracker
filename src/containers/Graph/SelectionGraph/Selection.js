@@ -130,10 +130,10 @@ class Graph extends Component {
                                 <h4 className="radialGraphTitle" >{this.state.selectedCountry + " - Rate"}</h4>
                             </Col>
                             <Col xs={6} md={12}>
-                                <RadialGraph countryName={this.state.selectedCountry} infected={this.state.infected} data={this.state.recovered} category="Recovery" color="#00E396" />                      
+                                <RadialGraph countryName={this.state.selectedCountry} category="Recovery" color="#00E396" />                      
                             </Col>
                             <Col xs={6} md={12}>
-                                <RadialGraph countryName={this.state.selectedCountry} infected={this.state.infected} data={this.state.death} category="Fatality" color="#FF4560" />                      
+                                <RadialGraph countryName={this.state.selectedCountry} category="Fatality" color="#FF4560" />                      
                             </Col>
                         </Row>
                     </Col>
