@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import Chart from "react-apexcharts";
 import './RadialGraph.css';
+import axios from 'axios';
 
 class RadialGraph extends Component {
     state = {      
@@ -9,6 +10,7 @@ class RadialGraph extends Component {
             labels:[this.props.category],
             colors:[this.props.color],
             offsetY: -10,
+            getDataError:false,
             chart: {
                 type: 'radialBar',
                 sparkline: {
@@ -16,11 +18,11 @@ class RadialGraph extends Component {
                 },
                 animations: {
                     enabled: true,
-                    easing: 'easein',
-                    speed: 1000,
+                    easing: 'linear',
+                    speed: 2000,
                     dynamicAnimation: {
                         enabled: true,
-                        speed: 1000
+                        speed: 2000
                     }
                 }
             },
@@ -74,18 +76,50 @@ class RadialGraph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            let percentage = 0
-            percentage =  (this.props.data / this.props.infected * 100).toFixed(2)
-            this.computeGraph(percentage, this.props.category)
-        }
-    } 
-
-    computeGraph = (percentage, category) => {
-        this.setState({
-            series:[percentage],
-            options: {
-                
+            if (this.props.countryName !== "World"){
+                this.getData(this.props.countryName)
+            } else {
+                this.getData("all")
             }
+        }
+    }
+
+    getData = (request) => {
+        let infected = 0 
+        let death = 0
+        let recovered = 0
+        let percentage = 0
+
+        axios.get("https://corona.lmao.ninja/v2/historical/" + request + "/?lastdays=1").then(response => {
+            this.setState({getDataError:false})
+            if(request !== "all"){
+                    infected = Object.values(response.data.timeline.cases)[0]
+                    death = Object.values(response.data.timeline.deaths)[0]
+                    recovered = Object.values(response.data.timeline.recovered)[0]            
+            } else {
+                    infected = Object.values(response.data.cases)[0]
+                    death =  Object.values(response.data.deaths)[0]
+                    recovered = Object.values(response.data.recovered)[0]
+            }
+
+            if(this.props.category === "Fatality"){
+                percentage = (death / infected * 100).toFixed(2)
+            } else {
+                percentage = (recovered / infected * 100).toFixed(2)
+            }
+            this.computeGraph(percentage)
+
+        }).catch(error => {
+            this.setState({
+                getDataError: true,
+            })
+            this.computeGraph(0)
+        });
+    }
+
+    computeGraph = (percentage) => {
+        this.setState({
+            series:[percentage]
         })
     }
 
