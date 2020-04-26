@@ -62,7 +62,7 @@ class SumGraph extends Component {
                 logarithmic: false
             },
             title: {
-                text: "Select a country - Total",
+                text: "Select a Country - Total",
                 align: 'Center',
                 style: {
                     color: 'white',
