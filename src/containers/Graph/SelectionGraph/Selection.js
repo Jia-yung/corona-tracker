@@ -114,7 +114,7 @@ class Graph extends Component {
                                 </Button>
                                 <DropdownButton className="sortBtn" title="Sort" variant="secondary" size="sm">
                                     <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
-                                    <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infection</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infected</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
                                 </DropdownButton>
@@ -149,6 +149,7 @@ class Graph extends Component {
                         <div className="caption">
                             <p>Drag/Click on the graph for more information.</p>
                             <p>Timeline is updated each day at 23:59 UTC.</p>
+                            <p>Data for some country are not displayed.</p>
                         </div>
                     </Col>
                 </Row>
