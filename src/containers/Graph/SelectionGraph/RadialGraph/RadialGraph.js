@@ -75,12 +75,12 @@ class RadialGraph extends Component {
     }
 
     componentDidUpdate (prevProps) {
-        if (prevProps.countryName !== this.props.countryName){ 
-            let percentage = 0
-            percentage =  (this.props.data / this.props.infected * 100).toFixed(2)
-            this.computeGraph(percentage)
-            
-            if (this.props.countryName === "World"){
+        if (prevProps.countryName !== this.props.countryName){             
+            if(this.props.countryName !== "World") {
+                let percentage = 0
+                percentage =  (this.props.data / this.props.infected * 100).toFixed(2)
+                this.computeGraph(percentage)
+            } else if (this.props.countryName === "World"){
                 this.getData("all")
             }
         }
