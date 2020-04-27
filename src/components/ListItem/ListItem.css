@@ -19,3 +19,23 @@ li:active {
     cursor: grabbing
 }
 
+.listContent {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.listContent > h6 {
+    margin-right: 5px;
+}
+
+.infected {
+    color:#FFE75E
+}
+
+.deaths {
+    color:#FF4560;
+}
+
+.recovered {
+    color:#00E396
+}
