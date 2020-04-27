@@ -1,11 +1,11 @@
 .itemFlag {
-    width: 30px;
-    height: 20px;
+    width: 30px !important;
+    height: 20px !important;
     margin-right: 10px;
 }
 
 li {
-    margin-bottom: 15px;
+    padding: 7px;
     border-bottom: 1px solid grey;
     font-size: 15px;
     cursor: pointer;
@@ -19,6 +19,10 @@ li:active {
     cursor: grabbing
 }
 
+li > h6 {
+    margin-bottom: 5px;
+}
+
 .listContent {
     display: flex;
     justify-content: flex-start;
@@ -26,16 +30,18 @@ li:active {
 
 .listContent > h6 {
     margin-right: 5px;
+    margin-bottom: 0px;
 }
 
-.infected {
+.Infected {
     color:#FFE75E
 }
 
-.deaths {
+.Death{
     color:#FF4560;
 }
 
-.recovered {
+.Recovery,
+.Recovered {
     color:#00E396
 }
