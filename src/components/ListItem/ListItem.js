@@ -22,7 +22,10 @@ class ListItem extends Component {
                     <img className="itemFlag" src={this.props.flag} alt="flag" align="middle" />
                     {this.props.country}
                 </h6>
-                <h6>{figure.toLocaleString()} {category}</h6>
+                <div className="listContent">
+                    <h6 className={category} >{figure.toLocaleString()}</h6>
+                    <h6>{category}</h6>
+                </div>
             </li>
         )
     }
