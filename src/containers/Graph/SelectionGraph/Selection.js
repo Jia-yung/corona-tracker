@@ -6,13 +6,13 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import DailyGraph from './DailyGraph/DailyGraph'
 import SumGraph from './SumGraph/SumGraph';
 import RadialGraph from './RadialGraph/RadialGraph';
-
+import flag from '../../../flag/flag.json'
 import './Selection.css';
 import axios from "axios";
 
 class Graph extends Component {
     state = {
-        sort: "country",
+        sort: "cases",
         infectedCountry: [],
         selectedCountry: "Country",
         infected:0,
@@ -23,16 +23,53 @@ class Graph extends Component {
     };
 
     componentDidMount() {
-        axios.get("https://corona.lmao.ninja/v2/countries?sort=country")
+        axios.get("https://corona.lmao.ninja/v2/jhucsse")
             .then(response => {
-                this.setState({
-                    error: false,
-                    loading:false,
-                    infectedCountry: response.data.reverse()
-                })
-        }).catch(error => {
-            this.setState({error: true})
-        }) 
+                let check = []
+                let sumInfectedCountry = []
+
+                for(let x = 0; x < response.data.length ; x++){
+                    let confirmed = 0
+                    let recovered = 0
+                    let deaths = 0
+                    let recoveryRate = 0.0
+                    let deathRate = 0.0
+                    
+                    if(response.data[x].country === "US") {
+                        confirmed += 2
+                    }
+
+                    if(response.data[x].country === "Canada") {
+                        confirmed -= 2
+                        deaths -= 2
+                    }
+
+                    if(!check.includes(response.data[x].country)){
+                        for(let i = 0; i < response.data.length; i++) {
+                            if(response.data[x].country === response.data[i].country){
+                                confirmed += response.data[i].stats.confirmed
+                                deaths += response.data[i].stats.deaths
+                                recovered += response.data[i].stats.recovered
+                            }
+                        }
+                        recoveryRate = ((recovered/confirmed * 100).toFixed(2)) * 100
+                        deathRate = ((deaths/confirmed * 100).toFixed(2)) * 100
+                        check.push(response.data[x].country)
+
+                        let img = ""
+
+                        for (let j = 0; j < flag.length; j++) {
+                            if(response.data[x].country === flag[j].country){
+                                img = flag[j].countryInfo.flag
+                            }
+                        }
+                        sumInfectedCountry.push({"country":response.data[x].country, "cases":confirmed,"deaths":deaths,"recovered":recovered, "recoveryRate":recoveryRate, "deathRate": deathRate ,"flag":img})     
+                    }
+                }
+                this.setState({loading:false, infectedCountry: sumInfectedCountry.sort(this.compareValues(this.state.sort, 'desc'))})
+            }).catch(error => {
+                this.setState({error:true})
+        })
     }
 
     compareValues = (key, order = "asc") => {
@@ -85,14 +122,16 @@ class Graph extends Component {
             item = this.state.infectedCountry.map(data => {
                 return (
                     <ListItem 
-                        key={data.country}
-                        country={data.country}
-                        cases={data.cases}
-                        deaths={data.deaths}
-                        recovered={data.recovered}
-                        sortBy={this.state.sort}
-                        flag={data.countryInfo.flag}
-                        clicked={() => this.countrySelectHandler(data.country, data.cases, data.deaths, data.recovered)} />
+                    key={data.country}
+                    country={data.country}
+                    cases={data.cases}
+                    deaths={data.deaths}
+                    deathRate={data.deathRate}
+                    recovered={data.recovered}
+                    recoveryRate={data.recoveryRate}
+                    flag={data.flag}
+                    sortBy={this.state.sort}
+                    clicked={() => this.countrySelectHandler(data.country, data.cases, data.deaths, data.recovered)} />
                 )
             })
         } 
@@ -116,7 +155,9 @@ class Graph extends Component {
                                     <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infected</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("deathRate")}>Death Rate</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("recoveryRate")}>Recovery Rate</Dropdown.Item>
                                 </DropdownButton>
                             </div>
                             <div className="ulContainer">
@@ -130,10 +171,10 @@ class Graph extends Component {
                                 <h4 className="radialGraphTitle" >{this.state.selectedCountry + " - Rate"}</h4>
                             </Col>
                             <Col xs={6} md={12}>
-                                <RadialGraph countryName={this.state.selectedCountry} category="Recovery" color="#00E396" />                      
+                                <RadialGraph countryName={this.state.selectedCountry} data={this.state.recovered} infected={this.state.infected} category="Recovery" color="#00E396" />                      
                             </Col>
                             <Col xs={6} md={12}>
-                                <RadialGraph countryName={this.state.selectedCountry} category="Fatality" color="#FF4560" />                      
+                                <RadialGraph countryName={this.state.selectedCountry} data={this.state.death} infected={this.state.infected} category="Fatality" color="#FF4560" />                      
                             </Col>
                         </Row>
                     </Col>
@@ -149,7 +190,8 @@ class Graph extends Component {
                         <div className="caption">
                             <p>Drag/Click on the graph for more information.</p>
                             <p>Timeline is updated each day at 23:59 UTC.</p>
-                            <p>Data for some country are not displayed.</p>
+                            <p>Recovery timeline for Canada is not shown</p>
+                            <p>🛳 (Ms Zaandam & Diamond Princess)</p>
                         </div>
                     </Col>
                 </Row>
