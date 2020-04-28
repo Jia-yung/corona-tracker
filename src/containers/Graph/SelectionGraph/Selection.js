@@ -35,15 +35,6 @@ class Graph extends Component {
                     let recoveryRate = 0.0
                     let deathRate = 0.0
                     
-                    if(response.data[x].country === "US") {
-                        confirmed += 2
-                    }
-
-                    if(response.data[x].country === "Canada") {
-                        confirmed -= 2
-                        deaths -= 2
-                    }
-
                     if(!check.includes(response.data[x].country)){
                         for(let i = 0; i < response.data.length; i++) {
                             if(response.data[x].country === response.data[i].country){
@@ -188,9 +179,8 @@ class Graph extends Component {
                             </Col>
                         </Row>
                         <div className="caption">
-                            <p>Drag/Click on the graph for more information.</p>
+                            <p>*Recovery timeline for Canada is not provided.</p>
                             <p>Timeline is updated each day at 23:59 UTC.</p>
-                            <p>Recovery timeline for Canada is not shown</p>
                             <p>🛳 (Ms Zaandam & Diamond Princess)</p>
                         </div>
                     </Col>
