@@ -83,7 +83,10 @@ class DailyGraph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            if (this.props.countryName !== "World") {
+            if(this.props.countryName === "Taiwan*"){
+                this.setState({selectedCountry: this.props.countryName})
+                this.getData("Taiwan")
+            } else if (this.props.countryName !== "World") {
                 this.setState({selectedCountry: this.props.countryName})
                 this.getData(this.props.countryName)
             } else {
