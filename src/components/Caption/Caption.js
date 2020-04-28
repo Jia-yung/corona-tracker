@@ -10,7 +10,6 @@ const caption = () => (
             <span className="rightDot"></span>
             to enable/disable timeline series.
         </p>
-        <p>Drag/Click on the graph for more information.</p>
         <p>Timeline is updated each day at 23:59 UTC.</p>
     </div>
 )
