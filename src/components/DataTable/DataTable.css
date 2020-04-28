@@ -6,6 +6,11 @@
     margin-bottom: 25px;
 }
 
+.tableCaption {
+    text-align: right;
+    margin-top: 5px;
+}
+
 .recovered {
     color: #00E396;
     font-weight: 700;
