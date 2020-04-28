@@ -3145,7 +3145,7 @@
     },
     {
         "updated": 1587973970332,
-        "country": "Myanmar",
+        "country": "Burma",
         "countryInfo": {
             "_id": 104,
             "iso2": "MM",
@@ -3405,6 +3405,30 @@
         "deathsPerOneMillion": 2,
         "tests": 0,
         "testsPerOneMillion": 0,
+        "continent": "Asia"
+    },
+    {
+        "updated": 1587973970248,
+        "country": "Kosovo",
+        "countryInfo": {
+            "_id": 586,
+            "iso2": "PK",
+            "iso3": "PAK",
+            "lat": 30,
+            "long": 70,
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg"
+        },
+        "cases": 13328,
+        "todayCases": 0,
+        "deaths": 281,
+        "todayDeaths": 0,
+        "recovered": 3029,
+        "active": 10018,
+        "critical": 111,
+        "casesPerOneMillion": 60,
+        "deathsPerOneMillion": 1,
+        "tests": 150756,
+        "testsPerOneMillion": 682,
         "continent": "Asia"
     },
     {
@@ -4657,7 +4681,7 @@
     },
     {
         "updated": 1587973970253,
-        "country": "UAE",
+        "country": "United Arab Emirates",
         "countryInfo": {
             "_id": 784,
             "iso2": "AE",
