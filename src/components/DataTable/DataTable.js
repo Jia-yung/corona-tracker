@@ -26,6 +26,7 @@ class DataTable extends Component {
                         </tr>
                     </thead>
                 </table>
+                <p className="tableCaption">Updated for every 10 minutes.</p>
             </div>
         )
     }
