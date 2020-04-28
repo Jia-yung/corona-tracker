@@ -90,7 +90,10 @@ class SumGraph extends Component {
 
     componentDidUpdate (prevProps) {
         if (prevProps.countryName !== this.props.countryName){ 
-            if (this.props.countryName !== "World") {
+            if(this.props.countryName === "Taiwan*"){
+                this.setState({selectedCountry: this.props.countryName})
+                this.getData("Taiwan", this.state.logarithmic)
+            } else if (this.props.countryName !== "World") {
                 this.setState({selectedCountry: this.props.countryName})
                 this.getData(this.props.countryName, this.state.logarithmic)
             } else {
