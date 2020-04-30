@@ -14,6 +14,7 @@ import Articles from '../Articles/Articles';
 import Logo from '../../components/Logo/Logo';
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
 import Map from '../Map/Map.js';
+import flag from '../../Flag/flag.json';
 
 import axios from 'axios';
 import './CoronaTracker.css';
@@ -46,11 +47,24 @@ class CoronaTracker extends Component {
                 this.setState({getAllError: true})
             })  
         
-        axios.get('https://corona.lmao.ninja/v2/countries?sort=country')
+        axios.get('https://corona.lmao.ninja/v2/jhucsse')
             .then(response => {
-                this.setState({
-                    infectedCountry: response.data.reverse(),
-                })
+                let check = []
+                let infectedCountry = []
+
+                for(let x = 0; x < response.data.length ; x++){                    
+                    if(!check.includes(response.data[x].country)){
+                        check.push(response.data[x].country)
+                        let img = ""
+                        for (let j = 0; j < flag.length; j++) {
+                            if(response.data[x].country === flag[j].country){
+                                img = flag[j].countryInfo.flag
+                            }
+                        }
+                        infectedCountry.push({"country":response.data[x].country, "flag":img})     
+                    }
+                }
+                this.setState({infectedCountry: infectedCountry})
             }).catch(error => {
                 this.setState({getCountryError: true})
             }) 
@@ -79,7 +93,7 @@ class CoronaTracker extends Component {
                 <CountryToolTip 
                     key={data.country} 
                     country={data.country} 
-                    flag={data.countryInfo.flag} />
+                    flag={data.flag} />
             )
         })
 
