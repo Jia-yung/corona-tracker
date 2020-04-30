@@ -26,7 +26,14 @@ class DataTable extends Component {
                         </tr>
                     </thead>
                 </table>
-                <p className="tableCaption">Updated for every 10 minutes.</p>
+                <div className="tableCaption">
+                    <p>Updated for every 10 minutes.</p>
+                    <p>Source:
+                        <a className="links" href="https://www.worldometers.info/coronavirus/" target="_blank" rel="noopener noreferrer" >
+                            Worldometers
+                        </a>
+                    </p>
+                </div>
             </div>
         )
     }
