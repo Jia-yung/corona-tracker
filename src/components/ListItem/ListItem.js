@@ -18,9 +18,9 @@ class ListItem extends Component {
         } else if (this.props.sortBy === "recoveryRate") {
             category = "Recovery rate"
             figure = (this.props.recoveryRate/100).toString() + "%"
-        } else if (this.props.sortBy === "deathRate") {
-            category = "Death rate"
-            figure = (this.props.deathRate/100).toString() + "%"
+        } else if (this.props.sortBy === "fatalityRate") {
+            category = "Fatality rate"
+            figure = (this.props.fatalityRate/100).toString() + "%"
         }
         return (
             <li onClick={this.props.clicked}>
