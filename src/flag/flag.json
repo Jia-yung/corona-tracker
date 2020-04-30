@@ -3457,7 +3457,7 @@
     },
     {
         "updated": 1587973970319,
-        "country": "Palestine",
+        "country": "West Bank and Gaza",
         "countryInfo": {
             "_id": 275,
             "iso2": "PS",
@@ -4441,7 +4441,7 @@
     },
     {
         "updated": 1587973970359,
-        "country": "Syrian Arab Republic",
+        "country": "Syria",
         "countryInfo": {
             "_id": 760,
             "iso2": "SY",
