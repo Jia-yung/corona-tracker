@@ -6,7 +6,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import DailyGraph from './DailyGraph/DailyGraph'
 import SumGraph from './SumGraph/SumGraph';
 import RadialGraph from './RadialGraph/RadialGraph';
-import flag from '../../../flag/flag.json'
+import flag from '../../../Flag/flag.json'
 import './Selection.css';
 import axios from "axios";
 
@@ -33,7 +33,7 @@ class Graph extends Component {
                     let recovered = 0
                     let deaths = 0
                     let recoveryRate = 0.0
-                    let deathRate = 0.0
+                    let fatalityRate = 0.0
                     
                     if(!check.includes(response.data[x].country)){
                         for(let i = 0; i < response.data.length; i++) {
@@ -44,7 +44,7 @@ class Graph extends Component {
                             }
                         }
                         recoveryRate = ((recovered/confirmed * 100).toFixed(2)) * 100
-                        deathRate = ((deaths/confirmed * 100).toFixed(2)) * 100
+                        fatalityRate = ((deaths/confirmed * 100).toFixed(2)) * 100
                         check.push(response.data[x].country)
 
                         let img = ""
@@ -54,7 +54,7 @@ class Graph extends Component {
                                 img = flag[j].countryInfo.flag
                             }
                         }
-                        sumInfectedCountry.push({"country":response.data[x].country, "cases":confirmed,"deaths":deaths,"recovered":recovered, "recoveryRate":recoveryRate, "deathRate": deathRate ,"flag":img})     
+                        sumInfectedCountry.push({"country":response.data[x].country, "cases":confirmed,"deaths":deaths,"recovered":recovered, "recoveryRate":recoveryRate, "fatalityRate": fatalityRate ,"flag":img})     
                     }
                 }
                 this.setState({loading:false, infectedCountry: sumInfectedCountry.sort(this.compareValues(this.state.sort, 'desc'))})
@@ -113,16 +113,16 @@ class Graph extends Component {
             item = this.state.infectedCountry.map(data => {
                 return (
                     <ListItem 
-                    key={data.country}
-                    country={data.country}
-                    cases={data.cases}
-                    deaths={data.deaths}
-                    deathRate={data.deathRate}
-                    recovered={data.recovered}
-                    recoveryRate={data.recoveryRate}
-                    flag={data.flag}
-                    sortBy={this.state.sort}
-                    clicked={() => this.countrySelectHandler(data.country, data.cases, data.deaths, data.recovered)} />
+                        key={data.country}
+                        country={data.country}
+                        cases={data.cases}
+                        deaths={data.deaths}
+                        fatalityRate={data.fatalityRate}
+                        recovered={data.recovered}
+                        recoveryRate={data.recoveryRate}
+                        flag={data.flag}
+                        sortBy={this.state.sort}
+                        clicked={() => this.countrySelectHandler(data.country, data.cases, data.deaths, data.recovered)} />
                 )
             })
         } 
@@ -146,9 +146,9 @@ class Graph extends Component {
                                     <Dropdown.Item onClick={() => this.sortHandler("country")}>Country Name</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("cases")}>Infected</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("deaths")}>Death</Dropdown.Item>
-                                    <Dropdown.Item onClick={() => this.sortHandler("deathRate")}>Death Rate</Dropdown.Item>
                                     <Dropdown.Item onClick={() => this.sortHandler("recovered")}>Recovered</Dropdown.Item>
-                                    <Dropdown.Item onClick={() => this.sortHandler("recoveryRate")}>Recovery Rate</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("recoveryRate")}>Recovery Rate %</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => this.sortHandler("fatalityRate")}>Fatality Rate %</Dropdown.Item>
                                 </DropdownButton>
                             </div>
                             <div className="ulContainer">
