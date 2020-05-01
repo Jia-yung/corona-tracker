@@ -888,6 +888,13 @@
         "continent": "Asia"
     },
     {
+        "updated": 1587973970390,
+        "country": "Comoros",
+        "countryInfo": {
+            "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/255px-Flag_of_the_Comoros.svg.png"
+        }
+    },
+    {
         "updated": 1587973970266,
         "country": "Colombia",
         "countryInfo": {
