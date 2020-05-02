@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import './CountryToolTip.css'
 
 class CountryToolTip extends Component {

@@ -1,7 +1,10 @@
+//libraries
 import React, { Component} from "react";
 import Chart from "react-apexcharts";
-import './RadialGraph.css';
 import axios from 'axios';
+
+//stylings
+import './RadialGraph.css';
 
 class RadialGraph extends Component {
     state = {      

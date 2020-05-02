@@ -1,18 +1,25 @@
+//libraries
 import React, { Component } from "react";
 import {Row, Col, Dropdown, DropdownButton} from 'react-bootstrap';
-
-import GlobalMap from '../../components/DataMap/GlobalMap';
-import CountryMap from '../../components/DataMap/CountryMap';
-
-import mapList from '../../../src/Maps/mapList.json';
-import globalGeoData from '../../../src/Maps/GeoData/global.json'
-import usaGeoData from '../../../src/Maps/GeoData/usa.json'
-import canadaGeoData from '../../../src/Maps/GeoData/canada.json'
-import australiaGeoData from '../../../src/Maps/GeoData/australia.json'
-import chinaGeoData from '../../../src/Maps/GeoData/china.json'
-
-import './Map.css';
 import axios from 'axios';
+
+//components
+import GlobalMap from '../../components/DataMap//DataMap/GlobalMap';
+import CountryMap from '../../components/DataMap/DataMap/CountryMap';
+
+//data
+import mapList from '../../../src/map/MapList/mapList.json';
+import globalGeoData from '../../../src/map/GeoData/global.json';
+import usaGeoData from '../../../src/map/GeoData/usa.json';
+import canadaGeoData from '../../../src/map/GeoData/canada.json';
+import australiaGeoData from '../../../src/map/GeoData/australia.json';
+import chinaGeoData from '../../../src/map/GeoData/china.json';
+
+//images
+import worldImg from '../../image/worldwide.svg';
+
+//stylings
+import './Map.css';
 
 class Map extends Component {
     state = {
@@ -75,7 +82,7 @@ class Map extends Component {
             if(data.country !== "World"){
                 img = <img height="15px" width="25px" className="dropdownBtnFlag" src={data.countryInfo.flag} alt=""/>
             } else {
-                img = <img height="20px" width="20px" className="dropdownBtnFlag" src={require("../../Images/worldwide.svg")} alt=""/>
+                img = <img height="20px" width="20px" className="dropdownBtnFlag" src={worldImg} alt=""/>
             }
             return (
                 <Dropdown.Item 

@@ -1,22 +1,27 @@
+//libraries
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
+import axios from 'axios';
 
-import SelectionGraph from '../Graph/SelectionGraph/Selection';
-import ComparisonGraph from '../Graph/ComparisonGraph/ComparisonGraph';
+//components
 import DataTable from '../../components/DataTable/DataTable';
 import Modal from '../../components/Modal/Modal';
-import Spinner from '../../components/UI/Spinner/Spinner'
-import FbButton from '../../components/UI/Button/FbButton/FbButton'
-import TweetButton from '../../components/UI/Button/TwtButton/TwtButton'
+import Spinner from '../../components/UI/Spinner/Spinner';
+import FbButton from '../../components/UI/Button/FbButton/FbButton';
+import TweetButton from '../../components/UI/Button/TwtButton/TwtButton';
 import CountryToolTip from '../../components/CountryToolTip/CountryToolTip';
 import Alert from '../../components/Alert/Alert';
-import Articles from '../Articles/Articles';
 import Logo from '../../components/Logo/Logo';
-import Disclaimer from '../../components/Disclaimer/Disclaimer'
-import Map from '../Map/Map.js';
-import flag from '../../Flag/flag.json';
+import Disclaimer from '../../components/Disclaimer/Disclaimer';
+import flag from '../../flag/flag.json';
 
-import axios from 'axios';
+//containers
+import Articles from '../Articles/Articles';
+import Map from '../Map/Map';
+import ComparisonGraph from '../Graph/ComparisonGraph/ComparisonGraph';
+import SelectionGraph from '../Graph/SelectionGraph/Selection';
+
+//stylings
 import './CoronaTracker.css';
 
 class CoronaTracker extends Component {

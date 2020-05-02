@@ -1,7 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
-import { select, geoPath, geoMercator, scaleQuantile} from "d3";
-import ColorLegend from './ColorLegend/ColorLegend';
-import useResizeObserver from "./ResizeObserver"; 
+//libraries
+import React, { useRef, useEffect, useState } from 'react';
+import {select, geoPath, geoMercator, scaleQuantile} from 'd3';
+
+//components
+import ColorLegend from '../ColorLegend/ColorLegend';
+import useResizeObserver from '../ResizeObserver/ResizeObserver'; 
+
+//stylings
 import './DataMap.css'
 
 function countryGeoChart({ data, infectedProvince, scale3, scale4, scale5, scale6}){

@@ -1,8 +1,11 @@
+//libraries
 import React, { Component} from "react";
 import {DropdownButton, Dropdown} from 'react-bootstrap';
 import Chart from "react-apexcharts";
-import './DailyGraph.css';
 import axios from "axios";
+
+//stylings
+import './DailyGraph.css';
 
 class DailyGraph extends Component {
     state = {

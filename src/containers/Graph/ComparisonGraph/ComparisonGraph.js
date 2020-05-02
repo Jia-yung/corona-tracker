@@ -1,9 +1,14 @@
+//libraries
 import React, { Component} from "react";
 import {Row, Col, Dropdown, DropdownButton} from 'react-bootstrap';
 import Chart from "react-apexcharts";
-import Caption from '../../../components/Caption/Caption';
-import './ComparisonGraph.css';
 import axios from "axios";
+
+//components
+import Caption from '../../../components/Caption/Caption';
+
+//stylings
+import './ComparisonGraph.css';
 
 class ComparisonGraph extends Component {
     state = {

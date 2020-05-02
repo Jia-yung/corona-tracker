@@ -1,8 +1,12 @@
+//libraries
 import React, { Component } from 'react';
+import axios from 'axios';
+
+//components
 import Article from '../../components/Article/Article';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
-import axios from 'axios';
+//stylings
 import './Articles.css';
 
 class Articles extends Component {

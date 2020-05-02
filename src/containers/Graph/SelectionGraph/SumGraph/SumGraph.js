@@ -1,8 +1,11 @@
+//libraries
 import React, { Component} from "react";
 import Chart from "react-apexcharts";
 import {DropdownButton, Dropdown} from 'react-bootstrap';
-import './SumGraph.css';
 import axios from "axios";
+
+//stylings
+import './SumGraph.css';
 
 class SumGraph extends Component {
     state = {

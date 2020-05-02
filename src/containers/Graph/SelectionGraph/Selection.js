@@ -1,14 +1,25 @@
+//libraries
 import React, { Component} from "react";
 import {Row, Col, DropdownButton, Dropdown, Button} from 'react-bootstrap';
-import EarthLogo from '../../../Images/worldwide.svg';
+import axios from "axios";
+
+//components
 import ListItem from '../../../components/ListItem/ListItem';
 import Spinner from '../../../components/UI/Spinner/Spinner';
-import DailyGraph from './DailyGraph/DailyGraph'
+
+//containers
+import DailyGraph from './DailyGraph/DailyGraph';
 import SumGraph from './SumGraph/SumGraph';
 import RadialGraph from './RadialGraph/RadialGraph';
-import flag from '../../../Flag/flag.json'
+
+//images
+import EarthLogo from '../../../image/worldwide.svg';
+
+//data
+import flag from '../../../flag/flag.json';
+
+//stylings
 import './Selection.css';
-import axios from "axios";
 
 class Graph extends Component {
     state = {
